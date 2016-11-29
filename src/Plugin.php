@@ -1,4 +1,5 @@
 <?php
+
 namespace Miaoxing\Article;
 
 class Plugin extends \miaoxing\plugin\BasePlugin
@@ -40,7 +41,7 @@ class Plugin extends \miaoxing\plugin\BasePlugin
             $links[] = [
                 'typeId' => 'article-category',
                 'name' => $category['name'],
-                'url' => 'article?categoryId=' . $category['id']
+                'url' => 'article?categoryId=' . $category['id'],
             ];
         }
     }

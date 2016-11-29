@@ -35,6 +35,7 @@ class Articles extends \miaoxing\plugin\BaseController
         $htmlTitle = $category['name'];
 
         $this->pageConfig['displayFooter'] = false;
+
         return get_defined_vars();
     }
 }

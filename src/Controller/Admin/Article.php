@@ -17,7 +17,7 @@ class Article extends \miaoxing\plugin\BaseController
     public function indexAction($req)
     {
         switch ($req['_format']) {
-            case 'json' :
+            case 'json':
                 $articles = wei()->article();
 
                 // 分页
@@ -38,11 +38,11 @@ class Article extends \miaoxing\plugin\BaseController
 
                 wei()->event->trigger('beforeArticleFind', [$articles, $req]);
 
-                $data = array();
+                $data = [];
                 foreach ($articles as $article) {
-                    $data[] = $article->toArray() + array(
-                            'category' => $article->getCategory()->toArray()
-                        );
+                    $data[] = $article->toArray() + [
+                            'category' => $article->getCategory()->toArray(),
+                        ];
                 }
 
                 wei()->event->trigger('afterArticleFind', [$articles, $req, $data]);
@@ -55,10 +55,9 @@ class Article extends \miaoxing\plugin\BaseController
                     'records' => $articles->count(),
                 ]);
 
-            default :
+            default:
                 return get_defined_vars();
         }
-
     }
 
     public function newAction($req)
@@ -74,6 +73,7 @@ class Article extends \miaoxing\plugin\BaseController
     public function editAction($req)
     {
         $article = wei()->article()->findId($req['id']);
+
         return get_defined_vars();
     }
 
@@ -91,13 +91,14 @@ class Article extends \miaoxing\plugin\BaseController
     public function destroyAction($req)
     {
         wei()->article()->findOneById($req['id'])->destroy();
+
         return $this->suc();
     }
 
     public function showAction($req)
     {
         return $this->suc([
-            'data' => wei()->article()->findOneById($req['id'])->toArray()
+            'data' => wei()->article()->findOneById($req['id'])->toArray(),
         ]);
     }
 
@@ -105,6 +106,7 @@ class Article extends \miaoxing\plugin\BaseController
     {
         $article = wei()->article()->findOneById($req['id']);
         $ret = wei()->audit->audit($article, $req['pass'], $req['description']);
+
         return $this->ret($ret);
     }
 }
