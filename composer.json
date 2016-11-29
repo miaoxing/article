@@ -1,0 +1,24 @@
+{
+  "name": "miaoxing/article",
+  "description": "Miaoxing Article Plugin",
+  "keywords": [
+    "miaoxing", "article"
+  ],
+  "license": "MIT",
+  "require": {
+    "miaoxing/app": "dev-master@dev",
+    "miaoxing/category": "dev-master@dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "Miaoxing\\Article\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MiaoxingTest\\Article\\": "tests"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
