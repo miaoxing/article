@@ -1,10 +1,3 @@
-/* TODO normalize */
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box
-}
-
 .article-list a {
   text-decoration: none;
 }
@@ -45,8 +38,8 @@
   padding: 20px 15px 15px;
 }
 
-.article-content h2 {
-  margin-top: 0px;
+.article-content .article-title {
+  margin-top: 0;
   margin-bottom: 10px;
   line-height: 1.4;
   font-weight: 400;
