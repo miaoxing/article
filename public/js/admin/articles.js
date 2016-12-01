@@ -56,7 +56,7 @@ define(['template'], function (template) {
             // FIXME jQuery对单个checkbox的处理
             arr.push({
               name: 'showCoverPic',
-              value: Number($('#showCoverPic').prop('checked'))
+              value: Number($('#show-cover-pic').prop('checked'))
             });
             return $form.valid();
           },
@@ -67,10 +67,11 @@ define(['template'], function (template) {
         .validate();
 
       // FIXME loadJSON不支持checkbox
-      $('#showCoverPic').prop('checked', this.data.showCoverPic === '1');
+      $('#show-cover-pic').prop('checked', this.data.showCoverPic === '1');
 
       // 初始化链接选择器
-      $('#linkTo').linkTo({
+      $('#link-to').linkTo({
+        name: 'linkTo',
         data: this.data.linkTo,
         hide: {
           keyword: true,
@@ -78,7 +79,7 @@ define(['template'], function (template) {
         }
       });
 
-      $('#sourceLinkTo').linkTo({
+      $('#source-link-to').linkTo({
         name: 'sourceLinkTo',
         data: this.data.sourceLinkTo,
         hide: {

@@ -18,12 +18,12 @@
     <!-- PAGE CONTENT BEGINS -->
     <form id="article-form" class="js-article-form form-horizontal" method="post" role="form">
       <div class="form-group">
-        <label class="col-lg-2 control-label" for="categoryId">
+        <label class="col-lg-2 control-label" for="category-id">
           栏目
         </label>
 
         <div class="col-lg-4">
-          <select id="categoryId" name="categoryId" class="form-control">
+          <select id="category-id" name="categoryId" class="form-control">
             <option value="">选择栏目</option>
           </select>
         </div>
@@ -75,7 +75,7 @@
         <div class="col-lg-offset-2 col-lg-4">
           <div class="checkbox">
             <label>
-              <input type="checkbox" id="showCoverPic" value="1"> 封面图片显示在正文中
+              <input type="checkbox" id="show-cover-pic" value="1"> 封面图片显示在正文中
             </label>
           </div>
         </div>
@@ -106,22 +106,22 @@
       </div>
 
       <div class="form-group">
-        <label class="col-lg-2 control-label" for="sourceLinkTo">
+        <label class="col-lg-2 control-label" for="source-link-to">
           原文链接
         </label>
 
         <div class="col-lg-4">
-          <p class="form-control-static" id="sourceLinkTo"></p>
+          <p class="form-control-static" id="source-link-to"></p>
         </div>
       </div>
 
       <div class="form-group">
-        <label class="col-lg-2 control-label" for="linkTo">
+        <label class="col-lg-2 control-label" for="link-to">
           跳转地址
         </label>
 
         <div class="col-lg-4">
-          <p class="form-control-static" id="linkTo"></p>
+          <p class="form-control-static" id="link-to"></p>
         </div>
 
         <label class="col-lg-6 help-text" for="no">
@@ -188,7 +188,7 @@
 <?= $block('js') ?>
 <script>
   require(['plugins/article/js/admin/articles', 'linkTo', 'form', 'ueditor', 'validator', 'dataTable', 'jquery-deparam'], function (articles, linkTo, form) {
-    form.toOptions($('#categoryId'), <?= json_encode(wei()->category()->notDeleted()->withParent('article')->getTreeToArray()) ?>, 'id', 'name');
+    form.toOptions($('#category-id'), <?= json_encode(wei()->category()->notDeleted()->withParent('article')->getTreeToArray()) ?>, 'id', 'name');
 
     articles.edit({
       data: <?= $article->toJson() ?>,

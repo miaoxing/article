@@ -15,10 +15,10 @@
         <div class="well form-well m-b">
           <div class="form-group form-group-sm">
 
-            <label class="col-md-1 control-label" for="categoryId">栏目：</label>
+            <label class="col-md-1 control-label" for="category-id">栏目：</label>
 
             <div class="col-md-3">
-              <select class="form-control" name="categoryId" id="categoryId">
+              <select class="form-control" name="categoryId" id="category-id">
                 <option value="">全部栏目</option>
               </select>
             </div>
@@ -38,13 +38,13 @@
       <table id="record-table" class="js-record-table record-table table table-bordered table-hover">
         <thead>
         <tr>
-          <th style="width: 120px">栏目名称</th>
+          <th class="t-5">栏目名称</th>
           <th>标题</th>
-          <th style="width: 200px">修改时间</th>
-          <th style="width: 60px">作者</th>
-          <th style="width: 60px">顺序</th>
+          <th class="t-9">修改时间</th>
+          <th class="t-6">作者</th>
+          <th class="t-4">顺序</th>
           <?php wei()->event->trigger('tableCol', ['article']); ?>
-          <th style="width: 220px">操作</th>
+          <th class="t-10">操作</th>
         </tr>
         </thead>
         <tbody>
@@ -63,7 +63,7 @@
 <?= $block('js') ?>
 <script>
   require(['form', 'dataTable',  'jquery-deparam'], function (form) {
-    form.toOptions($('#categoryId'), <?= json_encode(wei()->category()->notDeleted()->withParent('article')->getTreeToArray()) ?>, 'id', 'name');
+    form.toOptions($('#category-id'), <?= json_encode(wei()->category()->notDeleted()->withParent('article')->getTreeToArray()) ?>, 'id', 'name');
 
     $('#search-form').loadParams().update(function () {
       recordTable.reload($(this).serialize(), false);

@@ -10,7 +10,7 @@
         <div class="well form-well">
           <form class="js-article-picker-form form-inline" role="form">
             <div class="form-group">
-              <select class="form-control" name="categoryId" id="categoryId">
+              <select class="form-control" name="categoryId" id="category-id">
                 <option value="">全部栏目</option>
               </select>
             </div>
@@ -33,7 +33,7 @@
         <table class="js-article-picker-table article-table table table-bordered table-hover">
           <thead>
           <tr>
-            <th style="width:50px;"></th>
+            <th class="t-4"></th>
             <th>标题</th>
           </tr>
           </thead>
@@ -51,7 +51,7 @@
 <?= $block('js') ?>
 <script>
   require(['form'], function (form) {
-    form.toOptions($('#categoryId'), <?= json_encode(wei()->category()->notDeleted()->withParent('article')->getTreeToArray()) ?>, 'id', 'name');
+    form.toOptions($('#category-id'), <?= json_encode(wei()->category()->notDeleted()->withParent('article')->getTreeToArray()) ?>, 'id', 'name');
   });
 </script>
 <?= $block->end() ?>

@@ -28,8 +28,8 @@
         <tr>
           <th>名称</th>
           <th>简介</th>
-          <th style="width: 120px">顺序</th>
-          <th style="width: 120px">操作</th>
+          <th class="t-5">顺序</th>
+          <th class="t-10">操作</th>
         </tr>
         </thead>
         <tbody>
