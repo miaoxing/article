@@ -118,7 +118,8 @@ class Article extends \miaoxing\plugin\BaseModel
     public function replaceImages(callable $fn)
     {
         try {
-            $this['content'] = preg_replace_callback("/<img.+?src=[\"'](.+?)[\"'].*?>/i", function ($matches) use ($fn) {
+            $rxp = "/<img.+?src=[\"'](.+?)[\"'].*?>/i";
+            $this['content'] = preg_replace_callback($rxp, function ($matches) use ($fn) {
                 return $this->execReplaceCallback($matches, $fn);
             }, $this['content']);
         } catch (\Exception $e) {

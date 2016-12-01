@@ -1,6 +1,7 @@
 <?php
 
 namespace plugins\article\docs {
+
     /**
      * @property    \Miaoxing\Article\Service\Article $article 图文
      * @method      \Miaoxing\Article\Service\Article|\Miaoxing\Article\Service\Article[] article()
@@ -11,6 +12,7 @@ namespace plugins\article\docs {
 }
 
 namespace {
+
     /**
      * @return \plugins\article\docs\AutoComplete
      */

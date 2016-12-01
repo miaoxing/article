@@ -187,8 +187,10 @@
 
 <?= $block('js') ?>
 <script>
-  require(['plugins/article/js/admin/articles', 'linkTo', 'form', 'ueditor', 'validator', 'dataTable', 'jquery-deparam'], function (articles, linkTo, form) {
-    form.toOptions($('#category-id'), <?= json_encode(wei()->category()->notDeleted()->withParent('article')->getTreeToArray()) ?>, 'id', 'name');
+  require(['plugins/article/js/admin/articles', 'linkTo',
+    'form', 'ueditor', 'validator', 'dataTable', 'jquery-deparam'], function (articles, linkTo, form) {
+    var categoryJson = <?= json_encode(wei()->category()->notDeleted()->withParent('article')->getTreeToArray()); ?>;
+    form.toOptions($('#category-id'), categoryJson, 'id', 'name');
 
     articles.edit({
       data: <?= $article->toJson() ?>,

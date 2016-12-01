@@ -21,7 +21,8 @@ class Articles extends \miaoxing\plugin\BaseController
             $htmlTitle = $category['name'];
         }
 
-        return $this->view->render('article:articles/lists/' . ($category && $category['listTpl'] ? $category['listTpl'] : 'text') . '.php', get_defined_vars());
+        $tpl = $category && $category['listTpl'] ? $category['listTpl'] : 'text';
+        return $this->view->render('article:articles/lists/' . $tpl . '.php', get_defined_vars());
     }
 
     public function showAction($req)

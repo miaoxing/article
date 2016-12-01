@@ -60,7 +60,8 @@
 
 <?= $block('js') ?>
 <script>
-  require(['plugins/article/js/admin/categories', 'assets/apps/admin/category', 'dataTable', 'form', 'jquery-deparam'], function (categories) {
+  require(['plugins/article/js/admin/categories', 'assets/apps/admin/category',
+    'dataTable', 'form', 'jquery-deparam'], function (categories) {
     categories.index();
   });
 </script>

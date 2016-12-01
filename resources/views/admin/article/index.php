@@ -63,7 +63,8 @@
 <?= $block('js') ?>
 <script>
   require(['form', 'dataTable',  'jquery-deparam'], function (form) {
-    form.toOptions($('#category-id'), <?= json_encode(wei()->category()->notDeleted()->withParent('article')->getTreeToArray()) ?>, 'id', 'name');
+    var categoryJson = <?= json_encode(wei()->category()->notDeleted()->withParent('article')->getTreeToArray()); ?>;
+    form.toOptions($('#category-id'), categoryJson, 'id', 'name');
 
     $('#search-form').loadParams().update(function () {
       recordTable.reload($(this).serialize(), false);
