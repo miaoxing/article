@@ -1,6 +1,6 @@
-define(['assets/apps/admin/category'], function (categoryUtil) {
+define(['template', 'assets/apps/admin/category'], function (template, categoryUtil) {
   var Categories = function () {
-
+    // do nothing.
   };
 
   $.extend(Categories.prototype, {
@@ -44,5 +44,5 @@ define(['assets/apps/admin/category'], function (categoryUtil) {
     }
   });
 
-  return new Categories;
+  return new Categories();
 });

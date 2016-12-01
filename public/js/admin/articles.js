@@ -1,6 +1,6 @@
-define(function () {
+define(['template'], function (template) {
   var Articles = function () {
-
+    // do nothing.
   };
 
   $.extend(Articles.prototype, {
@@ -34,7 +34,7 @@ define(function () {
             data: 'id',
             sClass: 'text-center',
             render: function (data, type, full) {
-              return template.render('table-actions', full)
+              return template.render('table-actions', full);
             }
           }
         ]
@@ -44,7 +44,6 @@ define(function () {
     },
 
     // 编辑文章
-    //========
     linkTo: {},
     edit: function (options) {
       $.extend(this, options);
@@ -53,9 +52,12 @@ define(function () {
         .ajaxForm({
           url: $.url('admin/article/' + (this.data.id ? 'update' : 'create')),
           dataType: 'json',
-          beforeSubmit: function (arr, $form, options) {
+          beforeSubmit: function (arr, $form) {
             // FIXME jQuery对单个checkbox的处理
-            arr.push({name: 'showCoverPic', value: +$('#showCoverPic').prop('checked')});
+            arr.push({
+              name: 'showCoverPic',
+              value: Number($('#showCoverPic').prop('checked'))
+            });
             return $form.valid();
           },
           success: function (result) {
@@ -65,7 +67,7 @@ define(function () {
         .validate();
 
       // FIXME loadJSON不支持checkbox
-      $('#showCoverPic').prop('checked', this.data.showCoverPic == '1');
+      $('#showCoverPic').prop('checked', this.data.showCoverPic === '1');
 
       // 初始化链接选择器
       $('#linkTo').linkTo({
@@ -93,5 +95,5 @@ define(function () {
     }
   });
 
-  return new Articles;
+  return new Articles();
 });
