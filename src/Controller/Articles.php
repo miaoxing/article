@@ -38,6 +38,12 @@ class Articles extends \miaoxing\plugin\BaseController
 
         $this->pageConfig['displayFooter'] = false;
 
-        return get_defined_vars();
+        switch ($req['_format']) {
+            case 'json':
+                return $this->suc(['data' => $article]);
+
+            default:
+                return get_defined_vars();
+        }
     }
 }
