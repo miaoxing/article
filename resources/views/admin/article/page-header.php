@@ -1,7 +1,7 @@
 <div class="page-header">
   <div class="pull-right">
     <a class="btn btn-success" href="<?= $url('admin/article/new') ?>">添加文章</a>
-    <a class="btn btn-success" href="<?= $url('admin/article-category') ?>">栏目管理</a>
+    <a class="btn btn-default" href="<?= $url('admin/article-category') ?>">栏目管理</a>
   </div>
 
   <h1>
