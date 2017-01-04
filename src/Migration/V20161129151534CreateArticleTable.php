@@ -11,7 +11,7 @@ class V20161129151534CreateArticleTable extends BaseMigration
      */
     public function up()
     {
-        $this->scheme->table('article')
+        $this->schema->table('article')
             ->id()
             ->string('categoryId', 36)
             ->string('title')
@@ -35,6 +35,6 @@ class V20161129151534CreateArticleTable extends BaseMigration
      */
     public function down()
     {
-        $this->scheme->dropIfExists('article');
+        $this->schema->dropIfExists('article');
     }
 }
