@@ -48,7 +48,7 @@
 <?= $block('js') ?>
   <script>
     require([
-      'plugins/wechat<?= $isWechatCrop ? 'Corp' : '' ?>/assets/wx<?= $isWechatCrop ? '-corp' : '' ?>'
+      'plugins/wechat<?= $isWechatCrop ? 'Corp' : '' ?>/js/wx<?= $isWechatCrop ? '-corp' : '' ?>'
     ], function (wx) {
       var isSafe = <?= $article['safe'] ?>;
       if(isSafe == 1) {
