@@ -142,7 +142,7 @@ class Article extends \miaoxing\plugin\BaseModel
         $url = trim($url);
 
         if (!$url) {
-            $this->logger->info('Empty url: ' . $ori);
+            $this->logger->info('Ignore empty url', ['url' => $ori]);
 
             return $ori;
         }
@@ -150,7 +150,7 @@ class Article extends \miaoxing\plugin\BaseModel
         // 检查是否为图片
         $ext = $this->getExt($url);
         if (!in_array($ext, $this->exts)) {
-            $this->logger->info('Invalid image extension: ' . $url);
+            $this->logger->info('Ignore invalid image extension', ['url' =>  $url]);
 
             return $ori;
         }
