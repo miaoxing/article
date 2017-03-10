@@ -1,6 +1,6 @@
 <?php $view->layout() ?>
 
-<?php $isWechatCrop = wei()->plugin->isInstalled('wechatCorp'); ?>
+<?php $isWechatCrop = wei()->plugin->isInstalled('wechat-corp'); ?>
 <?php if ($isWechatCrop) :?>
 <?php $account = wei()->wechatCorpAccount->getCurrentAccount(); ?>
 <?php else : ?>
