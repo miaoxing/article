@@ -25,8 +25,8 @@ class V20161129151534CreateArticleTable extends BaseMigration
             ->text('linkTo')->comment('linkTo服务配置数组')
             ->text('sourceLinkTo')->comment('原文链接的linkTo配置')
             ->int('sort')->defaults(50)
-            ->timestamps()
-            ->userstamps()
+            ->timestampsV1()
+            ->userstampsV1()
             ->exec();
     }
 
