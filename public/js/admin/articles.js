@@ -61,7 +61,11 @@ define(['template'], function (template) {
             return $form.valid();
           },
           success: function (result) {
-            $.msg(result);
+            $.msg(result, function () {
+              if (result.code > 0) {
+                window.location.href = $.url('admin/article');
+              }
+            });
           }
         })
         .validate();
