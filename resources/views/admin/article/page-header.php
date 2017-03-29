@@ -5,7 +5,7 @@
   </div>
 
   <h1>
-    微官网
+    图文管理
     <small>
       <i class="fa fa-angle-double-right"></i>
       文章管理

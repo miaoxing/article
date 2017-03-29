@@ -3,7 +3,7 @@
 <div class="page-header">
   <a class="btn pull-right btn-success" href="<?= $url('admin/articleCategory/new') ?>">添加栏目</a>
   <h1>
-    微官网
+    图文管理
     <small>
       <i class="fa fa-angle-double-right"></i>
       文章栏目管理
@@ -51,7 +51,7 @@
     <a href="<%= $.url('admin/articleCategory/edit', {id: id}) %>" title="编辑">
       <i class="fa fa-edit bigger-130"></i>
     </a>
-    <a class="text-danger delete-record" href="javascript:;"
+    <a class="text-danger delete-record" href="javascript:"
       data-href="<%= $.url('admin/articleCategory/destroy', {id: id}) %>" title="删除">
       <i class="fa fa-trash-o bigger-130"></i>
     </a>
