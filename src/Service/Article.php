@@ -21,6 +21,7 @@ class Article extends \miaoxing\plugin\BaseModel
         'sort' => 50,
         'linkTo' => [],
         'sourceLinkTo' => [],
+        'content' => '',
     ];
 
     protected $category;
