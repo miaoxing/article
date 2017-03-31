@@ -151,7 +151,7 @@ class Article extends \miaoxing\plugin\BaseModel
         // 检查是否为图片
         $ext = $this->getExt($url);
         if (!in_array($ext, $this->exts)) {
-            $this->logger->info('Ignore invalid image extension', ['url' =>  $url]);
+            $this->logger->info('Ignore invalid image extension', ['url' => $url]);
 
             return $ori;
         }
