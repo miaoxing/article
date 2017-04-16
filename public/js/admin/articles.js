@@ -1,4 +1,4 @@
-define(['template'], function (template) {
+define(['template', 'plugins/admin/js/image-input'], function (template) {
   var Articles = function () {
     // do nothing.
   };
@@ -96,7 +96,7 @@ define(['template'], function (template) {
       $('#content').ueditor();
 
       // 点击选择图片
-      $('#thumb').imageInput();
+      $('input[type="file"].js-image-upload').imageUploadInput();
     }
   });
 

@@ -56,14 +56,9 @@
         </label>
 
         <div class="col-lg-4">
-          <div class="input-group">
-            <input type="text" class="form-control" id="thumb" name="thumb">
-            <span class="input-group-btn">
-                <button id="select-thumb" class="btn btn-white" type="button">
-                  <i class="fa fa-picture-o"></i>
-                  选择图片
-                </button>
-            </span>
+          <div class="input-group js-upload-container">
+            <input type="file" class="js-image-upload"/>
+            <input type="hidden" id="thumb" name="thumb" class="js-image-url"/>
           </div>
         </div>
         <label class="col-lg-6 help-text" for="no">
