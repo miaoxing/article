@@ -22,7 +22,7 @@
     <?php endif; ?>
 
     <div class="article-description-item article-time">
-      <?= date('Y-m-d', strtotime($article['createTime'])) ?>
+      <?= date('Y-m-d', strtotime($article['updateTime'])) ?>
     </div>
     <div class="article-description-item article-category">
       <?= $article['author'] ?>
