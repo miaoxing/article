@@ -30,12 +30,10 @@ class Articles extends \miaoxing\plugin\BaseController
     {
         $article = wei()->article()->cache()->findOneById($req['id']);
 
-        // 只显示头部的标题,不显示菜单上的标题
-        $headerTitle = $article['title'];
-
         $category = wei()->category()->withType('article')->findOneById($article['categoryId']);
         $htmlTitle = $category['name'];
 
+        $this->pageConfig['displayHeader'] = false;
         $this->pageConfig['displayFooter'] = false;
 
         switch ($req['_format']) {
@@ -43,6 +41,7 @@ class Articles extends \miaoxing\plugin\BaseController
                 return $this->suc(['data' => $article]);
 
             default:
+
                 return get_defined_vars();
         }
     }
