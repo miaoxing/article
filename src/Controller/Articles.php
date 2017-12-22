@@ -41,7 +41,6 @@ class Articles extends \miaoxing\plugin\BaseController
                 return $this->suc(['data' => $article]);
 
             default:
-
                 return get_defined_vars();
         }
     }
