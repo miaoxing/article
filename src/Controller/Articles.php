@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Article\Controller;
 
-class Articles extends \miaoxing\plugin\BaseController
+class Articles extends \Miaoxing\Plugin\BaseController
 {
     protected $guestPages = ['articles'];
 

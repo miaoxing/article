@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Article\Controller\Admin;
 
-class Article extends \miaoxing\plugin\BaseController
+class Article extends \Miaoxing\Plugin\BaseController
 {
     protected $controllerName = '图文管理';
 
