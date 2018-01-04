@@ -9,7 +9,7 @@ namespace Miaoxing\Article\Service;
  * @method string url($url = '', $params = array())
  * @property \Wei\Logger $logger
  */
-class Article extends \miaoxing\plugin\BaseModel
+class Article extends \Miaoxing\Plugin\BaseModel
 {
     protected $exts = [
         'jpg', 'jpeg', 'gif', 'png', 'bmp',
