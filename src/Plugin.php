@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Article;
 
-class Plugin extends \miaoxing\plugin\BasePlugin
+class Plugin extends \Miaoxing\Plugin\BasePlugin
 {
     protected $name = '文章管理';
 
