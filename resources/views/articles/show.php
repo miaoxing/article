@@ -1,24 +1,27 @@
-<?php $view->layout() ?>
+<?php
+
+$view->layout();
+?>
 
 <?php $isWechatCrop = wei()->plugin->isInstalled('wechat-corp'); ?>
-<?php if ($isWechatCrop) :?>
-<?php $account = wei()->wechatCorpAccount->getCurrentAccount(); ?>
+<?php if ($isWechatCrop) : ?>
+  <?php $account = wei()->wechatCorpAccount->getCurrentAccount(); ?>
 <?php else : ?>
-<?php $account = wei()->wechatAccount->getCurrentAccount(); ?>
+  <?php $account = wei()->wechatAccount->getCurrentAccount(); ?>
 <?php endif; ?>
 
 <?= $block('css') ?>
 <link rel="stylesheet" href="<?= $asset('plugins/article/css/articles.css') ?>">
 <?= $block->end() ?>
 
-<div data-role="content" class="article-content">
+<div class="article-content">
   <h2 class="article-title"><?= $article['title'] ?></h2>
 
   <div class="article-description">
     <?php if ($account) : ?>
-    <a class="article-description-item article-icon" href="javascript:;">
-      <img src="<?= $account['headImg']; ?>">
-    </a>
+      <a class="article-description-item article-icon" href="javascript:;">
+        <img src="<?= $account['headImg']; ?>">
+      </a>
     <?php endif; ?>
 
     <div class="article-description-item article-time">
@@ -45,21 +48,4 @@
   </div>
 </div>
 
-<?= $block('js') ?>
-  <script>
-    require([
-      'plugins/wechat<?= $isWechatCrop ? 'Corp' : '' ?>/js/wx<?= $isWechatCrop ? '-corp' : '' ?>'
-    ], function (wx) {
-      var isSafe = <?= $article['safe'] ?>;
-      if(isSafe == 1) {
-        wx.load(function () {
-          wx.hideOptionMenu();
-        });
-      } else {
-        wx.load(function () {
-          wx.showOptionMenu();
-        });
-      }
-    });
-  </script>
-<?= $block->end() ?>
+<?php $wei->event->trigger('afterArticlesShowRender', [$article]) ?>
