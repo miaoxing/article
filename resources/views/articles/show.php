@@ -1,14 +1,8 @@
 <?php
 
 $view->layout();
+$headImg = $wei->event->until('articlesShowGetHeadImg');
 ?>
-
-<?php $isWechatCrop = wei()->plugin->isInstalled('wechat-corp'); ?>
-<?php if ($isWechatCrop) : ?>
-  <?php $account = wei()->wechatCorpAccount->getCurrentAccount(); ?>
-<?php else : ?>
-  <?php $account = wei()->wechatAccount->getCurrentAccount(); ?>
-<?php endif; ?>
 
 <?= $block('css') ?>
 <link rel="stylesheet" href="<?= $asset('plugins/article/css/articles.css') ?>">
@@ -18,11 +12,11 @@ $view->layout();
   <h2 class="article-title"><?= $article['title'] ?></h2>
 
   <div class="article-description">
-    <?php if ($account) : ?>
-      <a class="article-description-item article-icon" href="javascript:;">
-        <img src="<?= $account['headImg']; ?>">
+    <?php if ($headImg) : ?>
+      <a class="article-description-item article-icon">
+        <img src="<?= $headImg ?>">
       </a>
-    <?php endif; ?>
+    <?php endif ?>
 
     <div class="article-description-item article-time">
       <?= date('Y-m-d', strtotime($article['updateTime'])) ?>
@@ -31,19 +25,19 @@ $view->layout();
       <?= $article['author'] ?>
     </div>
 
-    <?php if ($account) : ?>
+    <?php if ($siteTitle = $wei->setting('site.title')) : ?>
       <div class="article-description-item">
-        <?= $account['nickName'] ?>
+        <?= $siteTitle ?>
       </div>
-    <?php endif; ?>
+    <?php endif ?>
   </div>
 
   <div class="article-detail">
     <?php if ($article['showCoverPic']) : ?>
       <div class="article-thumb">
-        <img src="<?= $article['thumb']; ?>">
+        <img src="<?= $article['thumb'] ?>">
       </div>
-    <?php endif; ?>
+    <?php endif ?>
     <?= $article['content'] ?>
   </div>
 </div>
