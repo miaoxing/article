@@ -58,7 +58,7 @@
   </div>
 </script>
 
-<?= $block('js') ?>
+<?= $block->js() ?>
 <script>
   require(['plugins/article/js/admin/categories', 'assets/apps/admin/category',
     'dataTable', 'form', 'jquery-deparam'], function (categories) {

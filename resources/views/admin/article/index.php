@@ -1,6 +1,6 @@
 <?php $view->layout() ?>
 
-<?= $block('css') ?>
+<?= $block->css() ?>
 <link rel="stylesheet" href="<?= $asset('plugins/admin/css/filter.css') ?>"/>
 <?= $block->end() ?>
 
@@ -60,7 +60,7 @@
 
 <?php require $view->getFile('article:admin/article/actions.php'); ?>
 
-<?= $block('js') ?>
+<?= $block->js() ?>
 <script>
   require(['form', 'dataTable',  'jquery-deparam'], function (form) {
     var categoryJson = <?= json_encode(wei()->category()->notDeleted()->withParent('article')->getTreeToArray()); ?>;

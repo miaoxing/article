@@ -13,7 +13,7 @@
   </div>
 </div>
 
-<?= $block('js') ?>
+<?= $block->js() ?>
 <script>
 $(document)
   .on('linkToChangeType', function (e) {

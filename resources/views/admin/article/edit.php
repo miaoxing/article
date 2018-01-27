@@ -180,7 +180,7 @@
 </div><!-- /.col -->
 <!-- /.row -->
 
-<?= $block('js') ?>
+<?= $block->js() ?>
 <script>
   require(['plugins/article/js/admin/articles', 'linkTo',
     'form', 'ueditor', 'validator', 'dataTable', 'jquery-deparam'], function (articles, linkTo, form) {

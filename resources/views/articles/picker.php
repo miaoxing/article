@@ -48,7 +48,7 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div>
-<?= $block('js') ?>
+<?= $block->js() ?>
 <script>
   require(['form'], function (form) {
     form.toOptions($('#category-id'), <?= json_encode(wei()->category()->notDeleted()->withParent('article')->getTreeToArray()) ?>, 'id', 'name');

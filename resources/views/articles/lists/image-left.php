@@ -1,6 +1,6 @@
 <?php $view['theme'] = 'bs'; $view->layout() ?>
 
-<?= $block('css') ?>
+<?= $block->css() ?>
 <link rel="stylesheet" href="<?= $asset(['plugins/article/css/articles.css']) ?>">
 <?= $block->end() ?>
 
