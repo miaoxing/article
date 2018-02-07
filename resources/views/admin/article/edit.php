@@ -56,10 +56,7 @@
         </label>
 
         <div class="col-lg-4">
-          <div class="input-group js-upload-container">
-            <input type="file" class="js-image-upload"/>
-            <input type="hidden" id="thumb" name="thumb" class="js-image-url"/>
-          </div>
+          <input class="js-thumb" id="thumb" name="thumb" type="text">
         </div>
         <label class="col-lg-6 help-text" for="thumb">
           支持JPG、PNG格式，建议大图900像素 * 500像素，小图200像素 * 200像素，小于2M
