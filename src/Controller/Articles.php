@@ -18,7 +18,7 @@ class Articles extends \Miaoxing\Plugin\BaseController
             $categoryIds = $category->getChildrenIds();
             $articles->andWhere(['categoryId' => $categoryIds]);
             $headerTitle = $category['name'];
-            $htmlTitle = $category['name'];
+            $this->page->setTitle($category['name']);
         }
 
         $tpl = $category && $category['listTpl'] ? $category['listTpl'] : 'text';
@@ -31,10 +31,11 @@ class Articles extends \Miaoxing\Plugin\BaseController
         $article = wei()->article()->cache()->findOneById($req['id']);
 
         $category = wei()->category()->withType('article')->findOneById($article['categoryId']);
-        $htmlTitle = $category['name'];
 
-        $this->page->hideHeader();
-        $this->page->hideFooter();
+        $this->page
+            ->setTitle($category['name'])
+            ->hideHeader()
+            ->hideFooter();
 
         switch ($req['_format']) {
             case 'json':
