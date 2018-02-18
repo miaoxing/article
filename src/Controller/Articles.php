@@ -33,8 +33,8 @@ class Articles extends \Miaoxing\Plugin\BaseController
         $category = wei()->category()->withType('article')->findOneById($article['categoryId']);
         $htmlTitle = $category['name'];
 
-        $this->layout->hideHeader();
-        $this->layout->hideFooter();
+        $this->page->hideHeader();
+        $this->page->hideFooter();
 
         switch ($req['_format']) {
             case 'json':
