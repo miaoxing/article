@@ -6,6 +6,11 @@ use Miaoxing\Plugin\Test\BaseControllerTestCase;
 
 class ArticleTest extends BaseControllerTestCase
 {
+    public function testCreate()
+    {
+        $category = wei()->category();
+    }
+
     public function testDestroy()
     {
         $article = wei()->article()->save();
