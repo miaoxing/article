@@ -21,9 +21,9 @@ class Articles extends \Miaoxing\Plugin\BaseController
             $this->page->setTitle($category['name']);
         }
 
-        $tpl = $category && $category['listTpl'] ? $category['listTpl'] : 'text';
+        $tpl = isset($category) && $category['listTpl'] ? $category['listTpl'] : 'text';
 
-        return $this->view->render('article:articles/lists/' . $tpl . '.php', get_defined_vars());
+        return get_defined_vars();
     }
 
     public function showAction($req)

@@ -1,9 +1,3 @@
-<?php $view['theme'] = 'bs'; $view->layout() ?>
-
-<?= $block->css() ?>
-<link rel="stylesheet" href="<?= $asset(['plugins/article/css/articles.css']) ?>">
-<?= $block->end() ?>
-
 <ul class="list article-list">
   <?php foreach ($articles as $article) : ?>
     <li>

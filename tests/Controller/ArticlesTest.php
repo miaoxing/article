@@ -35,7 +35,7 @@ class ArticlesTest extends BaseControllerTestCase
         $this->assertContains($article['title'], $res);
         $this->assertContains($category['name'], $res);
         $this->assertContains($article['content'], $res);
-        $this->assertContains(substr($article['createTime'], 0, 10), $res);
+        $this->assertContains(substr($article['updateTime'], 0, 10), $res);
         $this->assertContains(wei()->setting('site.title'), $res);
     }
 }
