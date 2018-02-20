@@ -1,0 +1,9 @@
+{
+  "name": "miaoxing-article",
+  "version": "1.0.0",
+  "repository": "https://github.com/miaoxing/article",
+  "license": "MIT",
+  "devDependencies": {
+    "miaoxing-coding-standards": "^2.0.0"
+  }
+}
