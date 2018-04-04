@@ -43,6 +43,7 @@
           <th class="t-9">修改时间</th>
           <th class="t-6">作者</th>
           <th class="t-4">顺序</th>
+          <th class="t-4">UV/PV</th>
           <?php wei()->event->trigger('tableCol', ['article']); ?>
           <th class="t-10">操作</th>
         </tr>
@@ -90,6 +91,12 @@
         },
         {
           data: 'sort'
+        },
+        {
+          data: 'pv',
+          render: function (data, type, full) {
+            return full.uv + '/' + full.pv;
+          }
         },
         <?php wei()->event->trigger('tableData', ['article']); ?>
         {

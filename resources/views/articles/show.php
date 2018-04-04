@@ -42,4 +42,8 @@ $headImg = $wei->event->until('articlesShowGetHeadImg');
   </div>
 </div>
 
+<div class="hide">
+  <img src="<?= $url('article-logs/create', ['article_id' => $article['id']]) ?>">
+</div>
+
 <?php $wei->event->trigger('afterArticlesShowRender', [$article]) ?>
