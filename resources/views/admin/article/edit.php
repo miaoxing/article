@@ -122,26 +122,6 @@
       </div>
 
       <div class="form-group">
-        <label class="col-lg-2 control-label" for="safe">
-          保密
-        </label>
-
-        <div class="col-lg-4">
-          <label class="radio-inline">
-            <input type="radio" name="safe" value="1"> 保密
-          </label>
-          <label class="radio-inline">
-            <input type="radio" name="safe" value="0" checked> 公开
-          </label>
-
-        </div>
-
-        <label class="col-lg-6 help-text" for="no">
-          如果设置保密则图文不可转发分享(若设置跳转链接会失效)
-        </label>
-      </div>
-
-      <div class="form-group">
         <label class="col-lg-2 control-label" for="sort">
           顺序
         </label>
