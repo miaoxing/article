@@ -15,9 +15,9 @@ class ArticleLogs extends BaseController
             'article_id' => $article['id'],
         ]);
 
-        $article->incr('pv', 1);
+        $article->incr('pv');
         if ($log->isNew()) {
-            $article->incr('uv', 1);
+            $article->incr('uv');
         }
 
         $log->save();
