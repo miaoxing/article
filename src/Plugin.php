@@ -48,7 +48,7 @@ class Plugin extends \Miaoxing\Plugin\BasePlugin
 
     public function onLinkToRenderInput()
     {
-        $this->view->display('article:articles/linkTo.php');
+        $this->view->display('@article/articles/linkTo.php');
     }
 
     public function onLinkToGetUrlArticle($linkTo)
