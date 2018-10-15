@@ -11,10 +11,7 @@
           </h4>
           <div class="list-body">
             <?= $article['intro'] ?>
-
-            <div class="article-like">
-              <i class="iconfont icon-aixin"></i> <?= $article['likeNum'] ?>
-            </div>
+            <?= $view->render('@article/articles/_like.php') ?>
           </div>
         </div>
       </a>

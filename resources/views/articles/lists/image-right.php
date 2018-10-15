@@ -9,10 +9,7 @@
 
           <div class="list-body">
             <?= $article['intro'] ?>
-
-            <div class="article-like-left article-like">
-              <i class="iconfont icon-aixin"></i> <?= $article['likeNum'] ?>
-            </div>
+            <?= $view->render('@article/articles/_like.php') ?>
           </div>
         </div>
         <div class="list-col article-image-right">

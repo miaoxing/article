@@ -2,15 +2,26 @@
 
 namespace Miaoxing\Article\Service;
 
+use Miaoxing\Config\ConfigTrait;
+
 /**
  * @property \Miaoxing\LinkTo\Service\LinkTo $linkTo
  * @method string linkTo(array $options)
  * @property \Wei\Url $url
  * @method string url($url = '', $params = array())
  * @property \Wei\Logger $logger
+ * @property bool $enableLike
  */
 class Article extends \Miaoxing\Plugin\BaseModel
 {
+    use ConfigTrait;
+
+    protected $configs = [
+        'enableLike' => [
+            'default' => false,
+        ]
+    ];
+
     protected $exts = [
         'jpg', 'jpeg', 'gif', 'png', 'bmp',
     ];
