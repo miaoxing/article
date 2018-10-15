@@ -12,6 +12,10 @@
 
           <div class="list-body">
             <?= $article['intro'] ?>
+
+            <div class="article-list-like">
+              <i class="iconfont icon-aixin"></i> <?= $article['likeNum'] ?>
+            </div>
           </div>
         </div>
       </a>

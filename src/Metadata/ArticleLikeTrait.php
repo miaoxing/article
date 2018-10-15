@@ -3,16 +3,15 @@
 namespace Miaoxing\Article\Metadata;
 
 /**
- * ArticleLogTrait
+ * ArticleLikeTrait
  *
  * @property int $id
- * @property int $appId
  * @property int $articleId
  * @property int $userId
- * @property int $action
+ * @property int $type
  * @property string $createdAt
  */
-trait ArticleLogTrait
+trait ArticleLikeTrait
 {
     /**
      * @var array
@@ -20,10 +19,9 @@ trait ArticleLogTrait
      */
     protected $casts = [
         'id' => 'int',
-        'app_id' => 'int',
         'article_id' => 'int',
         'user_id' => 'int',
-        'action' => 'int',
+        'type' => 'int',
         'created_at' => 'datetime',
     ];
 }

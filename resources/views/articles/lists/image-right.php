@@ -9,6 +9,10 @@
 
           <div class="list-body">
             <?= $article['intro'] ?>
+
+            <div class="article-list-like-left article-list-like">
+              <i class="iconfont icon-aixin"></i> <?= $article['likeNum'] ?>
+            </div>
           </div>
         </div>
         <div class="list-col article-image-right">

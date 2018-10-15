@@ -3,13 +3,7 @@
 }
 
 .article-list .list-body {
-  text-shadow: none;
-  font-weight: normal;
-}
-
-/* 上图片下标题 */
-.article-image-top img {
-  height: 200px;
+  margin-bottom: 15px;
 }
 
 /* 左图片右标题 */
@@ -89,3 +83,16 @@
   width: 100%;
 }
 
+.article-list-like {
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+}
+
+.article-list-like .iconfont {
+  font-size: 12px;
+}
+
+.article-list-like-left {
+  left: 15px;
+}

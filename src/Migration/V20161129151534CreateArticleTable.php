@@ -23,6 +23,7 @@ class V20161129151534CreateArticleTable extends BaseMigration
             ->string('intro', 512)->comment('文章简介')
             ->int('pv')
             ->int('uv')
+            ->int('likeNum')
             ->text('linkTo')->comment('linkTo服务配置数组')
             ->text('sourceLinkTo')->comment('原文链接的linkTo配置')
             ->int('sort')->defaults(50)
