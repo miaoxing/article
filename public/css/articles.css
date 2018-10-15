@@ -28,6 +28,7 @@
 
 /* 详情页 */
 .article-content {
+  position: relative;
   background: #fff;
   padding: 20px 15px 15px;
 }
@@ -83,16 +84,21 @@
   width: 100%;
 }
 
-.article-list-like {
+.article-like {
   position: absolute;
   right: 15px;
   bottom: 10px;
 }
 
-.article-list-like .iconfont {
+.article-like:hover,
+.article-like:active {
+  text-decoration: none;
+}
+
+.article-like .iconfont {
   font-size: 12px;
 }
 
-.article-list-like-left {
+.article-like-left {
   left: 15px;
 }

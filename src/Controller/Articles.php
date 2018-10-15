@@ -32,6 +32,8 @@ class Articles extends \Miaoxing\Plugin\BaseController
 
         $category = wei()->category()->withType('article')->findOneById($article['categoryId']);
 
+        $like = wei()->articleLikeModel()->mine()->desc('id')->findOrInit(['article_id' => $article['id']]);
+
         $this->page
             ->setTitle($category['name'])
             ->hideHeader()

@@ -12,7 +12,7 @@
           <div class="list-body">
             <?= $article['intro'] ?>
 
-            <div class="article-list-like">
+            <div class="article-like">
               <i class="iconfont icon-aixin"></i> <?= $article['likeNum'] ?>
             </div>
           </div>

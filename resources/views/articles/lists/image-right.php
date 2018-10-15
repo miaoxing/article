@@ -10,7 +10,7 @@
           <div class="list-body">
             <?= $article['intro'] ?>
 
-            <div class="article-list-like-left article-list-like">
+            <div class="article-like-left article-like">
               <i class="iconfont icon-aixin"></i> <?= $article['likeNum'] ?>
             </div>
           </div>

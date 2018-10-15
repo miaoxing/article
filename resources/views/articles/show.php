@@ -2,6 +2,7 @@
 
 $view->layout();
 $headImg = $wei->event->until('articlesShowGetHeadImg');
+$wei->page->addCss('//at.alicdn.com/t/font_872953_843lwiv79j5.css');
 ?>
 
 <?= $block->css() ?>
@@ -40,6 +41,11 @@ $headImg = $wei->event->until('articlesShowGetHeadImg');
     <?php endif ?>
     <?= $article['content'] ?>
   </div>
+
+  <a class="js-article-like article-like <?= $like['type'] ? 'text-danger' : 'link-dark' ?>">
+    <i class="iconfont icon-aixin"></i>
+    <span class="js-article-num"><?= $article['likeNum'] ?></span>
+  </a>
 </div>
 
 <div class="hide">
@@ -47,3 +53,30 @@ $headImg = $wei->event->until('articlesShowGetHeadImg');
 </div>
 
 <?php $wei->event->trigger('afterArticlesShowRender', [$article]) ?>
+
+<?= $block->js() ?>
+<script>
+  $('.js-article-like').click(function() {
+    var $that = $(this);
+    var $num = $('.js-article-num');
+    var num = parseInt($num.html(), 10);
+     $.ajax({
+       url: $.url('article-likes/toggle', {articleId: <?= $article['id'] ?>}),
+       dataType: 'json',
+     }).then(function (ret) {
+       if (ret.code !== 1) {
+         $.msg(ret);
+         return;
+       }
+
+       if ($that.hasClass('link-dark')) {
+         $that.removeClass('link-dark').addClass('text-danger');
+         $num.html(num + 1);
+       } else {
+         $that.removeClass('text-danger').addClass('link-dark');
+         $num.html(num - 1);
+       }
+     });
+  });
+</script>
+<?= $block->end() ?>
