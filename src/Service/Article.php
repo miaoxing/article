@@ -217,4 +217,9 @@ class Article extends \Miaoxing\Plugin\BaseModel
             return '';
         }
     }
+
+    public function getTypeName()
+    {
+        return $this->isLinkTo() ? '跳转' : '图文';
+    }
 }

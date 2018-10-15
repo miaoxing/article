@@ -23,6 +23,16 @@
               </select>
             </div>
 
+            <label class="col-md-1 control-label" for="type">类型：</label>
+
+            <div class="col-md-3">
+              <select class="form-control" name="type" id="type">
+                <option value="">全部</option>
+                <option value="1">图文</option>
+                <option value="2">跳转</option>
+              </select>
+            </div>
+
             <?php wei()->event->trigger('searchForm', ['article']); ?>
 
             <label class="col-md-1 control-label" for="search">标题：</label>
@@ -39,6 +49,7 @@
         <thead>
         <tr>
           <th class="t-5">栏目名称</th>
+          <th class="t-2">类型</th>
           <th>标题</th>
           <th class="t-9">修改时间</th>
           <th class="t-6">作者</th>
@@ -78,6 +89,9 @@
       columns: [
         {
           data: 'category.name'
+        },
+        {
+          data: 'typeName',
         },
         {
           data: 'title',

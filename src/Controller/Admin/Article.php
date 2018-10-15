@@ -33,6 +33,10 @@ class Article extends \Miaoxing\Plugin\BaseController
                     $articles->andWhere('title LIKE ?', '%' . $req['search'] . '%');
                 }
 
+                if ($req['type']) {
+                    $articles->andWhere(sprintf("linkTo %s '{}'", $req['type'] == '1' ? '=' : '!='));
+                }
+
                 // 分类筛选
                 if ($req['categoryId']) {
                     $articles->andWhere('categoryId = ?', $req['categoryId']);
@@ -44,6 +48,7 @@ class Article extends \Miaoxing\Plugin\BaseController
                 foreach ($articles as $article) {
                     $data[] = $article->toArray() + [
                             'category' => $article->getCategory()->toArray(),
+                            'typeName' => $article->getTypeName(),
                         ];
                 }
 
