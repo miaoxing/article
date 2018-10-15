@@ -23,6 +23,13 @@ define(['template', 'assets/apps/admin/category'], function (template, categoryU
             }
           },
           {
+            data: 'pv',
+            sClass: 'text-center',
+            render: function (data, type, full) {
+              return full.uv + '/' + full.pv;
+            }
+          },
+          {
             data: 'sort',
             sClass: 'text-center'
           },
