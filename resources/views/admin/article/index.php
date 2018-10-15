@@ -55,6 +55,9 @@
           <th class="t-6">作者</th>
           <th class="t-4">顺序</th>
           <th class="t-4">UV/PV</th>
+          <?php if (wei()->article->enableLike) { ?>
+            <th class="t-4">点赞数</th>
+          <?php } ?>
           <?php wei()->event->trigger('tableCol', ['article']); ?>
           <th class="t-10">操作</th>
         </tr>
@@ -112,6 +115,11 @@
             return full.uv + '/' + full.pv;
           }
         },
+        <?php if (wei()->article->enableLike) { ?>
+        {
+          data: 'likeNum',
+        },
+        <?php } ?>
         <?php wei()->event->trigger('tableData', ['article']); ?>
         {
           data: 'id',
