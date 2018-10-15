@@ -30,7 +30,7 @@ class Articles extends \Miaoxing\Plugin\BaseController
     {
         $article = wei()->article()->cache()->findOneById($req['id']);
 
-        $category = wei()->category()->withType('article')->findOneById($article['categoryId']);
+        $category = wei()->category()->withType('article')->findOrInitById($article['categoryId']);
 
         $like = wei()->articleLikeModel()->mine()->desc('id')->findOrInit(['article_id' => $article['id']]);
 
