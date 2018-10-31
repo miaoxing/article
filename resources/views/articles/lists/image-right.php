@@ -9,7 +9,7 @@
 
           <div class="list-body">
             <?= $article['intro'] ?>
-            <?= $view->render('@article/articles/_like.php') ?>
+            <?php require $view->getFile('@article/articles/_like.php') ?>
           </div>
         </div>
         <div class="list-col article-image-right">

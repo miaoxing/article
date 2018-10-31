@@ -6,5 +6,6 @@ if (!wei()->article->enableLike) {
 ?>
 
 <div class="article-like">
-  <i class="iconfont icon-aixin"></i> <?= $article['likeNum'] ?>
+  <?= $article['likeNum'] ?>
+  <i class="iconfont icon-aixin"></i>
 </div>

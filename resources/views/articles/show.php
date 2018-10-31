@@ -44,8 +44,8 @@ $wei->page->addCss('//at.alicdn.com/t/font_872953_843lwiv79j5.css');
 
   <?php if (wei()->article->enableLike) { ?>
     <a class="js-article-like article-like <?= $like['type'] ? 'text-danger' : 'link-dark' ?>">
-      <i class="iconfont icon-aixin"></i>
       <span class="js-article-num"><?= $article['likeNum'] ?></span>
+      <i class="iconfont icon-aixin"></i>
     </a>
   <?php } ?>
 </div>
