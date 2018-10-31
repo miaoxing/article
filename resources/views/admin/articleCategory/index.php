@@ -28,7 +28,7 @@
         <tr>
           <th>名称</th>
           <th>简介</th>
-          <th class="t-4">PV/UV</th>
+          <th class="t-4">UV/PV</th>
           <th class="t-5">顺序</th>
           <th class="t-10">操作</th>
         </tr>
