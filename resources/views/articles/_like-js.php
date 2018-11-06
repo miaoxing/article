@@ -4,7 +4,7 @@
     e.preventDefault();
 
     var $that = $(this);
-    var $num = $('.js-article-num');
+    var $num = $that.find('.js-article-num');
     var num = parseInt($num.html(), 10);
     $.ajax({
       url: $.url('article-likes/toggle', {articleId: $that.data('id')}),
