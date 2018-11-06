@@ -29,7 +29,6 @@
 /* 详情页 */
 .article-content {
   position: relative;
-  background: #fff;
   padding: 20px 15px 15px;
 }
 
@@ -87,7 +86,11 @@
 .article-like {
   position: absolute;
   right: 15px;
-  bottom: 10px;
+  font-size: 16px;
+  min-width: 44px;
+  text-align: right;
+  height: 44px;
+  line-height: 44px;
 }
 
 .article-like:hover,
@@ -96,9 +99,14 @@
 }
 
 .article-like .iconfont {
-  font-size: 12px;
+  vertical-align: top;
 }
 
 .article-like-left {
   left: 15px;
+}
+
+.article-list-like {
+  padding-right: 15px;
+  right: 0;
 }

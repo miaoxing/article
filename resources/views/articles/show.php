@@ -7,6 +7,11 @@ $wei->page->addCss('//at.alicdn.com/t/font_872953_843lwiv79j5.css');
 
 <?= $block->css() ?>
 <link rel="stylesheet" href="<?= $asset('plugins/article/css/articles.css') ?>">
+<style>
+  body {
+    background: #fff;
+  }
+</style>
 <?= $block->end() ?>
 
 <div class="article-content">
@@ -43,7 +48,8 @@ $wei->page->addCss('//at.alicdn.com/t/font_872953_843lwiv79j5.css');
   </div>
 
   <?php if (wei()->article->enableLike) { ?>
-    <a class="js-article-like article-like <?= $like['type'] ? 'text-danger' : 'link-dark' ?>">
+    <a class="js-article-like article-like <?= $like['type'] ? 'text-danger' : 'link-dark' ?>"
+      data-id="<?= $article['id'] ?>">
       <span class="js-article-num"><?= $article['likeNum'] ?></span>
       <i class="iconfont icon-aixin"></i>
     </a>
@@ -55,30 +61,4 @@ $wei->page->addCss('//at.alicdn.com/t/font_872953_843lwiv79j5.css');
 </div>
 
 <?php $wei->event->trigger('afterArticlesShowRender', [$article]) ?>
-
-<?= $block->js() ?>
-<script>
-  $('.js-article-like').click(function() {
-    var $that = $(this);
-    var $num = $('.js-article-num');
-    var num = parseInt($num.html(), 10);
-     $.ajax({
-       url: $.url('article-likes/toggle', {articleId: <?= $article['id'] ?>}),
-       dataType: 'json',
-     }).then(function (ret) {
-       if (ret.code !== 1) {
-         $.msg(ret);
-         return;
-       }
-
-       if ($that.hasClass('link-dark')) {
-         $that.removeClass('link-dark').addClass('text-danger');
-         $num.html(num + 1);
-       } else {
-         $that.removeClass('text-danger').addClass('link-dark');
-         $num.html(num - 1);
-       }
-     });
-  });
-</script>
-<?= $block->end() ?>
+<?php require $view->getFile('@article/articles/_like-js.php') ?>
