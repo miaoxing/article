@@ -13,7 +13,7 @@
           </div>
         </div>
         <div class="list-col article-image-right">
-          <img src="<?= $article['thumb'] ?>">
+          <img src="<?= wei()->asset->thumb($article['thumb'], 160) ?>">
         </div>
       </a>
     </li>

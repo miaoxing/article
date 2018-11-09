@@ -3,7 +3,7 @@
     <li>
       <a class="list-item" href="<?= $article->getUrl() ?>">
         <div class="list-row article-image-top">
-          <img src="<?= $article['thumb'] ?>">
+          <img src="<?= wei()->asset->thumb($article['thumb'], 750) ?>">
         </div>
         <div class="list-row">
           <h4 class="list-heading">
