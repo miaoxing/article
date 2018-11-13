@@ -29,6 +29,9 @@ class Articles extends \Miaoxing\Plugin\BaseController
     public function showAction($req)
     {
         $article = wei()->article()->cache()->findOneById($req['id']);
+        if ($article->isLinkTo()) {
+            return $this->response->redirect($article->getUrl());
+        }
 
         $category = wei()->category()->withType('article')->findOrInitById($article['categoryId']);
 
