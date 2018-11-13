@@ -17,7 +17,6 @@ class Articles extends \Miaoxing\Plugin\BaseController
             $category = wei()->category()->withType('article')->findOneById($req['categoryId']);
             $categoryIds = $category->getChildrenIds();
             $articles->andWhere(['categoryId' => $categoryIds]);
-            $headerTitle = $category['name'];
             $this->page->setTitle($category['name']);
         }
 
