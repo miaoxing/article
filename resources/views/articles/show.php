@@ -2,7 +2,6 @@
 
 $view->layout();
 $headImg = $wei->event->until('articlesShowGetHeadImg');
-$wei->page->addCss('//at.alicdn.com/t/font_872953_843lwiv79j5.css');
 ?>
 
 <?= $block->css() ?>
@@ -51,7 +50,7 @@ $wei->page->addCss('//at.alicdn.com/t/font_872953_843lwiv79j5.css');
     <a class="js-article-like article-like <?= $like['type'] ? 'text-danger' : 'link-dark' ?>"
       data-id="<?= $article['id'] ?>">
       <span class="js-article-num"><?= $article['likeNum'] ?></span>
-      <i class="iconfont icon-aixin"></i>
+      <i class="iconfont icon-heart<?= $like['type'] ? '-fill' : '' ?>"></i>
     </a>
   <?php } ?>
 </div>
