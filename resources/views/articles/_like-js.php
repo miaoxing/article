@@ -2,6 +2,11 @@
 
 $wei->page->addCss('//at.alicdn.com/t/font_872953_xjymyq0bg4o.css');
 ?>
+<style>
+  .article-list-like {
+    bottom: 0;
+  }
+</style>
 
 <?= $block->js() ?>
 <script>
