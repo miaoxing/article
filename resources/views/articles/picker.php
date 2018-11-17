@@ -19,7 +19,7 @@
             </div>
 
             <div class="form-group pull-right">
-              <a class="js-article-picker-refresh btn btn-white" href="javascript:;">
+              <a class="js-article-picker-refresh btn btn-default" href="javascript:;">
                 <i class="fa fa-refresh"></i>
                 刷新列表
               </a>
