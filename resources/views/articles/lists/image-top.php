@@ -17,4 +17,5 @@
       </a>
     </li>
   <?php endforeach ?>
+  <?php require $app->getControllerFile('lists/_empty') ?>
 </ul>

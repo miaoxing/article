@@ -20,6 +20,13 @@ class Articles extends \Miaoxing\Plugin\BaseController
             $this->page->setTitle($category['name']);
         }
 
+        if ($req['search']) {
+            $articles->andWhere('title LIKE ? OR intro LIKE ?', [
+                '%' . $req['search'] . '%',
+                '%' . $req['search'] . '%',
+            ]);
+        }
+
         $tpl = isset($category) && $category['listTpl'] ? $category['listTpl'] : 'text';
 
         return get_defined_vars();
