@@ -51,9 +51,9 @@
           <th class="t-5">栏目名称</th>
           <th class="t-2">类型</th>
           <th>标题</th>
-          <th class="t-9">修改时间</th>
+          <th class="t-10">修改时间</th>
           <th class="t-6">作者</th>
-          <th class="t-4">顺序</th>
+          <th class="t-3">顺序</th>
           <th class="t-4">UV/PV</th>
           <?php if (wei()->article->enableLike) { ?>
             <th class="t-4">点赞数</th>
