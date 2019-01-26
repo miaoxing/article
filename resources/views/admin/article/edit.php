@@ -50,7 +50,7 @@
           <input class="js-thumb" id="thumb" name="thumb" type="text">
         </div>
         <label class="col-lg-6 help-text" for="thumb">
-          支持JPG、PNG格式，建议大图900像素 * 500像素，小图200像素 * 200像素，小于2M
+          建议大图2.35:1，小图1:1，尺寸大于200*200px
         </label>
       </div>
 
