@@ -50,7 +50,7 @@
           <input class="js-thumb" id="thumb" name="thumb" type="text">
         </div>
         <label class="col-lg-6 help-text" for="thumb">
-          建议大图2.35:1，小图1:1，尺寸大于200*200px
+          较好的效果为900*500px，小图200*200px
         </label>
       </div>
 
