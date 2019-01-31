@@ -102,7 +102,7 @@ class Article extends \Miaoxing\Plugin\BaseModel
     public function getFullUrl()
     {
         if ($this->isLinkTo()) {
-            return $this->linkTo->getUrlWithDecorator($this['linkTo']);
+            return $this->linkTo->getFullUrl($this['linkTo']);
         } else {
             return $this->request->getUrlFor($this->url('article/show', ['id' => $this['id']]));
         }
