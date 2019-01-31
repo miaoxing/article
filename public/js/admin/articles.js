@@ -78,8 +78,7 @@ define(['template', 'plugins/admin/js/image-upload'], function (template) {
         name: 'linkTo',
         data: this.data.linkTo,
         hide: {
-          keyword: true,
-          decorator: true
+          keyword: true
         }
       });
 
@@ -87,8 +86,7 @@ define(['template', 'plugins/admin/js/image-upload'], function (template) {
         name: 'sourceLinkTo',
         data: this.data.sourceLinkTo,
         hide: {
-          keyword: true,
-          decorator: true
+          keyword: true
         }
       });
 

@@ -24,7 +24,7 @@ class Plugin extends \Miaoxing\Plugin\BasePlugin
         ];
     }
 
-    public function onLinkToGetLinks(&$links, &$types, &$decorators)
+    public function onLinkToGetLinks(&$links, &$types)
     {
         $types['article'] = [
             'name' => '图文',

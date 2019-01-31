@@ -99,7 +99,7 @@ class Article extends \Miaoxing\Plugin\BaseModel
      *
      * @return string
      */
-    public function getUrlWithDecorator()
+    public function getFullUrl()
     {
         if ($this->isLinkTo()) {
             return $this->linkTo->getUrlWithDecorator($this['linkTo']);
