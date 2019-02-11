@@ -1,5 +1,5 @@
 <div class="form-group display-none js-link-to-article">
-  <div class="col-xs-8 col-xs-offset-3">
+  <div class="col-8 col-offset-3">
     <table class="record-table table table-bordered table-hover">
       <thead>
       <tr>
