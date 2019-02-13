@@ -9,7 +9,7 @@
       </div>
 
       <div class="modal-body">
-        <div class="well form-well">
+        <div class="well">
           <form class="js-article-picker-form form-inline" role="form">
             <div class="form-group">
               <select class="form-control" name="categoryId" id="category-id">
