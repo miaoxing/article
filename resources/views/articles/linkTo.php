@@ -1,4 +1,4 @@
-<div class="form-group display-none js-link-to-article">
+<div class="form-group d-none js-link-to-article">
   <div class="col-8 offset-3">
     <table class="record-table table table-bordered table-hover">
       <thead>
