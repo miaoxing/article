@@ -7,7 +7,7 @@ if (!wei()->article->enableLike) {
 $like = wei()->articleLikeModel()->mine()->desc('id')->findOrInit(['article_id' => $article['id']]);
 ?>
 
-<span class="js-article-like article-list-like article-like <?= $like['type'] ? 'text-danger' : 'link-dark' ?>"
+<span class="js-article-like article-list-like article-like <?= $like['type'] ? 'text-danger' : 'text-body' ?>"
   data-id="<?= $article['id'] ?>">
   <span class="js-article-num"><?= $article['likeNum'] ?></span>
   <i class="iconfont icon-heart<?= $like['type'] ? '-fill' : '' ?>"></i>

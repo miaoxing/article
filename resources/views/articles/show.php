@@ -47,7 +47,7 @@ $headImg = $wei->event->until('articlesShowGetHeadImg');
   </div>
 
   <?php if (wei()->article->enableLike) { ?>
-    <a class="js-article-like article-like <?= $like['type'] ? 'text-danger' : 'link-dark' ?>"
+    <a class="js-article-like article-like <?= $like['type'] ? 'text-danger' : 'text-body' ?>"
       data-id="<?= $article['id'] ?>">
       <span class="js-article-num"><?= $article['likeNum'] ?></span>
       <i class="iconfont icon-heart<?= $like['type'] ? '-fill' : '' ?>"></i>

@@ -26,12 +26,12 @@ $wei->page->addCss('//at.alicdn.com/t/font_872953_xjymyq0bg4o.css');
         return;
       }
 
-      if ($that.hasClass('link-dark')) {
-        $that.removeClass('link-dark').addClass('text-danger');
+      if ($that.hasClass('text-body')) {
+        $that.removeClass('text-body').addClass('text-danger');
         $icon.removeClass('icon-heart').addClass('icon-heart-fill');
         $num.html(num + 1);
       } else {
-        $that.removeClass('text-danger').addClass('link-dark');
+        $that.removeClass('text-danger').addClass('text-body');
         $icon.removeClass('icon-heart-fill').addClass('icon-heart');
         $num.html(num - 1);
       }
