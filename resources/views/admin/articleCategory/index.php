@@ -61,7 +61,7 @@
 
 <?= $block->js() ?>
 <script>
-  require(['plugins/article/js/admin/categories', 'assets/apps/admin/category',
+  require(['plugins/article/js/admin/categories', 'plugins/category/js/admin/categories',
     'plugins/admin/js/data-table', 'form', 'jquery-unparam'], function (categories) {
     categories.index();
   });

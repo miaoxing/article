@@ -1,4 +1,4 @@
-define(['template', 'assets/apps/admin/category'], function (template, categoryUtil) {
+define(['template', 'plugins/category/js/admin/categories'], function (template, categoryUtil) {
   var Categories = function () {
     // do nothing.
   };
