@@ -62,7 +62,7 @@
 <?= $block->js() ?>
 <script>
   require(['plugins/article/js/admin/categories', 'assets/apps/admin/category',
-    'dataTable', 'form', 'jquery-deparam'], function (categories) {
+    'plugins/admin/js/data-table', 'form', 'jquery-deparam'], function (categories) {
     categories.index();
   });
 </script>

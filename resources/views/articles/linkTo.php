@@ -26,7 +26,7 @@ $(document)
     var $table = $el.find('.js-link-to-article table');
     var $input = $el.find('.js-link-to-input-article');
 
-    require(['dataTable'], function () {
+    require(['plugins/admin/js/data-table'], function () {
       if ($.fn.dataTable.fnIsDataTable($table[0])) {
         $table.dataTable().reload();
         return;

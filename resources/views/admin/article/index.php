@@ -77,7 +77,7 @@
 
 <?= $block->js() ?>
 <script>
-  require(['form', 'dataTable',  'jquery-deparam'], function (form) {
+  require(['form', 'plugins/admin/js/data-table',  'jquery-deparam'], function (form) {
     var categoryJson = <?= json_encode(wei()->category()->notDeleted()->withParent('article')->getTreeToArray()); ?>;
     form.toOptions($('#category-id'), categoryJson, 'id', 'name');
 
