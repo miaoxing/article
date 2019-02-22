@@ -1,4 +1,4 @@
-define(['template', 'plugins/admin/js/image-upload'], function (template) {
+define([plugins/app/libs/artTemplate/template.min, 'plugins/admin/js/image-upload'], function (template) {
   var Articles = function () {
     // do nothing.
   };
