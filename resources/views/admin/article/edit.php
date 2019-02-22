@@ -151,7 +151,7 @@
 <?= $block->js() ?>
 <script>
   require(['plugins/article/js/admin/articles', 'plugins/link-to/js/link-to',
-    'form', 'ueditor', 'plugins/app/js/validation', 'plugins/admin/js/data-table', 'jquery-unparam'], function (articles, linkTo, form) {
+    'form', 'ueditor', 'plugins/app/js/validation', 'plugins/admin/js/data-table'], function (articles, linkTo, form) {
     var categoryJson = <?= json_encode(wei()->category()->notDeleted()->withParent('article')->getTreeToArray()); ?>;
     form.toOptions($('#category-id'), categoryJson, 'id', 'name');
 
