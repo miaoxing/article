@@ -1,4 +1,4 @@
-define([plugins/app/libs/artTemplate/template.min, 'form'], function (template) {
+define(['plugins/app/libs/artTemplate/template.min', 'form'], function (template) {
   var Picker = function (options) {
     if (options) {
       $.extend(this, options);

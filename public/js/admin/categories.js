@@ -1,4 +1,4 @@
-define([plugins/app/libs/artTemplate/template.min, 'plugins/category/js/admin/categories'], function (template, categoryUtil) {
+define(['plugins/app/libs/artTemplate/template.min', 'plugins/category/js/admin/categories'], function (template, categoryUtil) {
   var Categories = function () {
     // do nothing.
   };
