@@ -20,7 +20,7 @@
               <input type="text" class="form-control" name="search" placeholder="请输入标题搜索">
             </div>
 
-            <div class="form-group pull-right">
+            <div class="form-group float-right">
               <a class="js-article-picker-refresh btn btn-default" href="javascript:;">
                 <i class="fa fa-refresh"></i>
                 刷新列表
