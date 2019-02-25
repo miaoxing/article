@@ -94,7 +94,7 @@
         </label>
 
         <div class="col-lg-4">
-          <p class="form-control-static" id="source-link-to"></p>
+          <p class="form-control-plaintext" id="source-link-to"></p>
         </div>
       </div>
 
@@ -104,7 +104,7 @@
         </label>
 
         <div class="col-lg-4">
-          <p class="form-control-static" id="link-to"></p>
+          <p class="form-control-plaintext" id="link-to"></p>
         </div>
 
         <label class="col-lg-6 help-text" for="no">
