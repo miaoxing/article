@@ -1,7 +1,7 @@
 <?php $view->layout() ?>
 
 <?= $block('header-actions') ?>
-<a class="btn btn-default float-right" href="<?= $url('admin/article/index') ?>">返回列表</a>
+<a class="btn btn-secondary float-right" href="<?= $url('admin/article/index') ?>">返回列表</a>
 <?= $block->end() ?>
 
 <div class="row">
@@ -136,7 +136,7 @@
           </button>
           <?php $event->trigger('renderAdminFormActions', ['article']) ?>
           &nbsp; &nbsp; &nbsp;
-          <a class="btn btn-default" href="<?= $url('admin/article/index') ?>">
+          <a class="btn btn-secondary" href="<?= $url('admin/article/index') ?>">
             <i class="fa fa-undo bigger-110"></i>
             返回列表
           </a>
