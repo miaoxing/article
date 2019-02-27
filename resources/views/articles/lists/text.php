@@ -1,4 +1,4 @@
-<ul class="list list-link">
+<ul class="list">
   <?php foreach ($articles as $article) : ?>
     <li>
       <a href="<?= $article->getUrl() ?>" class="list-item has-feedback">
