@@ -3,10 +3,10 @@
     <li>
       <a class="list-item flex-column" href="<?= $article->getUrl() ?>">
         <img class="img-fluid mb-2" src="<?= wei()->asset->thumb($article['thumb'], 750) ?>">
-        <h4 class="list-heading">
+        <h4 class="list-title">
           <?= $article['title'] ?>
         </h4>
-        <div class="list-body">
+        <div class="list-text">
           <?= $article['intro'] ?>
           <?php require $view->getFile('@article/articles/_like.php') ?>
         </div>

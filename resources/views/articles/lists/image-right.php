@@ -3,11 +3,11 @@
     <li>
       <a class="list-item" href="<?= $article->getUrl() ?>">
         <div class="list-col list-middle">
-          <h4 class="list-heading">
+          <h4 class="list-title">
             <?= $article['title'] ?>
           </h4>
 
-          <div class="list-body">
+          <div class="list-text">
             <?= $article['intro'] ?>
             <?php require $view->getFile('@article/articles/_like.php') ?>
           </div>

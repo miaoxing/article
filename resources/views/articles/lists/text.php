@@ -2,7 +2,7 @@
   <?php foreach ($articles as $article) : ?>
     <li>
       <a href="<?= $article->getUrl() ?>" class="list-item has-feedback">
-        <h4 class="list-heading">
+        <h4 class="list-title">
           <?= $article['title'] ?>
         </h4>
         <i class="bm-angle-right list-feedback"></i>
