@@ -6,11 +6,11 @@
           <img src="<?= wei()->asset->thumb($article['thumb'], 216) ?>">
         </div>
         <div class="list-col list-middle">
-          <h4 class="list-title">
+          <h4 class="list-item-title">
             <?= $article['title'] ?>
           </h4>
 
-          <div class="list-text">
+          <div class="list-item-text">
             <?= $article['intro'] ?>
             <?php require $view->getFile('@article/articles/_like.php') ?>
           </div>
