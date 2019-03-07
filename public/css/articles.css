@@ -8,7 +8,7 @@
 
 /* 左图片右标题 */
 .article-image-left {
-  width: 72px;
+  flex: 0 0 72px;
   height: 72px;
 }
 
