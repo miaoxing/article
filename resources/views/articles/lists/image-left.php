@@ -5,7 +5,7 @@
         <div class="list-col article-image-left">
           <img src="<?= wei()->asset->thumb($article['thumb'], 216) ?>">
         </div>
-        <div class="list-col list-middle">
+        <div class="list-col align-self-center">
           <h4 class="list-title">
             <?= $article['title'] ?>
           </h4>

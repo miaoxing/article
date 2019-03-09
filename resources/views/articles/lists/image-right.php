@@ -2,7 +2,7 @@
   <?php foreach ($articles as $article) : ?>
     <li>
       <a class="list-item" href="<?= $article->getUrl() ?>">
-        <div class="list-col list-middle">
+        <div class="list-col align-self-center">
           <h4 class="list-title">
             <?= $article['title'] ?>
           </h4>
