@@ -52,7 +52,7 @@
 </div>
 <?= $block->js() ?>
 <script>
-  require(['form'], function (form) {
+  require(['plugins/admin/js/form'], function (form) {
     form.toOptions($('#category-id'), <?= json_encode(wei()->category()->notDeleted()->withParent('article')->getTreeToArray()) ?>, 'id', 'name');
   });
 </script>
