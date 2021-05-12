@@ -2,25 +2,18 @@
 
 namespace Miaoxing\Article;
 
-class Plugin extends \Miaoxing\Plugin\BasePlugin
+class ArticlePlugin extends \Miaoxing\Plugin\BasePlugin
 {
-    protected $name = '文章管理';
+    protected $name = '图文管理';
 
-    protected $description = '创建,编辑文章,可以在菜单,栏目中显示';
+    protected $description = '创建，编辑图文，可以在菜单，分类中显示';
 
     public function onAdminNavGetNavs(&$navs, &$categories, &$subCategories)
     {
-        $subCategories['app-article'] = [
-            'parentId' => 'app',
-            'name' => '图文管理',
-            'icon' => 'fa fa-list',
-            'sort' => 1000,
-        ];
-
-        $navs[] = [
-            'parentId' => 'app-article',
-            'url' => 'admin/article/index',
-            'name' => '图文管理',
+        $subCategories[] = [
+            'parentId' => 'content',
+            'name' => '图文分类管理',
+            'url' => 'admin/article-categories',
         ];
     }
 

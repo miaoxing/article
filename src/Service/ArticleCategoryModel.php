@@ -1,0 +1,55 @@
+<?php
+
+namespace Miaoxing\Article\Service;
+
+use Miaoxing\Article\Metadata\ArticleCategoryTrait;
+use Miaoxing\Plugin\BaseModel;
+use Miaoxing\Plugin\Model\HasAppIdTrait;
+use Miaoxing\Plugin\Model\ModelTrait;
+use Miaoxing\Plugin\Model\ReqQueryTrait;
+use Miaoxing\Plugin\Model\SoftDeleteTrait;
+
+/**
+ * @property ArticleCategoryModel $parent
+ * @property ArticleCategoryModel[]|ArticleCategoryModel $children
+ */
+class ArticleCategoryModel extends BaseModel
+{
+    use ArticleCategoryTrait;
+    use HasAppIdTrait;
+    use ModelTrait;
+    use ReqQueryTrait;
+    use SoftDeleteTrait;
+
+    protected $columns = [
+        'link' => [
+            'cast' => 'json',
+            'default' => [],
+        ],
+    ];
+
+    public function getGuarded(): array
+    {
+        return array_merge($this->guarded, [
+            'level',
+        ]);
+    }
+
+    public function afterDestroy()
+    {
+        $this->children->destroy();
+    }
+
+    /**
+     * 获取当前分类的父分类
+     */
+    public function parent()
+    {
+        return $this->belongsTo(static::class, 'id', 'parent_id');
+    }
+
+    public function children()
+    {
+        return $this->hasMany(static::class, 'parent_id')->desc('sort');
+    }
+}
