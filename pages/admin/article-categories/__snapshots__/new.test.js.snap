@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`admin/article-categories form 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      Object {
+        "method": "get",
+        "url": "/admin-api/article-categories/defaults",
+      },
+    ],
+    Array [
+      Object {
+        "loading": true,
+        "method": "get",
+        "params": Object {
+          "limit": 500,
+        },
+        "url": "/admin-api/article-categories",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+  ],
+}
+`;
+
+exports[`admin/article-categories form 2`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      Object {
+        "method": "get",
+        "url": "/admin-api/article-categories/defaults",
+      },
+    ],
+    Array [
+      Object {
+        "loading": true,
+        "method": "get",
+        "params": Object {
+          "limit": 500,
+        },
+        "url": "/admin-api/article-categories",
+      },
+    ],
+    Array [
+      Object {
+        "data": Object {
+          "description": undefined,
+          "id": undefined,
+          "name": "测试分类",
+          "parentId": 0,
+          "sort": 50,
+        },
+        "loading": true,
+        "method": "POST",
+        "url": "/admin-api/article-categories",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+  ],
+}
+`;
