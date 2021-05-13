@@ -2,15 +2,15 @@
   "name": "miaoxing/article",
   "description": "Miaoxing Article Plugin",
   "keywords": [
-    "miaoxing", "article"
+    "miaoxing",
+    "article"
   ],
   "license": "MIT",
   "require": {
-    "miaoxing/app": "dev-master@dev",
-    "miaoxing/category": "dev-master@dev"
+    "miaoxing/app": "^0.3.2"
   },
   "require-dev": {
-    "miaoxing/coding-standards": "^2.0.0"
+    "miaoxing/dev": "^7.0.1"
   },
   "autoload": {
     "psr-4": {
