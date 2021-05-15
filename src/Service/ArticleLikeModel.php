@@ -2,11 +2,13 @@
 
 namespace Miaoxing\Article\Service;
 
-use Miaoxing\Plugin\BaseModelV2;
+use Miaoxing\Plugin\BaseModel;
+use Miaoxing\Plugin\Model\ModelTrait;
 
 /**
  * ArticleLikeModel
  */
-class ArticleLikeModel extends BaseModelV2
+class ArticleLikeModel extends BaseModel
 {
+    use ModelTrait;
 }

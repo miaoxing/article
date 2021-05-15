@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Article\Migration;
 
-use Miaoxing\Plugin\BaseMigration;
+use Wei\Migration\BaseMigration;
 
 class V20181015104630CreateArticleLikesTable extends BaseMigration
 {

@@ -3,16 +3,18 @@
 namespace Miaoxing\Article\Service;
 
 use Miaoxing\Article\Metadata\ArticleLogTrait;
-use Miaoxing\Plugin\BaseModelV2;
+use Miaoxing\Plugin\BaseModel;
 use Miaoxing\Plugin\Model\HasAppIdTrait;
+use Miaoxing\Plugin\Model\ModelTrait;
 
 /**
  * 图文日志
  */
-class ArticleLogModel extends BaseModelV2
+class ArticleLogModel extends BaseModel
 {
+    use ModelTrait;
     use ArticleLogTrait;
     use HasAppIdTrait;
 
-    const ACTION_VIEW = 1;
+    public const ACTION_VIEW = 1;
 }

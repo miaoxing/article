@@ -3,6 +3,8 @@
 namespace Miaoxing\Article\Service;
 
 use Miaoxing\Config\ConfigTrait;
+use Miaoxing\Plugin\BaseModel;
+use Miaoxing\Plugin\Model\ModelTrait;
 
 /**
  * @property \Miaoxing\LinkTo\Service\LinkTo $linkTo
@@ -12,18 +14,22 @@ use Miaoxing\Config\ConfigTrait;
  * @property \Wei\Logger $logger
  * @property bool $enableLike
  */
-class Article extends \Miaoxing\Plugin\BaseModel
+class ArticleModel extends BaseModel
 {
-    use ConfigTrait;
+    use ModelTrait;
 
     protected $configs = [
         'enableLike' => [
             'default' => false,
-        ]
+        ],
     ];
 
     protected $exts = [
-        'jpg', 'jpeg', 'gif', 'png', 'bmp',
+        'jpg',
+        'jpeg',
+        'gif',
+        'png',
+        'bmp',
     ];
 
     protected $autoId = true;
@@ -186,7 +192,7 @@ class Article extends \Miaoxing\Plugin\BaseModel
      * 根据编号顺序查找图文
      *
      * @param array $ids
-     * @return Article|Article[]
+     * @return ArticleModel|ArticleModel[]
      */
     public function findByIds(array $ids)
     {

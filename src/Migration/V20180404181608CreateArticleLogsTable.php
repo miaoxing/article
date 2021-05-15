@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Article\Migration;
 
-use Miaoxing\Plugin\BaseMigration;
+use Wei\Migration\BaseMigration;
 
 class V20180404181608CreateArticleLogsTable extends BaseMigration
 {

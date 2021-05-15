@@ -8,6 +8,8 @@ class ArticlePlugin extends \Miaoxing\Plugin\BasePlugin
 
     protected $description = '创建，编辑图文，可以在菜单，分类中显示';
 
+    protected $code = 209;
+
     public function onAdminNavGetNavs(&$navs, &$categories, &$subCategories)
     {
         $subCategories[] = [
