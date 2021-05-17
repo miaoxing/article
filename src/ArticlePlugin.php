@@ -14,6 +14,12 @@ class ArticlePlugin extends \Miaoxing\Plugin\BasePlugin
     {
         $subCategories[] = [
             'parentId' => 'content',
+            'name' => '图文管理',
+            'url' => 'admin/articles',
+        ];
+
+        $subCategories[] = [
+            'parentId' => 'content',
             'name' => '图文分类管理',
             'url' => 'admin/article-categories',
         ];
