@@ -24,36 +24,4 @@ class ArticlePlugin extends \Miaoxing\Plugin\BasePlugin
             'url' => 'admin/article-categories',
         ];
     }
-
-    public function onLinkToGetLinks(&$links, &$types)
-    {
-        $types['article'] = [
-            'name' => '图文',
-            'input' => 'custom',
-            'sort' => 1100,
-        ];
-
-        $types['article-category'] = [
-            'name' => '图文列表',
-            'sort' => 1000,
-        ];
-
-        foreach (wei()->category()->notDeleted()->withParent('article')->desc('sort') as $category) {
-            $links[] = [
-                'typeId' => 'article-category',
-                'name' => $category['name'],
-                'url' => 'articles?categoryId=' . $category['id'],
-            ];
-        }
-    }
-
-    public function onLinkToRenderInput()
-    {
-        $this->view->display('@article/articles/linkTo.php');
-    }
-
-    public function onLinkToGetUrlArticle($linkTo)
-    {
-        return wei()->url('articles/%s', $linkTo['value']);
-    }
 }
