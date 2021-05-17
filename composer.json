@@ -24,5 +24,10 @@
     }
   },
   "minimum-stability": "dev",
-  "prefer-stable": true
+  "prefer-stable": true,
+  "extra": {
+    "require-ci": {
+      "miaoxing/services": "miaoxing/services as 0.3.x-dev"
+    }
+  }
 }
