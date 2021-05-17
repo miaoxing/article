@@ -3,22 +3,20 @@
 namespace Miaoxing\Article\Metadata;
 
 /**
- * @property int|null $id
- * @property int $appId
- * @property int $categoryId
- * @property string $title
+ * @property int|null $id 编号
+ * @property int $appId 应用编号
+ * @property int $categoryId 分类编号
+ * @property string $title 标题
  * @property string $author 作者
- * @property longtext $content
- * @property string $slug
- * @property string $thumb 缩略图
- * @property bool $showCoverPic 封面图片显示在正文中
- * @property string $intro 文章简介
- * @property int $pv
- * @property int $uv
- * @property int $likeNum
- * @property string $linkTo linkTo服务配置数组
- * @property string $sourceLinkTo 原文链接的linkTo配置
- * @property int $sort
+ * @property string $slug URL 路径
+ * @property string $cover 封面
+ * @property string $intro 摘要
+ * @property int $pv 查看人数
+ * @property int $uv 查看次数
+ * @property int $likeNum 点赞数量
+ * @property string $sourceLink 原文链接
+ * @property string $redirectLink 跳转链接
+ * @property int $sort 顺序，从大到小排列
  * @property string|null $createdAt
  * @property string|null $updatedAt
  * @property int $createdBy

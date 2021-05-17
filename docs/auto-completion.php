@@ -8,6 +8,13 @@ class ArticleCategoryModelMixin {
 }
 
 /**
+ * @property    Miaoxing\Article\Service\ArticleDetailModel $articleDetailModel
+ * @method      Miaoxing\Article\Service\ArticleDetailModel articleDetailModel() 返回当前对象
+ */
+class ArticleDetailModelMixin {
+}
+
+/**
  * @property    Miaoxing\Article\Service\ArticleLikeModel $articleLikeModel ArticleLikeModel
  * @method      Miaoxing\Article\Service\ArticleLikeModel articleLikeModel() 返回当前对象
  */
@@ -30,6 +37,7 @@ class ArticleModelMixin {
 
 /**
  * @mixin ArticleCategoryModelMixin
+ * @mixin ArticleDetailModelMixin
  * @mixin ArticleLikeModelMixin
  * @mixin ArticleLogModelMixin
  * @mixin ArticleModelMixin
@@ -50,6 +58,12 @@ $articleCategory = wei()->articleCategoryModel;
 
 /** @var Miaoxing\Article\Service\ArticleCategoryModel|Miaoxing\Article\Service\ArticleCategoryModel[] $articleCategories */
 $articleCategories = wei()->articleCategoryModel();
+
+/** @var Miaoxing\Article\Service\ArticleDetailModel $articleDetail */
+$articleDetail = wei()->articleDetailModel;
+
+/** @var Miaoxing\Article\Service\ArticleDetailModel|Miaoxing\Article\Service\ArticleDetailModel[] $articleDetails */
+$articleDetails = wei()->articleDetailModel();
 
 /** @var Miaoxing\Article\Service\ArticleLikeModel $articleLike */
 $articleLike = wei()->articleLikeModel;
