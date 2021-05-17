@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`admin/articles form 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      Object {
+        "method": "get",
+        "url": "/admin-api/articles/defaults",
+      },
+    ],
+    Array [
+      Object {
+        "loading": true,
+        "method": "get",
+        "params": Object {
+          "limit": 500,
+        },
+        "url": "/admin-api/article-categories",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+  ],
+}
+`;
+
+exports[`admin/articles form 2`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      Object {
+        "method": "get",
+        "url": "/admin-api/articles/defaults",
+      },
+    ],
+    Array [
+      Object {
+        "loading": true,
+        "method": "get",
+        "params": Object {
+          "limit": 500,
+        },
+        "url": "/admin-api/article-categories",
+      },
+    ],
+    Array [
+      Object {
+        "data": Object {
+          "author": undefined,
+          "categoryId": 1,
+          "cover": undefined,
+          "detail": Object {
+            "content": undefined,
+          },
+          "id": 1,
+          "intro": undefined,
+          "redirectLink": undefined,
+          "sort": 50,
+          "sourceLink": undefined,
+          "title": "测试标题",
+        },
+        "loading": true,
+        "method": "POST",
+        "url": "/admin-api/articles",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+  ],
+}
+`;
