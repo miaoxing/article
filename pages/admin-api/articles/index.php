@@ -20,6 +20,25 @@ return new class extends BaseController {
             ::beforeFind(function (ArticleModel $models) {
                 $models->setDefaultSortColumn(['sort', 'id']);
             })
+            ->afterFind(function (ArticleModel $models, $req) {
+                // @experimental 指定编号排序
+                if ($req['sortField'] !== 'id') {
+                    return;
+                }
+
+                $ids = (array) ($req['search']['id'] ?? []);
+                if (!$ids) {
+                    return;
+                }
+
+                $iterator = $models->getIterator();
+                $iterator->uasort(function ($article1, $article2) use ($ids) {
+                    $pos1 = array_search($article1->id, $ids);
+                    $pos2 = array_search($article2->id, $ids);
+                    return $pos1 - $pos2;
+                });
+                $models->fromArray($iterator);
+            })
             ->exec($this);
     }
 };
