@@ -23,7 +23,15 @@
     "miaoxing": "^0.2.5",
     "@mxjs/app": "^0.3.2",
     "@mxjs/upload": "^0.4.2",
-    "@mxjs/ueditor": "^0.1.6"
+    "@mxjs/ueditor": "^0.1.6",
+    "prop-types": "^15.7.2",
+    "@mxjs/icons": "^0.1.4",
+    "@mxjs/bootstrap": "^0.1.5",
+    "@ant-design/icons": "^4.6.2",
+    "@mxjs/css": "^0.2.2",
+    "append-url": "^1.0.13",
+    "bootstrap-mobile": "^0.9.2",
+    "@mxjs/a-button": "^0.2.12"
   },
   "devDependencies": {
     "@miaoxing/dev": "^7.0.1",
