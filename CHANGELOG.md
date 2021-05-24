@@ -1,3 +1,10 @@
+## [0.1.1](https://github.com/miaoxing/article/compare/v0.1.0...v0.1.1) (2021-05-24)
+
+
+### Bug Fixes
+
+* **article:** 图文选择器中添加图文地址错误 ([8e53a9e](https://github.com/miaoxing/article/commit/8e53a9ec8e97097e8b935a391fa166cfbf6ee79d))
+
 # 0.1.0 (2021-05-21)
 
 
