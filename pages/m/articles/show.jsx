@@ -1,17 +1,17 @@
 import {Component} from 'react';
 import {View, Text} from '@tarojs/components';
 import './show.scss';
-import Taro, {getCurrentInstance} from '@tarojs/taro';
+import Taro from '@tarojs/taro';
 import Ret from '@mxjs/m-ret';
 import config from '@/config';
+import $ from 'miaoxing';
 
 export default class Articles extends Component {
   state = {};
 
   componentDidMount() {
-    const id = getCurrentInstance().router.params.id;
     Taro.request({
-      url: config.apiUrl + '/articles/' + id,
+      url: config.apiUrl + '/articles/' + $.req('id'),
       header: {
         ACCEPT: 'application/json',
       },
