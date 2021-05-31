@@ -1,31 +1,22 @@
 import {Component} from 'react';
 import {View, Text} from '@tarojs/components';
 import './show.scss';
-import Taro from '@tarojs/taro';
 import Ret from '@mxjs/m-ret';
-import config from '@/config';
 import $ from 'miaoxing';
 
 export default class Articles extends Component {
   state = {};
 
   componentDidMount() {
-    Taro.request({
-      url: config.apiUrl + '/articles/' + $.req('id'),
-      header: {
-        ACCEPT: 'application/json',
-      },
-      success: ({data: ret}) => {
-        if (ret.code !== 0) {
-          Taro.showModal({
-            content: ret.message,
-            showCancel: false,
-          });
-          return;
-        }
-
-        this.setState(ret);
-      },
+    $.http({
+      url: $.apiUrl('articles/%s', $.req('id')),
+      loading: true,
+    }).then(({ret}) => {
+      if (ret.isErr()) {
+        $.ret(ret);
+        return;
+      }
+      this.setState(ret);
     });
   }
 
