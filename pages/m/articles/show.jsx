@@ -1,5 +1,5 @@
 import {Component} from 'react';
-import {View, Text} from '@tarojs/components';
+import {View, Text} from '@fower/taro';
 import './show.scss';
 import Ret from '@mxjs/m-ret';
 import $ from 'miaoxing';
@@ -32,18 +32,18 @@ export default class Articles extends Component {
 }
 
 const Article = ({data}) => (
-  <View className="article-content">
-    <View className="article-title">{data.title}</View>
+  <View pt5 pb4 px4>
+    <View mb3 textXL>{data.title}</View>
 
-    <View className="article-meta">
-      {data.author && <Text className="article-author">
+    <View mb5 textSm gray500>
+      {data.author && <Text mr2>
         {data.author}
       </Text>}
-      <Text className="article-time">
+      <Text>
         {data.updatedAt.substr(0, 10)}
       </Text>
     </View>
 
-    <View className="article-detail" dangerouslySetInnerHTML={{__html: data.detail.content}}/>
+    <View leadingRelaxed className="article-detail" dangerouslySetInnerHTML={{__html: data.detail.content}}/>
   </View>
 );
