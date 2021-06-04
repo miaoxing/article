@@ -1,8 +1,8 @@
 import {Component} from 'react';
 import {View, Text} from '@fower/taro';
-import './show.scss';
 import Ret from '@mxjs/m-ret';
 import $ from 'miaoxing';
+import RichText from '@mxjs/m-rich-text';
 
 export default class Articles extends Component {
   state = {};
@@ -44,6 +44,6 @@ const Article = ({data}) => (
       </Text>
     </View>
 
-    <View leadingRelaxed className="article-detail" dangerouslySetInnerHTML={{__html: data.detail.content}}/>
+    <RichText leadingRelaxed>{data.detail.content}</RichText>
   </View>
 );
