@@ -3,6 +3,7 @@ import {View, Text} from '@fower/taro';
 import Ret from '@mxjs/m-ret';
 import $ from 'miaoxing';
 import RichText from '@mxjs/m-rich-text';
+import Page from '@mxjs/m-page';
 
 export default class Articles extends Component {
   state = {};
@@ -24,9 +25,11 @@ export default class Articles extends Component {
     const {data = {}} = this.state;
 
     return (
-      <Ret ret={this.state}>
-        <Article data={data}/>
-      </Ret>
+      <Page bg="#ffffff">
+        <Ret ret={this.state}>
+          <Article data={data}/>
+        </Ret>
+      </Page>
     );
   }
 }
