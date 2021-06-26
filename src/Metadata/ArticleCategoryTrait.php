@@ -5,7 +5,7 @@ namespace Miaoxing\Article\Metadata;
 /**
  * @property int|null $id 编号
  * @property int $appId 应用编号
- * @property int $parentId 父分类编号
+ * @property int $parentId 父栏目编号
  * @property int $level 层级
  * @property string $name 名称
  * @property string $image 图片

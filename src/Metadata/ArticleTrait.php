@@ -5,7 +5,7 @@ namespace Miaoxing\Article\Metadata;
 /**
  * @property int|null $id 编号
  * @property int $appId 应用编号
- * @property int $categoryId 分类编号
+ * @property int $categoryId 栏目编号
  * @property string $title 标题
  * @property string $author 作者
  * @property string $slug URL 路径
