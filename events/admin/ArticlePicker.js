@@ -94,7 +94,7 @@ const ArticlePickerLabel = ({value, extra}) => {
   useEffect(() => {
     if (!extra.title) {
       (async () => {
-        const ret = await api.get('articles/' + value.id);
+        const {ret} = await api.get('articles/' + value.id);
         setTitle(ret.data.title);
       })();
     }

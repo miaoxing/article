@@ -102,7 +102,7 @@ const CategoryPickerLabel = ({value, extra}) => {
   useEffect(() => {
     if (!extra.name) {
       (async () => {
-        const ret = await api.get('article-categories/' + value.id);
+        const {ret} = await api.get('article-categories/' + value.id);
         setName(ret.data.name);
       })();
     }
