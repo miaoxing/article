@@ -39,7 +39,7 @@ const New = () => {
       </PageActions>
 
       <Form
-        afterLoad={(ret) => {
+        afterLoad={({ret}) => {
           // 避免分类显示 "0"
           if (!ret.data.id) {
             delete ret.data.categoryId;
