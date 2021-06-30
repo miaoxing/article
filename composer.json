@@ -28,6 +28,7 @@
   "prefer-stable": true,
   "extra": {
     "require-ci": {
+      "miaoxing/plugin": "miaoxing/plugin as 0.4.x-dev",
       "miaoxing/services": "miaoxing/services as 0.3.x-dev"
     }
   }
