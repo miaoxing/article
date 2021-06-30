@@ -30,23 +30,29 @@ describe('admin/article-categories', () => {
     $.http = jest.fn()
       // 读取默认数据
       .mockImplementationOnce(() => promise.resolve({
-        code: 1,
-        data: {
-          parentId: 0,
-          sort: 50,
+        ret: {
+          code: 1,
+          data: {
+            parentId: 0,
+            sort: 50,
+          },
         },
       }))
       // 读取父级分类
       .mockImplementationOnce(() => promise2.resolve({
-        code: 1,
-        data: [{
-          id: 1,
-          name: '测试分类',
-        }],
+        ret: {
+          code: 1,
+          data: [{
+            id: 1,
+            name: '测试分类',
+          }],
+        },
       }))
       // 提交
       .mockImplementationOnce(() => promise3.resolve({
-        code: 1,
+        ret: {
+          code: 1,
+        },
       }));
 
     const {getByLabelText} = render(<MemoryRouter>

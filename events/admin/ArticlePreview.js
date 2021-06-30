@@ -165,7 +165,7 @@ const ArticlePreview = (
         limit: num,
         search,
       }),
-    }).then(ret => {
+    }).then(({ret}) => {
       if (ret.isErr()) {
         $.ret(ret);
         return;

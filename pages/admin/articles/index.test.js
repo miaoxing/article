@@ -28,28 +28,30 @@ describe('admin/articles', () => {
     $.http = jest.fn()
       // 读取列表数据
       .mockImplementationOnce(() => promise.resolve(Ret.new({
-        code: 1,
-        data: [
-          {
-            id: 1,
-            title: '测试标题',
-            redirectLink: {},
-            author: '测试作者',
-            sort: 51,
-            category: {
-              name: '测试分类',
+        ret: {
+          code: 1,
+          data: [
+            {
+              id: 1,
+              title: '测试标题',
+              redirectLink: {},
+              author: '测试作者',
+              sort: 51,
+              category: {
+                name: '测试分类',
+              },
             },
-          },
-          {
-            id: 2,
-            title: '测试标题2',
-            redirectLink: {
-              options: ['articles'],
+            {
+              id: 2,
+              title: '测试标题2',
+              redirectLink: {
+                options: ['articles'],
+              },
+              author: '测试作者2',
+              sort: 52,
             },
-            author: '测试作者2',
-            sort: 52,
-          },
-        ],
+          ],
+        },
       })));
 
     const {findByText} = render(<MemoryRouter>

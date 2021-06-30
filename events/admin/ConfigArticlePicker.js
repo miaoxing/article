@@ -69,7 +69,7 @@ const ArticlePicker = ({value = [], onChange}) => {
     }
 
     api.get(appendUrl('articles', {sortField: 'id', search: {id: value}}))
-      .then(ret => {
+      .then(({ret}) => {
         if (ret.isErr()) {
           $.ret(ret);
           return;

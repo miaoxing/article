@@ -28,23 +28,25 @@ describe('admin/article-categories', () => {
     $.http = jest.fn()
       // 读取列表数据
       .mockImplementationOnce(() => promise.resolve({
-        code: 1,
-        data: [
-          {
-            id: 1,
-            parentId: 0,
-            sort: 50,
-            name: '测试分类',
-            children: [
-              {
-                id: 2,
-                parentId: 1,
-                sort: 50,
-                name: '子分类',
-              },
-            ],
-          },
-        ],
+        ret: {
+          code: 1,
+          data: [
+            {
+              id: 1,
+              parentId: 0,
+              sort: 50,
+              name: '测试分类',
+              children: [
+                {
+                  id: 2,
+                  parentId: 1,
+                  sort: 50,
+                  name: '子分类',
+                },
+              ],
+            },
+          ],
+        },
       }));
 
     const {findByText} = render(<MemoryRouter>

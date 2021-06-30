@@ -16,7 +16,7 @@ const New = () => {
   // 加载图文分类
   const [categories, setCategories] = useState([]);
   useEffect(() => {
-    api.getMax('article-categories', {loading: true}).then(ret => {
+    api.getMax('article-categories', {loading: true}).then(({ret}) => {
       if (ret.isSuc()) {
         setCategories(ret.data.map(category => ({
           value: category.id,
