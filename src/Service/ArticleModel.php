@@ -31,12 +31,12 @@ class ArticleModel extends BaseModel
         ],
     ];
 
-    public function detail()
+    public function detail(): ArticleDetailModel
     {
         return $this->hasOne(ArticleDetailModel::class);
     }
 
-    public function category()
+    public function category(): ArticleCategoryModel
     {
         return $this->belongsTo(ArticleCategoryModel::class, 'id', 'category_id');
     }

@@ -43,12 +43,12 @@ class ArticleCategoryModel extends BaseModel
     /**
      * 获取当前分类的父分类
      */
-    public function parent()
+    public function parent(): self
     {
         return $this->belongsTo(static::class, 'id', 'parent_id');
     }
 
-    public function children()
+    public function children(): self
     {
         return $this->hasMany(static::class, 'parent_id')->desc('sort');
     }
