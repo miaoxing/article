@@ -46,6 +46,9 @@
     "jest-preset-miaoxing": "miaoxing/jest-preset-miaoxing",
     "@miaoxing/dev": "miaoxing/dev",
     "@mxjs/a-form": "miaoxing/mxjs-a-form",
-    "@mxjs/a-table": "miaoxing/mxjs-a-table"
+    "@mxjs/a-table": "miaoxing/mxjs-a-table",
+    "@mxjs/a-clink": "miaoxing/mxjs-a-clink",
+    "@mxjs/upload": "miaoxing/mxjs-upload",
+    "@mxjs/a-link-picker": "miaoxing/mxjs-a-link-picker"
   }
 }
