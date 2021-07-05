@@ -1,4 +1,3 @@
-import React from 'react';
 import Icon from '@mxjs/icons';
 import ArticlePicker from './ArticlePicker';
 import CategoryPicker from './CategoryPicker';

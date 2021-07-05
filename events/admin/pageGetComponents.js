@@ -1,4 +1,3 @@
-import React from 'react';
 import {ProfileOutlined} from '@ant-design/icons';
 import ArticlePreview from './ArticlePreview';
 import ArticleConfig from './ArticleConfig';

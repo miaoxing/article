@@ -1,7 +1,7 @@
 /**
  * @share [id]/edit
  */
-import React, {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import {CListBtn} from '@mxjs/a-clink';
 import {Page, PageActions} from '@mxjs/a-page';
 import {Form, FormItem, FormAction, Select} from '@mxjs/a-form';
