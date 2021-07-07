@@ -9,7 +9,11 @@
     "plugins/*"
   ],
   "jest": {
-    "preset": "jest-preset-miaoxing"
+    "preset": "jest-preset-miaoxing",
+    "moduleNameMapper": {
+      "@tarojs/components": "@tarojs/components/dist-h5/react",
+      "@tarojs/taro": "@tarojs/taro-h5"
+    }
   },
   "dependencies": {
     "antd": "^4.15.2",
@@ -32,14 +36,19 @@
     "@mxjs/css": "^0.2.2",
     "append-url": "^1.0.13",
     "bootstrap-mobile": "^0.9.2",
-    "@mxjs/a-button": "^0.2.12"
+    "@mxjs/a-button": "^0.2.12",
+    "@tarojs/components": "^3.2.10",
+    "@fower/taro": "^1.16.0",
+    "@mxjs/m-ret": "^0.1.0",
+    "@mxjs/m-rich-text": "^0.1.0",
+    "@mxjs/m-page": "^0.1.0"
   },
   "devDependencies": {
     "@miaoxing/dev": "^7.0.1",
     "@mxjs/test": "^0.1.8",
-    "@testing-library/jest-dom": "^5.5.0",
     "@testing-library/react": "^11.2.6",
-    "react-router": "^5.2.0"
+    "react-router": "^5.2.0",
+    "@tarojs/taro": "^3.2.10"
   },
   "ciDependencies": {
     "babel-preset-miaoxing": "miaoxing/babel-preset-miaoxing",
@@ -49,6 +58,9 @@
     "@mxjs/a-table": "miaoxing/mxjs-a-table",
     "@mxjs/a-clink": "miaoxing/mxjs-a-clink",
     "@mxjs/upload": "miaoxing/mxjs-upload",
-    "@mxjs/a-link-picker": "miaoxing/mxjs-a-link-picker"
+    "@mxjs/a-link-picker": "miaoxing/mxjs-a-link-picker",
+    "@mxjs/m-ret": "miaoxing/mxjs-m-ret",
+    "@mxjs/m-rich-text": "miaoxing/mxjs-m-rich-text",
+    "@mxjs/m-page": "miaoxing/mxjs-m-page"
   }
 }
