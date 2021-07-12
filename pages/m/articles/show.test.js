@@ -20,8 +20,7 @@ describe('Show', () => {
 
     $.http = jest.fn()
       .mockImplementationOnce(() => promise.resolve({
-        ret: Ret.new({
-          code: 0,
+        ret: Ret.suc({
           data: {
             title: 'title',
             updatedAt: '2021-01-01 01:01:01',

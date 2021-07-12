@@ -26,9 +26,8 @@ describe('admin/articles', () => {
 
     $.http = jest.fn()
       // 读取列表数据
-      .mockImplementationOnce(() => promise.resolve(Ret.new({
-        ret: {
-          code: 1,
+      .mockImplementationOnce(() => promise.resolve({
+        ret: Ret.suc({
           data: [
             {
               id: 1,
@@ -50,8 +49,8 @@ describe('admin/articles', () => {
               sort: 52,
             },
           ],
-        },
-      })));
+        }),
+      }));
 
     const {findByText} = render(<MemoryRouter>
       <Index/>

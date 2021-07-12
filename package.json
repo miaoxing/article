@@ -51,6 +51,7 @@
     "@tarojs/taro": "^3.2.10"
   },
   "ciDependencies": {
+    "miaoxing": "miaoxing/miaoxing-js",
     "babel-preset-miaoxing": "miaoxing/babel-preset-miaoxing",
     "jest-preset-miaoxing": "miaoxing/jest-preset-miaoxing",
     "@miaoxing/dev": "miaoxing/dev",
