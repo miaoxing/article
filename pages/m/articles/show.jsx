@@ -6,7 +6,9 @@ import RichText from '@mxjs/m-rich-text';
 import Page from '@mxjs/m-page';
 
 export default class Articles extends Component {
-  state = {};
+  state = {
+    ret: {},
+  };
 
   componentDidMount() {
     $.http({
@@ -17,36 +19,32 @@ export default class Articles extends Component {
         $.ret(ret);
         return;
       }
-      this.setState(ret);
+      this.setState({ret});
     });
   }
 
   render() {
-    const {data = {}} = this.state;
+    const {ret, ret: {data}} = this.state;
 
     return (
       <Page bg="#ffffff">
-        <Ret ret={this.state}>
-          <Article data={data}/>
+        <Ret ret={ret}>
+          {data && <View pt5 pb4 px4>
+            <View mb3 textXL>{data.title}</View>
+
+            <View mb5 textSm gray500>
+              {data.author && <Text mr2>
+                {data.author}
+              </Text>}
+              <Text>
+                {data.updatedAt.substr(0, 10)}
+              </Text>
+            </View>
+
+            <RichText leadingRelaxed>{data.detail.content}</RichText>
+          </View>}
         </Ret>
       </Page>
     );
   }
 }
-
-const Article = ({data}) => (
-  <View pt5 pb4 px4>
-    <View mb3 textXL>{data.title}</View>
-
-    <View mb5 textSm gray500>
-      {data.author && <Text mr2>
-        {data.author}
-      </Text>}
-      <Text>
-        {data.updatedAt.substr(0, 10)}
-      </Text>
-    </View>
-
-    <RichText leadingRelaxed>{data.detail.content}</RichText>
-  </View>
-);
