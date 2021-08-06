@@ -12,7 +12,6 @@ export default class Articles extends Component {
   componentDidMount() {
     $.http({
       url: $.apiUrl('articles/%s', $.req('id')),
-      loading: true,
     }).then(({ret}) => {
       if (ret.isErr()) {
         $.ret(ret);
