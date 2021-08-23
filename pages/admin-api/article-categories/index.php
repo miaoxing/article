@@ -10,7 +10,7 @@ return new class extends BaseController {
     use CollGetTrait;
     use PostToPatchTrait;
 
-    protected $expand = [
+    protected $include = [
         'children',
     ];
 

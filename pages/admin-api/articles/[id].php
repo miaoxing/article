@@ -14,7 +14,7 @@ return new
  * @mixin \ObjectReqMixin
  */
 class extends BaseController {
-    protected $expand = [
+    protected $include = [
         'detail',
     ];
 
