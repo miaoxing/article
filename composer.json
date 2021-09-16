@@ -29,7 +29,8 @@
   "extra": {
     "require-ci": {
       "miaoxing/plugin": "miaoxing/plugin as 0.4.x-dev",
-      "miaoxing/services": "miaoxing/services as 0.3.x-dev"
+      "miaoxing/services": "miaoxing/services as 0.3.x-dev",
+      "wei/wei": "twinh/wei as 0.10.x-dev"
     }
   }
 }
