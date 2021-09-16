@@ -35,7 +35,6 @@ exports[`Show basic 2`] = `
   "calls": Array [
     Array [
       Object {
-        "loading": true,
         "url": "/api/articles/1",
       },
     ],
