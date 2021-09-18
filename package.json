@@ -34,7 +34,7 @@
     "bootstrap-mobile": "^0.9.2",
     "@mxjs/a-button": "^0.2.12",
     "@tarojs/components": "^3.2.10",
-    "@fower/taro": "^1.16.0",
+    "@fower/taro": "^1.52.0",
     "@mxjs/m-ret": "^0.1.0",
     "@mxjs/m-rich-text": "^0.1.0",
     "@mxjs/m-page": "^0.1.0"
