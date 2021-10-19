@@ -9,11 +9,10 @@ use Miaoxing\Services\Service\ShowAction;
 use Miaoxing\Services\Service\UpdateAction;
 use Wei\V;
 
-return new
-/**
+return new /**
  * @mixin \ObjectReqMixin
  */
-class extends BaseController {
+class() extends BaseController {
     protected $include = [
         'detail',
     ];

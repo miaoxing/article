@@ -4,35 +4,40 @@
  * @property    Miaoxing\Article\Service\ArticleCategoryModel $articleCategoryModel
  * @method      Miaoxing\Article\Service\ArticleCategoryModel articleCategoryModel() 返回当前对象
  */
-class ArticleCategoryModelMixin {
+class ArticleCategoryModelMixin
+{
 }
 
 /**
  * @property    Miaoxing\Article\Service\ArticleDetailModel $articleDetailModel
  * @method      Miaoxing\Article\Service\ArticleDetailModel articleDetailModel() 返回当前对象
  */
-class ArticleDetailModelMixin {
+class ArticleDetailModelMixin
+{
 }
 
 /**
  * @property    Miaoxing\Article\Service\ArticleLikeModel $articleLikeModel ArticleLikeModel
  * @method      Miaoxing\Article\Service\ArticleLikeModel articleLikeModel() 返回当前对象
  */
-class ArticleLikeModelMixin {
+class ArticleLikeModelMixin
+{
 }
 
 /**
  * @property    Miaoxing\Article\Service\ArticleLogModel $articleLogModel 图文日志
  * @method      Miaoxing\Article\Service\ArticleLogModel articleLogModel() 返回当前对象
  */
-class ArticleLogModelMixin {
+class ArticleLogModelMixin
+{
 }
 
 /**
  * @property    Miaoxing\Article\Service\ArticleModel $articleModel
  * @method      Miaoxing\Article\Service\ArticleModel articleModel() 返回当前对象
  */
-class ArticleModelMixin {
+class ArticleModelMixin
+{
 }
 
 /**
@@ -42,7 +47,8 @@ class ArticleModelMixin {
  * @mixin ArticleLogModelMixin
  * @mixin ArticleModelMixin
  */
-class AutoCompletion {
+class AutoCompletion
+{
 }
 
 /**
@@ -50,7 +56,7 @@ class AutoCompletion {
  */
 function wei()
 {
-    return new AutoCompletion;
+    return new AutoCompletion();
 }
 
 /** @var Miaoxing\Article\Service\ArticleCategoryModel $articleCategory */
