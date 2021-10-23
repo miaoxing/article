@@ -1,8 +1,8 @@
-import Show from './show';
 import {render, waitFor} from '@testing-library/react';
 import $, {Ret} from 'miaoxing';
 import {createPromise, bootstrap, setUrl, resetUrl} from '@mxjs/test';
 import Taro from '@tarojs/taro';
+import Show from './show';
 
 bootstrap();
 
@@ -33,7 +33,7 @@ describe('Show', () => {
 
     Taro.setBackgroundColor = jest.fn();
 
-    const {container, getByText} = render(<Show/>);
+    const {container, getByText} = render(<Show />);
 
     await waitFor(() => {
       expect(getByText('content')).not.toBeNull();
