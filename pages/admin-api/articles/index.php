@@ -6,7 +6,7 @@ use Miaoxing\Services\Page\CollGetTrait;
 use Miaoxing\Services\Page\PostToPatchTrait;
 use Miaoxing\Services\Service\IndexAction;
 
-return new class() extends BaseController {
+return new class () extends BaseController {
     use CollGetTrait;
     use PostToPatchTrait;
 

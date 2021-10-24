@@ -12,7 +12,7 @@ use Wei\V;
 return new /**
  * @mixin \ObjectReqMixin
  */
-class() extends BaseController {
+class () extends BaseController {
     protected $include = [
         'detail',
     ];
