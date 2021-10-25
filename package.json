@@ -33,7 +33,7 @@
     "append-url": "^1.0.13",
     "bootstrap-mobile": "^0.9.2",
     "@mxjs/a-button": "^0.2.12",
-    "@tarojs/components": "^3.2.10",
+    "@tarojs/components": "^3.3.10",
     "@fower/taro": "^1.52.0",
     "@mxjs/m-ret": "^0.1.0",
     "@mxjs/m-rich-text": "^0.1.0",
@@ -44,7 +44,7 @@
     "@mxjs/test": "^0.1.8",
     "@testing-library/react": "^11.2.6",
     "react-router": "^5.2.0",
-    "@tarojs/taro": "^3.2.10"
+    "@tarojs/taro": "^3.3.10"
   },
   "ciDependencies": {
     "miaoxing": "miaoxing/miaoxing-js",
