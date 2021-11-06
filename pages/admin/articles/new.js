@@ -10,7 +10,7 @@ import $ from 'miaoxing';
 import {FormUeditor} from '@mxjs/ueditor';
 import LinkPicker from '@miaoxing/link-to/components/LinkPicker';
 import api from '@mxjs/api';
-import {TreeSelect} from 'antd';
+import {Input, TreeSelect} from 'antd';
 
 const New = () => {
   // 加载图文分类
@@ -65,7 +65,9 @@ const New = () => {
           <Upload url={$.apiUrl('files', {type: 'image'})} max={1}/>
         </FormItem>
 
-        <FormItem label="摘要" name="intro" type="textarea"/>
+        <FormItem label="摘要" name="intro" type="textarea">
+          <Input.TextArea maxLength={255} showCount/>
+        </FormItem>
 
         <FormUeditor label="正文" name={['detail', 'content']}/>
 
