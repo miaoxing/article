@@ -11,6 +11,7 @@ import {FormUeditor} from '@mxjs/ueditor';
 import LinkPicker from '@miaoxing/link-to/components/LinkPicker';
 import api from '@mxjs/api';
 import {Input, TreeSelect} from 'antd';
+import {FormItemSort} from '@miaoxing/admin';
 
 const New = () => {
   // 加载图文分类
@@ -79,7 +80,7 @@ const New = () => {
           <LinkPicker/>
         </FormItem>
 
-        <FormItem label="顺序" name="sort" type="number"/>
+        <FormItemSort/>
 
         <FormItem name="id" type="hidden"/>
 

@@ -6,6 +6,7 @@ import {CListBtn} from '@mxjs/a-clink';
 import {Page, PageActions} from '@mxjs/a-page';
 import {Form, FormItem, FormAction, Select} from '@mxjs/a-form';
 import api from '@mxjs/api';
+import {FormItemSort} from '@miaoxing/admin';
 
 const New = () => {
   const [parents, setParents] = useState([]);
@@ -28,7 +29,7 @@ const New = () => {
         </FormItem>
         <FormItem label="名称" name="name" required/>
         <FormItem label="简介" name="description" type="textarea"/>
-        <FormItem label="顺序" name="sort" type="number" extra="大的显示在前面，按从大到小排列。"/>
+        <FormItemSort/>
         <FormItem name="id" type="hidden"/>
         <FormAction/>
       </Form>
