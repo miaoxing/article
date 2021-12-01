@@ -1,27 +1,24 @@
-import { useState, useEffect } from 'react';
+import {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
-import {css} from '@mxjs/css';
 import $ from 'miaoxing';
 import {Empty} from 'antd';
+import {Box, Image} from '@mxjs/box';
+import {css} from '@fower/core';
 import './list.scss';
 
 const defaultImage = window.location.origin + $.url('plugins/page/images/default-swiper.svg');
 
-const listCss = css({
-  mb: 0,
-});
-
-const imgCss = css({
+const imgClass = css({
   maxW: '100%',
   h: 'auto',
-  mb: 2,
+  mb2: true,
 });
 
 const ImageTopList = ({articles}) => {
   return articles.map((article) => (
     <li key={article.id}>
       <a className="list-item" href="#">
-        <img css={imgCss} src={article.cover || defaultImage}/>
+        <img className={imgClass} src={article.cover || defaultImage}/>
         <h4 className="list-title">
           {article.title}
         </h4>
@@ -46,29 +43,25 @@ const OnlyTitleList = ({articles}) => {
   ));
 };
 
-const imageLeftCss = css({
+const imageLeftClass = css({
   // 样式被 list.scss 覆盖
   flex: '0 0 72px !important',
   h: '72px',
   w: '72px !important',
 });
 
-const alignSelfCenter = css({
+const verticalAlignMiddle = css({
   verticalAlign: 'middle',
-});
-
-const sideImgCss = css({
-  h: '100%',
 });
 
 const ImageLeftTitleRightList = ({articles}) => {
   return articles.map(article => (
     <li key={article.id}>
       <a className="list-item" href="#">
-        <div className="list-col" css={imageLeftCss}>
-          <img css={sideImgCss} src={article.cover || defaultImage}/>
+        <div className={'list-col ' + imageLeftClass}>
+          <Image h="100%" src={article.cover || defaultImage}/>
         </div>
-        <div className="list-col" css={alignSelfCenter}>
+        <div className={'list-col ' + verticalAlignMiddle}>
           <h4 className="list-title">
             {article.title}
           </h4>
@@ -81,7 +74,7 @@ const ImageLeftTitleRightList = ({articles}) => {
   ));
 };
 
-const imageRightCss = css({
+const imageRightClass = css({
   flex: '0 0 87px !important',
   h: '72px',
   w: '87px !important',
@@ -91,7 +84,7 @@ const TitleLeftImageRightList = ({articles}) => {
   return articles.map(article => (
     <li key={article.id}>
       <a className="list-item" href="#">
-        <div className="list-col" css={alignSelfCenter}>
+        <div className={'list-col ' + verticalAlignMiddle}>
           <h4 className="list-title">
             {article.title}
           </h4>
@@ -99,8 +92,8 @@ const TitleLeftImageRightList = ({articles}) => {
             {article.intro}
           </div>
         </div>
-        <div className="list-col" css={imageRightCss}>
-          <img css={sideImgCss} src={article.cover || defaultImage}/>
+        <div className={'list-col' + imageRightClass}>
+          <Image h="100%" maxW="100%" src={article.cover || defaultImage}/>
         </div>
       </a>
     </li>
@@ -113,10 +106,6 @@ const tpls = {
   3: ImageLeftTitleRightList,
   4: TitleLeftImageRightList,
 };
-
-const emptyContainerCss = css({
-  overflow: 'hidden',
-});
 
 const ArticlePreview = (
   {
@@ -180,13 +169,13 @@ const ArticlePreview = (
     <>
       {
         articles.length ?
-          <ul className="list list-indented" css={listCss}>
+          <Box as="ul" mb0 className="list list-indented">
             <Tpl articles={articles}/>
-          </ul>
+          </Box>
           :
-          <div css={emptyContainerCss}>
+          <Box overflowHidden>
             <Empty image={Empty.PRESENTED_IMAGE_SIMPLE}/>
-          </div>
+          </Box>
       }
     </>
   );

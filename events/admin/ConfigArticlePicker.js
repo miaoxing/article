@@ -1,10 +1,9 @@
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 import {Table, TableProvider, useTable} from '@mxjs/a-table';
 import Media from '@mxjs/a-media';
 import {CloseCircleFilled, DownCircleFilled, UpCircleFilled} from '@ant-design/icons';
 import $ from 'miaoxing';
 import {Avatar, Button, Modal} from 'antd';
-import {css} from '@mxjs/css';
 import Icon from '@mxjs/icons';
 import {PageActions} from '@mxjs/a-page';
 import {SearchForm, SearchItem} from '@mxjs/a-form';
@@ -12,32 +11,34 @@ import api from '@mxjs/api';
 import appendUrl from 'append-url';
 import PropTypes from 'prop-types';
 import {NewBtn} from '@mxjs/a-button';
+import {css} from '@fower/core';
+import {spacing} from '@mxjs/css';
 
 const defaultImage = window.location.origin + $.url('plugins/page/images/default-swiper.svg');
 
-const cardCss = css({
+const cardClass = css({
   position: 'relative',
-  mb: 4,
-  p: 6,
-  boxShadow: 'sm',
-  border: '1px solid',
-  borderColor: 'gray.100',
-  _hover: {
+  mb4: true,
+  p6: true,
+  shadowTiny: true,
+  border: 1,
+  borderColor: 'gray100',
+  ':hover': {
     '> .toolbar': {
       display: 'block',
     },
   },
 });
 
-const toolbarCss = css({
+const toolbarClass = css({
   display: 'none',
   position: 'absolute',
-  top: -4,
-  right: -2,
-  fontSize: 'xl',
+  top: -spacing(4),
+  right: -spacing(2),
+  textXL: true,
   '> a': {
-    ml: 1,
-    color: 'gray.400',
+    ml1: true,
+    gray400: true,
   },
 });
 
@@ -92,8 +93,8 @@ const ArticlePicker = ({value = [], onChange}) => {
     <>
       <div>
         {articles.map((article, index) => {
-          return <Media key={article.id} css={cardCss}>
-            <div className="toolbar" css={toolbarCss}>
+          return <Media key={article.id} className={cardClass}>
+            <div className={'toolbar ' + toolbarClass}>
               {index !== 0 && <a href="#" onClick={(e) => {
                 e.preventDefault();
                 move(index, index - 1);
@@ -117,7 +118,7 @@ const ArticlePicker = ({value = [], onChange}) => {
                 <CloseCircleFilled/>
               </a>
             </div>
-            <Avatar src={article.cover || defaultImage} shape="square" size={48} css={css({mr: 3})}/>
+            <Avatar src={article.cover || defaultImage} shape="square" size={48}/>
             <Media.Body>
               {article.title}
             </Media.Body>
