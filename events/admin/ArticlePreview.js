@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import $ from 'miaoxing';
 import {Empty} from 'antd';
 import {Box, Image} from '@mxjs/box';
-import {css} from '@fower/core';
+import {css} from '@mxjs/css';
 import './list.scss';
 
 const defaultImage = window.location.origin + $.url('plugins/page/images/default-swiper.svg');

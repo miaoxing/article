@@ -11,8 +11,7 @@ import api from '@mxjs/api';
 import appendUrl from 'append-url';
 import PropTypes from 'prop-types';
 import {NewBtn} from '@mxjs/a-button';
-import {css} from '@fower/core';
-import {spacing} from '@mxjs/css';
+import {css, spacing} from '@mxjs/css';
 
 const defaultImage = window.location.origin + $.url('plugins/page/images/default-swiper.svg');
 
