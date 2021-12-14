@@ -5,8 +5,7 @@ import {Empty} from 'antd';
 import {Box, Image} from '@mxjs/box';
 import {css} from '@mxjs/css';
 import './list.scss';
-
-const defaultImage = window.location.origin + $.url('plugins/page/images/default-swiper.svg');
+import defaultCover from '../../images/default-cover.svg';
 
 const imgClass = css({
   maxW: '100%',
@@ -18,7 +17,7 @@ const ImageTopList = ({articles}) => {
   return articles.map((article) => (
     <li key={article.id}>
       <a className="list-item" href="#">
-        <img className={imgClass} src={article.cover || defaultImage}/>
+        <img className={imgClass} src={article.cover || defaultCover}/>
         <h4 className="list-title">
           {article.title}
         </h4>
@@ -59,7 +58,7 @@ const ImageLeftTitleRightList = ({articles}) => {
     <li key={article.id}>
       <a className="list-item" href="#">
         <div className={'list-col ' + imageLeftClass}>
-          <Image h="100%" src={article.cover || defaultImage}/>
+          <Image h="100%" src={article.cover || defaultCover}/>
         </div>
         <div className={'list-col ' + verticalAlignMiddle}>
           <h4 className="list-title">
@@ -93,7 +92,7 @@ const TitleLeftImageRightList = ({articles}) => {
           </div>
         </div>
         <div className={'list-col' + imageRightClass}>
-          <Image h="100%" maxW="100%" src={article.cover || defaultImage}/>
+          <Image h="100%" maxW="100%" src={article.cover || defaultCover}/>
         </div>
       </a>
     </li>
@@ -190,5 +189,3 @@ ArticlePreview.propTypes = {
 };
 
 export default ArticlePreview;
-
-export {defaultImage};

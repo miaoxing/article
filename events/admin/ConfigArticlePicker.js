@@ -12,8 +12,7 @@ import appendUrl from 'append-url';
 import PropTypes from 'prop-types';
 import {NewBtn} from '@mxjs/a-button';
 import {css, spacing} from '@mxjs/css';
-
-const defaultImage = window.location.origin + $.url('plugins/page/images/default-swiper.svg');
+import defaultCover from '../../images/default-cover.svg';
 
 const cardClass = css({
   position: 'relative',
@@ -117,7 +116,7 @@ const ArticlePicker = ({value = [], onChange}) => {
                 <CloseCircleFilled/>
               </a>
             </div>
-            <Avatar src={article.cover || defaultImage} shape="square" size={48}/>
+            <Avatar src={article.cover || defaultCover} shape="square" size={48}/>
             <Media.Body>
               {article.title}
             </Media.Body>
