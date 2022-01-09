@@ -33,7 +33,7 @@ describe('Show', () => {
 
     Taro.setBackgroundColor = jest.fn();
 
-    const {container, getByText} = render(<Show />);
+    const {getByText} = render(<Show />);
 
     await waitFor(() => {
       expect(getByText('content')).not.toBeNull();
