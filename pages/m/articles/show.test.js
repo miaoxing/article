@@ -39,7 +39,9 @@ describe('Show', () => {
       expect(getByText('content')).not.toBeNull();
     });
 
-    expect(container).toMatchSnapshot();
+    expect(getByText('title')).not.toBeNull();
+    expect(getByText('2021-01-01')).not.toBeNull();
+
     expect($.http).toMatchSnapshot();
   });
 });
