@@ -1,3 +1,50 @@
+## [0.2.1](https://github.com/miaoxing/article/compare/v0.2.0...v0.2.1) (2022-01-12)
+
+
+### Bug Fixes
+
+* 更新 `[@fower](https://github.com/fower)` 到 `^1.59.0` ([fb0d2c1](https://github.com/miaoxing/article/commit/fb0d2c123bb6fdbf0a0332ee02cf7894e88ae814))
+
+
+### Features
+
+* **taro:** 限制 taro 为 3.3.x，3.4 有 BREAKING CHANGES ([312edfc](https://github.com/miaoxing/article/commit/312edfc576eb5157a95a7a9ffccdc7f8ab420b1f))
+* 显示 `textarea` 的长度限制 ([bce5121](https://github.com/miaoxing/article/commit/bce5121ea884cf8046cf680c3897666a37e1fd89))
+* 更新 `[@fower](https://github.com/fower)` 到 `^1.61` ([dded7ed](https://github.com/miaoxing/article/commit/dded7ed86329fc2307e81745747eeb43b1e1a766))
+* 更新 `antd` 到 `~4.17.4` ([e005736](https://github.com/miaoxing/article/commit/e005736157a60475d79bab94ed4c2e5a635ae666))
+* 更新 taro 到 `^3.3.20` ([b06f9b9](https://github.com/miaoxing/article/commit/b06f9b90290eba1e6e8b197ba7de2445228b3592))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-page:** upgrade from `0.3.0` to `0.3.1`
+* **@mxjs/a-clink:** upgrade from `0.2.0` to `0.2.1`
+* **@mxjs/a-table:** upgrade from `0.4.0` to `0.4.1`
+* **@mxjs/a-form:** upgrade from `0.3.0` to `0.3.1`
+* **@mxjs/api:** upgrade from `0.1.4` to `0.1.5`
+* **@mxjs/actions:** upgrade from `0.2.0` to `0.2.1`
+* **miaoxing:** upgrade from `0.3.0` to `0.4.0`
+* **@mxjs/app:** upgrade from `0.3.3` to `0.4.0`
+* **@mxjs/upload:** upgrade from `0.5.0` to `0.5.1`
+* **@mxjs/ueditor:** upgrade from `0.2.0` to `0.2.1`
+* **@mxjs/icons:** upgrade from `0.2.0` to `0.2.1`
+* **@mxjs/bootstrap:** upgrade from `0.1.6` to `0.1.7`
+* **@mxjs/css:** upgrade from `0.2.3` to `0.3.0`
+* **append-url:** upgrade from `1.0.14` to `1.0.15`
+* **bootstrap-mobile:** upgrade from `0.9.3` to `0.9.4`
+* **@mxjs/a-button:** upgrade from `0.3.0` to `0.4.0`
+* **@mxjs/m-ret:** upgrade from `0.1.1` to `0.1.2`
+* **@mxjs/m-rich-text:** upgrade from `0.1.1` to `0.1.2`
+* **@mxjs/m-page:** upgrade from `0.2.0` to `0.2.1`
+* **@miaoxing/dev:** upgrade from `8.0.0` to `8.0.1`
+* **@mxjs/test:** upgrade from `0.2.0` to `0.2.1`
+* **@miaoxing/admin:** upgrade from `0.4.0` to `0.5.0`
+* **@miaoxing/app:** upgrade from `0.4.0` to `0.5.0`
+* **@miaoxing/link-to:** upgrade from `0.1.18` to `0.1.19`
+
 # [0.2.0](https://github.com/miaoxing/article/compare/v0.1.1...v0.2.0) (2021-10-28)
 
 
