@@ -5,13 +5,12 @@ import { useEffect, useState } from 'react';
 import {CListBtn} from '@mxjs/a-clink';
 import {Page, PageActions} from '@mxjs/a-page';
 import {Form, FormItem, FormAction} from '@mxjs/a-form';
-import Upload from '@mxjs/upload';
 import $ from 'miaoxing';
 import {FormUeditor} from '@mxjs/ueditor';
 import LinkPicker from '@miaoxing/link-to/components/LinkPicker';
 import api from '@mxjs/api';
 import {Input, TreeSelect} from 'antd';
-import {FormItemSort} from '@miaoxing/admin';
+import {FormItemSort, Upload} from '@miaoxing/admin';
 
 const New = () => {
   // 加载图文分类
@@ -63,7 +62,7 @@ const New = () => {
         <FormItem label="作者" name="author"/>
 
         <FormItem label="封面" name="cover" extra="支持.jpg .jpeg .bmp .gif .png格式照片">
-          <Upload url={$.apiUrl('files', {type: 'image'})} max={1}/>
+          <Upload max={1}/>
         </FormItem>
 
         <FormItem label="摘要" name="intro" type="textarea">
