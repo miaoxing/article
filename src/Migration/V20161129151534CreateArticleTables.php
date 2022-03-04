@@ -13,7 +13,7 @@ class V20161129151534CreateArticleTables extends BaseMigration
     {
         $this->schema->table('articles')->tableComment('图文')
             ->bigId()->comment('编号')
-            ->int('app_id')->comment('应用编号')
+            ->uBigInt('app_id')->comment('应用编号')
             ->bigInt('category_id')->comment('分类编号')
             ->string('title')->comment('标题')
             ->string('author', 32)->comment('作者')
@@ -33,7 +33,7 @@ class V20161129151534CreateArticleTables extends BaseMigration
 
         $this->schema->table('article_details')->tableComment('图文详情；1:1')
             ->bigId()->comment('编号')
-            ->int('app_id')->comment('应用编号')
+            ->uBigInt('app_id')->comment('应用编号')
             ->bigInt('article_id')->comment('图文编号')
             ->bool('show_cover')->comment('封面是否显示在正文中')
             ->mediumText('content')->comment('正文')
@@ -44,7 +44,7 @@ class V20161129151534CreateArticleTables extends BaseMigration
 
         $this->schema->table('article_categories')->tableComment('图文分类；1:1')
             ->bigId()->comment('编号')
-            ->int('app_id')->comment('应用编号')
+            ->uBigInt('app_id')->comment('应用编号')
             ->bigInt('parent_id')->comment('父分类编号')
             ->smallInt('level', 1)->defaults(1)->comment('层级')
             ->string('name')->comment('名称')
