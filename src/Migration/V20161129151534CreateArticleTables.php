@@ -67,8 +67,6 @@ class V20161129151534CreateArticleTables extends BaseMigration
      */
     public function down()
     {
-        $this->schema->dropIfExists('articles')
-            ->dropIfExists('article_details')
-            ->dropIfExists('article_categories');
+        $this->schema->dropIfExists(['articles', 'article_details', 'article_categories']);
     }
 }
