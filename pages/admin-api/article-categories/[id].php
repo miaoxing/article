@@ -11,8 +11,8 @@ return new class () extends BaseController {
 
     public function patch($req)
     {
-        return UpdateAction
-            ::beforeSave(function (ArticleCategoryModel $category, $req) {
+        return UpdateAction::new()
+            ->beforeSave(function (ArticleCategoryModel $category, $req) {
                 $isNew = $category->isNew();
                 $ret = V::defaultOptional()
                     ->uBigInt('parentId', '父级分类')->required($isNew)

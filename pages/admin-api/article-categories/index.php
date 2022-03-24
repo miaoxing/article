@@ -16,8 +16,8 @@ return new class () extends BaseController {
 
     public function get()
     {
-        return IndexAction
-            ::beforeFind(function (ArticleCategoryModel $models) {
+        return IndexAction::new()
+            ->beforeFind(function (ArticleCategoryModel $models) {
                 $models->where('level', 1)
                     ->setDefaultSortColumn(['sort', 'id']);
             })
