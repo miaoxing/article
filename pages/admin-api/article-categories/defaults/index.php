@@ -1,11 +1,8 @@
 <?php
 
-use Miaoxing\Article\Service\ArticleCategoryModel;
 use Miaoxing\Plugin\BaseController;
+use Miaoxing\Services\Page\DefaultsTrait;
 
 return new class () extends BaseController {
-    public function get()
-    {
-        return ArticleCategoryModel::toRet();
-    }
+    use DefaultsTrait;
 };
