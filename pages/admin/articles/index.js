@@ -2,6 +2,7 @@ import {Table, TableProvider, CTableDeleteLink, useTable} from '@mxjs/a-table';
 import {CEditLink, CNewBtn} from '@mxjs/a-clink';
 import {Page, PageActions} from '@mxjs/a-page';
 import {LinkActions} from '@mxjs/actions';
+import {SearchForm, SearchItem} from '@mxjs/a-form';
 
 const Index = () => {
   const [table] = useTable();
@@ -12,6 +13,10 @@ const Index = () => {
         <PageActions>
           <CNewBtn/>
         </PageActions>
+
+        <SearchForm>
+          <SearchItem label="标题" name={['search', 'title:ct']}/>
+        </SearchForm>
 
         <Table
           tableApi={table}
