@@ -58,12 +58,11 @@ describe('admin/articles', () => {
 
     await findByText('测试分类');
     await findByText('测试标题');
-    await findByText('图文');
     await findByText('测试作者');
     await findByText(51);
 
     const redirect = await findByText('跳转');
-    expect(redirect.parentElement.getAttribute('data-row-key')).toBe('2');
+    expect(redirect.parentElement.parentElement.getAttribute('data-row-key')).toBe('2');
 
     await Promise.all([promise]);
     expect($.http).toHaveBeenCalledTimes(1);

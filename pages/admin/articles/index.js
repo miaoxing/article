@@ -3,6 +3,7 @@ import {CEditLink, CNewBtn} from '@mxjs/a-clink';
 import {Page, PageActions} from '@mxjs/a-page';
 import {LinkActions} from '@mxjs/actions';
 import {SearchForm, SearchItem} from '@mxjs/a-form';
+import {Tag} from 'antd';
 
 const Index = () => {
   const [table] = useTable();
@@ -26,13 +27,17 @@ const Index = () => {
               dataIndex: ['category', 'name'],
             },
             {
-              title: '类型',
-              dataIndex: 'redirectLink',
-              render: (value) => Object.keys(value).length === 0 ? '图文' : '跳转',
-            },
-            {
               title: '标题',
               dataIndex: 'title',
+              render: (value, row) => {
+                return (
+                  <>
+                    {value}
+                    {' '}
+                    {Object.keys(row.redirectLink).length !== 0 && <Tag>跳转</Tag>}
+                  </>
+                );
+              },
             },
             {
               title: '作者',
