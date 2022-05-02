@@ -15,7 +15,7 @@ return new class () extends BaseController {
             ->beforeSave(function (ArticleCategoryModel $category, $req) {
                 $isNew = $category->isNew();
                 $ret = V::defaultOptional()
-                    ->uBigInt('parentId', '父级分类')->required($isNew)
+                    ->uBigIntString('parentId', '父级分类')->required($isNew)
                     ->tinyChar('name', '名称')->required($isNew)
                     ->tinyChar('description', '简介')
                     ->smallInt('sort', '顺序')
