@@ -1,12 +1,34 @@
+import {useState, useEffect} from 'react';
 import {Table, TableProvider, CTableDeleteLink, useTable} from '@mxjs/a-table';
 import {CEditLink, CNewBtn} from '@mxjs/a-clink';
 import {Page, PageActions} from '@mxjs/a-page';
 import {LinkActions} from '@mxjs/actions';
 import {SearchForm, SearchItem} from '@mxjs/a-form';
-import {Tag} from 'antd';
+import {Tag, TreeSelect} from 'antd';
+import api from '@mxjs/api';
+import $ from 'miaoxing';
 
 const Index = () => {
   const [table] = useTable();
+
+  // 加载图文分类
+  const [categories, setCategories] = useState([]);
+  useEffect(() => {
+    api.getMax('article-categories', {loading: true}).then(({ret}) => {
+      if (ret.isSuc()) {
+        setCategories(ret.data.map(category => ({
+          value: category.id,
+          title: category.name,
+          children: category.children.map(subCategory => ({
+            value: subCategory.id,
+            title: subCategory.name,
+          })),
+        })));
+      } else {
+        $.ret(ret);
+      }
+    });
+  }, []);
 
   return (
     <Page>
@@ -16,6 +38,17 @@ const Index = () => {
         </PageActions>
 
         <SearchForm>
+          <SearchItem label="分类" name={['search', 'categoryId']} initialValue="">
+            <TreeSelect
+              showSearch
+              showArrow
+              allowClear
+              treeDefaultExpandAll
+              placeholder="全部"
+              treeData={categories}
+            />
+          </SearchItem>
+
           <SearchItem label="标题" name={['search', 'title:ct']}/>
         </SearchForm>
 
