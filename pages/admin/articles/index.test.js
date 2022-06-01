@@ -23,10 +23,28 @@ describe('admin/articles', () => {
 
   test('index', async () => {
     const promise = createPromise();
+    const promise2 = createPromise();
 
     $.http = jest.fn()
-      // 读取列表数据
+      // 读取分类
       .mockImplementationOnce(() => promise.resolve({
+        ret: Ret.suc({
+          data: [
+            {
+              id: 1,
+              name: '测试分类',
+              children: [
+                {
+                  id: 2,
+                  name: '测试子分类',
+                },
+              ],
+            },
+          ],
+        }),
+      }))
+      // 读取列表数据
+      .mockImplementationOnce(() => promise2.resolve({
         ret: Ret.suc({
           data: [
             {
@@ -64,8 +82,8 @@ describe('admin/articles', () => {
     const redirect = await findByText('跳转');
     expect(redirect.parentElement.parentElement.getAttribute('data-row-key')).toBe('2');
 
-    await Promise.all([promise]);
-    expect($.http).toHaveBeenCalledTimes(1);
+    await Promise.all([promise, promise2]);
+    expect($.http).toHaveBeenCalledTimes(2);
     expect($.http).toMatchSnapshot();
   });
 });
