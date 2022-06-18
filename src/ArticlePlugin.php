@@ -2,6 +2,8 @@
 
 namespace Miaoxing\Article;
 
+use Miaoxing\Admin\Service\AdminMenu;
+
 class ArticlePlugin extends \Miaoxing\Plugin\BasePlugin
 {
     protected $name = '图文管理';
@@ -10,18 +12,10 @@ class ArticlePlugin extends \Miaoxing\Plugin\BasePlugin
 
     protected $code = 209;
 
-    public function onAdminNavGetNavs(&$navs, &$categories, &$subCategories)
+    public function onAdminMenuGetMenus(AdminMenu $menu)
     {
-        $subCategories[] = [
-            'parentId' => 'content',
-            'name' => '图文管理',
-            'url' => 'admin/articles',
-        ];
-
-        $subCategories[] = [
-            'parentId' => 'content',
-            'name' => '图文分类管理',
-            'url' => 'admin/article-categories',
-        ];
+        $content = $menu->child('content');
+        $content->addChild()->setLabel('图文管理')->setUrl('admin/articles');
+        $content->addChild()->setLabel('图文分类管理')->setUrl('admin/article-categories');
     }
 }
