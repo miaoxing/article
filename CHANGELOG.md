@@ -1,3 +1,36 @@
+## [0.3.5](https://github.com/miaoxing/article/compare/v0.3.4...v0.3.5) (2022-07-01)
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-page:** upgrade from `0.3.7` to `1.0.0`
+* **@mxjs/a-clink:** upgrade from `0.2.6` to `1.0.0`
+* **@mxjs/a-table:** upgrade from `0.4.6` to `1.0.0`
+* **@mxjs/a-form:** upgrade from `0.3.7` to `1.0.0`
+* **@mxjs/api:** upgrade from `0.1.10` to `1.0.0`
+* **@mxjs/actions:** upgrade from `0.2.3` to `0.2.4`
+* **miaoxing:** upgrade from `0.4.2` to `0.4.3`
+* **@mxjs/app:** upgrade from `0.5.1` to `0.5.2`
+* **@mxjs/upload:** upgrade from `0.6.5` to `0.6.6`
+* **@mxjs/ueditor:** upgrade from `0.2.7` to `0.2.8`
+* **@mxjs/icons:** upgrade from `0.2.3` to `1.0.0`
+* **@mxjs/bootstrap:** upgrade from `0.1.9` to `0.1.10`
+* **@mxjs/css:** upgrade from `0.3.3` to `1.0.0`
+* **append-url:** upgrade from `1.0.17` to `1.0.18`
+* **bootstrap-mobile:** upgrade from `0.10.0` to `0.10.1`
+* **@mxjs/a-button:** upgrade from `0.4.2` to `1.0.0`
+* **@mxjs/m-ret:** upgrade from `0.1.4` to `1.0.0`
+* **@mxjs/m-rich-text:** upgrade from `0.1.5` to `1.0.0`
+* **@mxjs/m-page:** upgrade from `0.2.4` to `1.0.0`
+* **@miaoxing/dev:** upgrade from `8.1.1` to `8.1.2`
+* **@mxjs/test:** upgrade from `0.2.6` to `1.0.0`
+* **@miaoxing/admin:** upgrade from `0.7.3` to `0.8.0`
+* **@miaoxing/app:** upgrade from `0.6.4` to `0.6.5`
+* **@miaoxing/link-to:** upgrade from `0.1.26` to `0.1.27`
+
 ## [0.3.4](https://github.com/miaoxing/article/compare/v0.3.3...v0.3.4) (2022-06-06)
 
 
