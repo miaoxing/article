@@ -28,17 +28,18 @@ class () extends BaseController {
             ::setReq($this->objectReq)
             ->beforeSave(function (ArticleModel $article, $req) {
                 $isNew = $article->isNew();
-                return V::defaultOptional()
-                    ->uBigInt('categoryId', '分类')->required($isNew)->modelExists(ArticleCategoryModel::class)
-                    ->tinyChar('title', '标题')->required($isNew)
-                    ->char('author', '作者', 0, 32)
-                    ->tinyChar('cover', '封面')
-                    ->char('intro', '摘要', 0, 512)
-                    ->mediumText(['detail', 'content'], '正文')
-                    ->object('sourceLink', '原文链接')
-                    ->object('redirectLink', '跳转地址')
-                    ->smallInt('sort', '顺序')
-                    ->check($req);
+
+                $v = V::defaultOptional();
+                $v->uBigInt('categoryId', '分类')->required($isNew)->modelExists(ArticleCategoryModel::class);
+                $v->tinyChar('title', '标题')->required($isNew);
+                $v->char('author', '作者', 0, 32);
+                $v->tinyChar('cover', '封面');
+                $v->char('intro', '摘要', 0, 512);
+                $v->mediumText(['detail', 'content'], '正文');
+                $v->object('sourceLink', '原文链接');
+                $v->object('redirectLink', '跳转地址');
+                $v->smallInt('sort', '顺序');
+                return $v->check($req);
             })
             ->afterSave(function (ArticleModel $article, $req) {
                 if (isset($req['detail'])) {

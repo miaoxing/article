@@ -14,12 +14,13 @@ return new class () extends BaseController {
         return UpdateAction::new()
             ->beforeSave(function (ArticleCategoryModel $category, $req) {
                 $isNew = $category->isNew();
-                $ret = V::defaultOptional()
-                    ->uBigIntString('parentId', '父级分类')->required($isNew)
-                    ->tinyChar('name', '名称')->required($isNew)
-                    ->tinyChar('description', '简介')
-                    ->smallInt('sort', '顺序')
-                    ->check($req);
+
+                $v = V::defaultOptional();
+                $v->uBigIntString('parentId', '父级分类')->required($isNew);
+                $v->tinyChar('name', '名称')->required($isNew);
+                $v->tinyChar('description', '简介');
+                $v->smallInt('sort', '顺序');
+                $ret = $v->check($req);
                 if ($ret->isErr()) {
                     return $ret;
                 }
