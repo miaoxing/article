@@ -1,7 +1,7 @@
 import Index from './index';
 import {render} from '@testing-library/react';
 import {MemoryRouter} from 'react-router';
-import $ from 'miaoxing';
+import $, {Ret} from 'miaoxing';
 import {bootstrap, createPromise, setUrl, resetUrl} from '@mxjs/test';
 import {app} from '@mxjs/app';
 
@@ -27,8 +27,7 @@ describe('admin/article-categories', () => {
     $.http = jest.fn()
       // 读取列表数据
       .mockImplementationOnce(() => promise.resolve({
-        ret: {
-          code: 1,
+        ret: Ret.suc({
           data: [
             {
               id: 1,
@@ -45,7 +44,7 @@ describe('admin/article-categories', () => {
               ],
             },
           ],
-        },
+        }),
       }));
 
     const {findByText} = render(<MemoryRouter>
