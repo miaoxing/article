@@ -16,8 +16,8 @@ return new class () extends BaseController {
                 $isNew = $category->isNew();
 
                 $v = V::defaultOptional();
-                $v->uBigIntString('parentId', '父级分类')->required($isNew);
-                $v->tinyChar('name', '名称')->required($isNew);
+                $v->uBigIntString('parentId', '父级分类');
+                $v->tinyChar('name', '名称')->required($isNew)->notEmpty();
                 $v->tinyChar('description', '简介');
                 $v->smallInt('sort', '顺序');
                 $ret = $v->check($req);
