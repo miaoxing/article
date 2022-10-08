@@ -33,7 +33,7 @@ class () extends BaseController {
                 $v->uBigInt('categoryId', '分类')->required($isNew)->modelExists(ArticleCategoryModel::class);
                 $v->tinyChar('title', '标题')->required($isNew);
                 $v->char('author', '作者', 0, 32);
-                $v->tinyChar('cover', '封面');
+                $v->imageUrl('cover', '封面');
                 $v->char('intro', '摘要', 0, 512);
                 $v->mediumText(['detail', 'content'], '正文');
                 $v->object('sourceLink', '原文链接');
