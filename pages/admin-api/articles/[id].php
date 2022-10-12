@@ -36,8 +36,8 @@ class () extends BaseController {
                 $v->imageUrl('cover', '封面');
                 $v->char('intro', '摘要', 0, 512);
                 $v->mediumText(['detail', 'content'], '正文');
-                $v->object('sourceLink', '原文链接');
-                $v->object('redirectLink', '跳转地址');
+                $v->object('sourceLink', '原文链接', 255);
+                $v->object('redirectLink', '跳转地址', 255);
                 $v->smallInt('sort', '顺序');
                 return $v->check($req);
             })
