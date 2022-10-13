@@ -20,6 +20,8 @@ class ArticleResource extends BaseResource
                 'likeNum',
                 'createdAt',
                 'updatedAt',
+                'sourceLink',
+                'redirectLink',
             ]),
             'detail' => ArticleDetailResource::whenLoaded($article, 'detail'),
         ];
