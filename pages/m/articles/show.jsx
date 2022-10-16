@@ -1,5 +1,5 @@
 import {Component} from 'react';
-import {View, Text} from '@fower/taro';
+import {View, Text, Button} from '@fower/taro';
 import $ from 'miaoxing';
 import RichText from '@mxjs/m-rich-text';
 import Page from '@mxjs/m-page';
