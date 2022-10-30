@@ -30,7 +30,7 @@ class () extends BaseController {
                 $isNew = $article->isNew();
 
                 $v = V::defaultOptional();
-                $v->uBigInt('categoryId', '分类')->required($isNew)->modelExists(ArticleCategoryModel::class);
+                $v->modelExists('categoryId', '分类', ArticleCategoryModel::class)->allowEmpty();
                 $v->tinyChar('title', '标题')->required($isNew);
                 $v->char('author', '作者', 0, 32);
                 $v->imageUrl('cover', '封面')->allowEmpty();

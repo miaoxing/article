@@ -18,14 +18,19 @@ const New = () => {
   useEffect(() => {
     api.getMax('article-categories', {loading: true}).then(({ret}) => {
       if (ret.isSuc()) {
-        setCategories(ret.data.map(category => ({
+        const data = ret.data.map(category => ({
           value: category.id,
           title: category.name,
           children: category.children.map(subCategory => ({
             value: subCategory.id,
             title: subCategory.name,
           })),
-        })));
+        }));
+        data.unshift({
+          value: '',
+          title: '未分类',
+        });
+        setCategories(data);
       } else {
         $.ret(ret);
       }
@@ -40,13 +45,13 @@ const New = () => {
 
       <Form
         afterLoad={({ret}) => {
-          // 避免分类显示 "0"
-          if (!ret.data.id) {
+          // 未分类提示"请选择"
+          if (!ret.data.categoryId) {
             delete ret.data.categoryId;
           }
         }}
       >
-        <FormItem label="分类" name="categoryId" required>
+        <FormItem label="分类" name="categoryId">
           <TreeSelect
             showSearch
             showArrow
