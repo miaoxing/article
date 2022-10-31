@@ -16,14 +16,19 @@ const Index = () => {
   useEffect(() => {
     api.getMax('article-categories', {loading: true}).then(({ret}) => {
       if (ret.isSuc()) {
-        setCategories(ret.data.map(category => ({
+        const data = ret.data.map(category => ({
           value: category.id,
           title: category.name,
           children: category.children.map(subCategory => ({
             value: subCategory.id,
             title: subCategory.name,
           })),
-        })));
+        }));
+        data.unshift({
+          value: '0',
+          title: '未分类',
+        });
+        setCategories(data);
       } else {
         $.ret(ret);
       }
@@ -38,7 +43,7 @@ const Index = () => {
         </PageActions>
 
         <SearchForm>
-          <SearchItem label="分类" name={['search', 'categoryId']} initialValue="">
+          <SearchItem label="分类" name={['search', 'categoryId']}>
             <TreeSelect
               showSearch
               showArrow
