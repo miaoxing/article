@@ -1,3 +1,19 @@
+## [0.3.11](https://github.com/miaoxing/article/compare/v0.3.10...v0.3.11) (2022-11-02)
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-clink:** upgrade from `1.1.0` to `1.1.1`
+* **@mxjs/a-table:** upgrade from `1.1.1` to `1.1.2`
+* **@mxjs/a-form:** upgrade from `1.1.2` to `1.1.3`
+* **@mxjs/upload:** upgrade from `0.6.10` to `0.6.11`
+* **@mxjs/ueditor:** upgrade from `0.2.12` to `0.2.13`
+* **@mxjs/a-button:** upgrade from `1.1.0` to `1.1.1`
+* **@miaoxing/admin:** upgrade from `0.9.3` to `0.9.4`
+
 ## [0.3.10](https://github.com/miaoxing/article/compare/v0.3.9...v0.3.10) (2022-11-01)
 
 
