@@ -1,3 +1,32 @@
+## [0.3.12](https://github.com/miaoxing/article/compare/v0.3.11...v0.3.12) (2022-12-01)
+
+
+### Features
+
+* **article:** 增加读取图文列表接口 ([2d609a4](https://github.com/miaoxing/article/commit/2d609a400bbc36f8647bcbd4df06bc2a8cbe4ac5))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-page:** upgrade from `1.1.0` to `1.1.1`
+* **@mxjs/a-clink:** upgrade from `1.1.1` to `1.1.2`
+* **@mxjs/a-table:** upgrade from `1.1.2` to `1.2.0`
+* **@mxjs/a-form:** upgrade from `1.1.3` to `1.1.4`
+* **@mxjs/api:** upgrade from `1.0.1` to `1.0.2`
+* **miaoxing:** upgrade from `0.4.4` to `0.4.5`
+* **@mxjs/upload:** upgrade from `0.6.11` to `0.6.12`
+* **@mxjs/ueditor:** upgrade from `0.2.13` to `0.2.14`
+* **@mxjs/a-button:** upgrade from `1.1.1` to `1.1.2`
+* **@mxjs/m-ret:** upgrade from `1.0.1` to `1.0.2`
+* **@mxjs/m-page:** upgrade from `1.0.1` to `1.0.2`
+* **@mxjs/test:** upgrade from `1.0.1` to `1.0.2`
+* **@miaoxing/admin:** upgrade from `0.9.4` to `0.9.5`
+* **@miaoxing/app:** upgrade from `0.6.10` to `0.6.11`
+* **@miaoxing/link-to:** upgrade from `0.1.32` to `0.1.33`
+
 ## [0.3.11](https://github.com/miaoxing/article/compare/v0.3.10...v0.3.11) (2022-11-02)
 
 
