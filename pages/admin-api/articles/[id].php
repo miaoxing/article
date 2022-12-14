@@ -30,15 +30,16 @@ class () extends BaseController {
                 $isNew = $article->isNew();
 
                 $v = V::defaultOptional();
+                $v->setModel($article);
                 $v->modelExists('categoryId', '分类', ArticleCategoryModel::class)->allowEmpty();
-                $v->tinyChar('title', '标题')->required($isNew);
-                $v->char('author', '作者', 0, 32);
+                $v->modelColumn('title', '标题')->required($isNew);
+                $v->modelColumn('author', '作者');
                 $v->imageUrl('cover', '封面')->allowEmpty();
-                $v->char('intro', '摘要', 0, 512);
+                $v->modelColumn('intro', '摘要');
                 $v->mediumText(['detail', 'content'], '正文');
                 $v->object('sourceLink', '原文链接', 255);
                 $v->object('redirectLink', '跳转地址', 255);
-                $v->smallInt('sort', '顺序');
+                $v->modelColumn('sort', '顺序');
                 return $v->check($req);
             })
             ->afterSave(function (ArticleModel $article, $req) {
