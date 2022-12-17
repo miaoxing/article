@@ -27,22 +27,22 @@ describe('admin/article-categories', () => {
     const promise3 = createPromise();
 
     $.http = jest.fn()
-      // 读取默认数据
-      .mockImplementationOnce(() => promise.resolve({
-        ret: Ret.suc({
-          data: {
-            parentId: 0,
-            sort: 50,
-          },
-        }),
-      }))
       // 读取父级分类
-      .mockImplementationOnce(() => promise2.resolve({
+      .mockImplementationOnce(() => promise.resolve({
         ret: Ret.suc({
           data: [{
             id: 1,
             name: '测试分类',
           }],
+        }),
+      }))
+      // 读取默认数据
+      .mockImplementationOnce(() => promise2.resolve({
+        ret: Ret.suc({
+          data: {
+            parentId: 0,
+            sort: 50,
+          },
         }),
       }))
       // 提交
