@@ -5,18 +5,18 @@ exports[`admin/articles form 1`] = `
   "calls": Array [
     Array [
       Object {
-        "method": "get",
-        "url": "/admin-api/articles/defaults",
-      },
-    ],
-    Array [
-      Object {
         "loading": true,
         "method": "get",
         "params": Object {
           "limit": 500,
         },
         "url": "/admin-api/article-categories",
+      },
+    ],
+    Array [
+      Object {
+        "method": "get",
+        "url": "/admin-api/articles/defaults",
       },
     ],
   ],
@@ -44,18 +44,18 @@ exports[`admin/articles form 2`] = `
   "calls": Array [
     Array [
       Object {
-        "method": "get",
-        "url": "/admin-api/articles/defaults",
-      },
-    ],
-    Array [
-      Object {
         "loading": true,
         "method": "get",
         "params": Object {
           "limit": 500,
         },
         "url": "/admin-api/article-categories",
+      },
+    ],
+    Array [
+      Object {
+        "method": "get",
+        "url": "/admin-api/articles/defaults",
       },
     ],
     Array [

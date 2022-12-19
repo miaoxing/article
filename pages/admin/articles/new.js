@@ -1,42 +1,15 @@
 /**
  * @share [id]/edit
  */
-import { useEffect, useState } from 'react';
 import {CListBtn} from '@mxjs/a-clink';
 import {Page, PageActions} from '@mxjs/a-page';
 import {Form, FormItem, FormAction} from '@mxjs/a-form';
-import $ from 'miaoxing';
 import {FormUeditor} from '@mxjs/ueditor';
 import LinkPicker from '@miaoxing/link-to/components/LinkPicker';
-import api from '@mxjs/api';
-import {Input, TreeSelect} from 'antd';
-import {FormItemSort, Upload} from '@miaoxing/admin';
+import {Input} from 'antd';
+import {FormItemSort, Upload, TreeSelect} from '@miaoxing/admin';
 
 const New = () => {
-  // 加载图文分类
-  const [categories, setCategories] = useState([]);
-  useEffect(() => {
-    api.getMax('article-categories', {loading: true}).then(({ret}) => {
-      if (ret.isSuc()) {
-        const data = ret.data.map(category => ({
-          value: category.id,
-          title: category.name,
-          children: category.children.map(subCategory => ({
-            value: subCategory.id,
-            title: subCategory.name,
-          })),
-        }));
-        data.unshift({
-          value: '',
-          title: '未分类',
-        });
-        setCategories(data);
-      } else {
-        $.ret(ret);
-      }
-    });
-  }, []);
-
   return (
     <Page>
       <PageActions>
@@ -53,12 +26,12 @@ const New = () => {
       >
         <FormItem label="分类" name="categoryId">
           <TreeSelect
-            showSearch
-            showArrow
-            allowClear
-            treeDefaultExpandAll
+            url="article-categories"
             placeholder="请选择"
-            treeData={categories}
+            prependData={{
+              id: '',
+              name: '未分类',
+            }}
           />
         </FormItem>
 

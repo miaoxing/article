@@ -1,31 +1,11 @@
-import { useState, useEffect } from 'react';
-import {Card, Radio, Select, TreeSelect, InputNumber} from 'antd';
+import {useState} from 'react';
+import {Card, Radio, Select, InputNumber} from 'antd';
 import PropTypes from 'prop-types';
 import {FormItem, useForm} from '@mxjs/a-form';
-import $ from 'miaoxing';
-import api from '@mxjs/api';
+import {TreeSelect} from '@miaoxing/admin';
 import ConfigArticlePicker from './ConfigArticlePicker';
 
 const ArticleConfig = ({propName}) => {
-  // 加载图文分类
-  const [categories, setCategories] = useState([]);
-  useEffect(() => {
-    api.getMax('article-categories', {loading: true}).then(({ret}) => {
-      if (ret.isSuc()) {
-        setCategories(ret.data.map(category => ({
-          value: category.id,
-          title: category.name,
-          children: category.children.map(subCategory => ({
-            value: subCategory.id,
-            title: subCategory.name,
-          })),
-        })));
-      } else {
-        $.ret(ret);
-      }
-    });
-  }, []);
-
   const form = useForm();
   const [source, setSource] = useState(form.getFieldValue(['components'].concat(propName(['source']))));
 
@@ -43,13 +23,9 @@ const ArticleConfig = ({propName}) => {
 
       {source === 'category' && <FormItem label="选择分类" name={propName(['categoryIds'])}>
         <TreeSelect
-          showSearch
-          showArrow
-          allowClear
+          url="article-categories"
           multiple
-          treeDefaultExpandAll
           placeholder="请选择"
-          treeData={categories}
         />
       </FormItem>}
 
