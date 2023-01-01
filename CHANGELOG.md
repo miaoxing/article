@@ -1,3 +1,41 @@
+## [0.3.13](https://github.com/miaoxing/article/compare/v0.3.12...v0.3.13) (2023-01-01)
+
+
+### Features
+
+* 更新 `fower` 到 `~1.75.0` ([4cab38c](https://github.com/miaoxing/article/commit/4cab38c7d8f8c1a679041e89f61b89f9e52e4ec1))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-page:** upgrade from `1.1.1` to `1.1.2`
+* **@mxjs/a-clink:** upgrade from `1.1.2` to `1.1.3`
+* **@mxjs/a-table:** upgrade from `1.2.0` to `1.2.1`
+* **@mxjs/a-form:** upgrade from `1.1.4` to `1.1.5`
+* **@mxjs/api:** upgrade from `1.0.2` to `1.0.3`
+* **@mxjs/actions:** upgrade from `0.2.5` to `0.2.6`
+* **miaoxing:** upgrade from `0.4.5` to `0.4.6`
+* **@mxjs/app:** upgrade from `0.5.3` to `0.5.4`
+* **@mxjs/upload:** upgrade from `0.6.12` to `0.6.13`
+* **@mxjs/ueditor:** upgrade from `0.2.14` to `0.2.15`
+* **@mxjs/icons:** upgrade from `1.0.1` to `1.0.2`
+* **@mxjs/bootstrap:** upgrade from `0.1.11` to `0.1.12`
+* **@mxjs/css:** upgrade from `1.0.1` to `1.1.0`
+* **append-url:** upgrade from `1.0.19` to `1.0.20`
+* **bootstrap-mobile:** upgrade from `0.10.2` to `0.10.3`
+* **@mxjs/a-button:** upgrade from `1.1.2` to `1.1.3`
+* **@mxjs/m-ret:** upgrade from `1.0.2` to `1.0.3`
+* **@mxjs/m-rich-text:** upgrade from `1.0.1` to `1.1.0`
+* **@mxjs/m-page:** upgrade from `1.0.2` to `1.1.0`
+* **@miaoxing/dev:** upgrade from `8.1.3` to `8.2.0`
+* **@mxjs/test:** upgrade from `1.0.2` to `1.0.3`
+* **@miaoxing/admin:** upgrade from `0.9.5` to `0.9.6`
+* **@miaoxing/app:** upgrade from `0.6.11` to `0.6.12`
+* **@miaoxing/link-to:** upgrade from `0.1.33` to `0.1.34`
+
 ## [0.3.12](https://github.com/miaoxing/article/compare/v0.3.11...v0.3.12) (2022-12-01)
 
 
