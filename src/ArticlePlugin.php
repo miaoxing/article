@@ -15,7 +15,15 @@ class ArticlePlugin extends \Miaoxing\Plugin\BasePlugin
     public function onAdminMenuGetMenus(AdminMenu $menu)
     {
         $content = $menu->child('content');
-        $content->addChild()->setLabel('图文管理')->setUrl('admin/articles');
-        $content->addChild()->setLabel('图文分类管理')->setUrl('admin/article-categories');
+
+        $articles = $content->addChild()->setLabel('图文管理')->setUrl('admin/articles')->setApis([
+            'GET admin-api/article-categories',
+        ]);
+        $articles->addChild()->setUrl('admin/articles/new')->setLabel('添加');
+        $articles->addChild()->setUrl('admin/articles/[id]/edit')->setLabel('编辑');
+
+        $categories = $content->addChild()->setLabel('图文分类管理')->setUrl('admin/article-categories');
+        $categories->addChild()->setUrl('admin/article-categories/new')->setLabel('添加');
+        $categories->addChild()->setUrl('admin/article-categories/[id]/edit')->setLabel('编辑');
     }
 }
