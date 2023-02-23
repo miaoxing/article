@@ -9,6 +9,7 @@ use Miaoxing\Plugin\Model\ModelTrait;
 use Miaoxing\Plugin\Model\ReqQueryTrait;
 use Miaoxing\Plugin\Model\SnowflakeTrait;
 use Wei\Model\SoftDeleteTrait;
+use Wei\Ret;
 
 /**
  * @property ArticleCategoryModel $parent
@@ -53,5 +54,13 @@ class ArticleCategoryModel extends BaseModel
     public function children(): self
     {
         return $this->hasMany(static::class, 'parent_id')->desc('sort');
+    }
+
+    public function checkDestroy(): Ret
+    {
+        if (ArticleModel::findBy('categoryId', $this->id)) {
+            return err(['很抱歉，该%s已被%s使用，不能删除', '分类', '图文']);
+        }
+        return suc();
     }
 }
