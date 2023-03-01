@@ -1,3 +1,22 @@
+## [0.3.15](https://github.com/miaoxing/article/compare/v0.3.14...v0.3.15) (2023-03-01)
+
+
+### Features
+
+* 模型增加 `checkDestroy` 方法 ([5c2fbd8](https://github.com/miaoxing/article/commit/5c2fbd8ef9f564fd51c3c9de5148c1de2b346b11))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-page:** upgrade from `1.1.3` to `2.0.0`
+* **@mxjs/actions:** upgrade from `0.2.7` to `0.2.8`
+* **@miaoxing/admin:** upgrade from `0.9.7` to `0.10.0`
+* **@miaoxing/app:** upgrade from `0.6.13` to `0.7.0`
+* **@miaoxing/link-to:** upgrade from `0.1.35` to `0.1.36`
+
 ## [0.3.14](https://github.com/miaoxing/article/compare/v0.3.13...v0.3.14) (2023-01-31)
 
 
