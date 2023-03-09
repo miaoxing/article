@@ -3,6 +3,7 @@
 namespace Miaoxing\Article;
 
 use Miaoxing\Admin\Service\AdminMenu;
+use Miaoxing\App\Service\PermissionMap;
 
 class ArticlePlugin extends \Miaoxing\Plugin\BasePlugin
 {
@@ -16,14 +17,41 @@ class ArticlePlugin extends \Miaoxing\Plugin\BasePlugin
     {
         $content = $menu->child('content');
 
-        $articles = $content->addChild()->setLabel('图文管理')->setUrl('admin/articles')->setApis([
-            'GET admin-api/article-categories',
-        ]);
-        $articles->addChild()->setUrl('admin/articles/new')->setLabel('添加');
-        $articles->addChild()->setUrl('admin/articles/[id]/edit')->setLabel('编辑');
+        $articles = $content->addChild()->setLabel('图文管理')->setUrl('admin/articles');
+        $articles->addChild()->setLabel('添加')->setUrl('admin/articles/new');
+        $articles->addChild()->setLabel('编辑')->setUrl('admin/articles/[id]/edit');
+        $articles->addChild()->setLabel('删除')->setUrl('admin/articles/[id]/delete');
 
         $categories = $content->addChild()->setLabel('图文分类管理')->setUrl('admin/article-categories');
-        $categories->addChild()->setUrl('admin/article-categories/new')->setLabel('添加');
-        $categories->addChild()->setUrl('admin/article-categories/[id]/edit')->setLabel('编辑');
+        $categories->addChild()->setLabel('添加')->setUrl('admin/article-categories/new');
+        $categories->addChild()->setLabel('编辑')->setUrl('admin/article-categories/[id]/edit');
+        $categories->addChild()->setLabel('删除')->setUrl('admin/article-categories/[id]/delete');
+    }
+
+    public function onPermissionGetMap(PermissionMap $map)
+    {
+        $map->prefix('admin/articles', function (PermissionMap $map) {
+            $map->addList('', [
+                'GET api/admin/article-categories',
+            ]);
+            $map->addNew('', [
+                'GET api/admin/article-categories',
+            ]);
+            $map->addEdit('', [
+                'GET api/admin/article-categories',
+            ]);
+            $map->addDelete();
+        });
+
+        $map->prefix('admin/article-categories', function (PermissionMap $map) {
+            $map->addList();
+            $map->addNew('', [
+                'GET api/admin/article-categories',
+            ]);
+            $map->addEdit('', [
+                'GET api/admin/article-categories',
+            ]);
+            $map->addDelete();
+        });
     }
 }
