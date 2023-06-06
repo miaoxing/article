@@ -12,7 +12,7 @@ return new class () extends BaseController {
     public function patch($req)
     {
         return UpdateAction::new()
-            ->beforeSave(function (ArticleCategoryModel $category, $req) {
+            ->validate(function (ArticleCategoryModel $category, $req) {
                 $isNew = $category->isNew();
 
                 $v = V::defaultOptional();
@@ -27,17 +27,21 @@ return new class () extends BaseController {
                 }
 
                 // 选择了父分类，但类型和父分类一致，同时层级为父分类加 1
-                if ($category->parentId) {
-                    if ($category->parentId === $category->id) {
+                if ($req['parentId']) {
+                    if ($req['parentId'] === $category->id) {
                         return err('不能使用自己作为父级分类');
                     }
 
                     if ($category->children()->first()) {
                         return err('当前只支持 2 级分类，该分类已有子分类，不能成为其他分类的子分类');
                     }
+                }
 
-                    $parent = $category->parent;
-                    $category->level = $parent->level + 1;
+                return $ret;
+            })
+            ->beforeSave(function (ArticleCategoryModel $category, $req) {
+                if ($category->parentId) {
+                    $category->level = $category->parent->level + 1;
                 } else {
                     $category->level = 1;
                 }
