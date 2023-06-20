@@ -1,6 +1,6 @@
 <?php
 
-namespace MiaoxingTest\Article\Pages\AdminApi\Articles\Defaults;
+namespace MiaoxingTest\Article\Pages\Api\Admin\Articles\Defaults;
 
 use Miaoxing\Plugin\Service\Tester;
 use Miaoxing\Plugin\Test\BaseTestCase;

@@ -59,6 +59,7 @@
     "@mxjs/a-clink": "miaoxing/mxjs-a-clink",
     "@mxjs/upload": "miaoxing/mxjs-upload",
     "@mxjs/a-link-picker": "miaoxing/mxjs-a-link-picker",
+    "@mxjs/app": "miaoxing/mxjs-app",
     "@mxjs/m-ret": "miaoxing/mxjs-m-ret",
     "@mxjs/m-rich-text": "miaoxing/mxjs-m-rich-text",
     "@mxjs/m-page": "miaoxing/mxjs-m-page"

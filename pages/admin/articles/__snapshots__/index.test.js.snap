@@ -10,13 +10,13 @@ exports[`admin/articles index 1`] = `
         "params": Object {
           "limit": 500,
         },
-        "url": "/admin-api/article-categories",
+        "url": "/api/admin/article-categories",
       },
     ],
     Array [
       Object {
         "method": "get",
-        "url": "/admin-api/articles?page=1&limit=20",
+        "url": "/api/admin/articles?page=1&limit=20",
       },
     ],
   ],

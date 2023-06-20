@@ -1,6 +1,6 @@
 <?php
 
-namespace MiaoxingTest\Article\Pages\AdminApi\Articles;
+namespace MiaoxingTest\Article\Pages\Api\Admin\Articles;
 
 use Miaoxing\Article\Service\ArticleCategoryModel;
 use Miaoxing\Article\Service\ArticleDetailModel;
