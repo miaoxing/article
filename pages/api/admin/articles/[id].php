@@ -3,7 +3,7 @@
 use Miaoxing\Article\Service\ArticleCategoryModel;
 use Miaoxing\Article\Service\ArticleDetailModel;
 use Miaoxing\Article\Service\ArticleModel;
-use Miaoxing\Plugin\BaseController;
+use Miaoxing\Plugin\BasePage;
 use Miaoxing\Services\Service\DestroyAction;
 use Miaoxing\Services\Service\ShowAction;
 use Miaoxing\Services\Service\UpdateAction;
@@ -12,7 +12,7 @@ use Wei\V;
 return new /**
  * @mixin \ObjectReqMixin
  */
-class () extends BaseController {
+class () extends BasePage {
     protected $include = [
         'detail',
     ];
