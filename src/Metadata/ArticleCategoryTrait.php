@@ -3,10 +3,11 @@
 namespace Miaoxing\Article\Metadata;
 
 /**
- * @property int|null $id 编号
- * @property int $appId 应用编号
- * @property int $parentId 父栏目编号
+ * @property string|null $id 编号
+ * @property string $appId 应用编号
+ * @property string $parentId 父分类编号
  * @property int $level 层级
+ * @property string $path 路径
  * @property string $name 名称
  * @property string $image 图片
  * @property string $description 简介
@@ -18,10 +19,10 @@ namespace Miaoxing\Article\Metadata;
  * @property int $sort 顺序，从大到小排列
  * @property string|null $createdAt
  * @property string|null $updatedAt
- * @property int $createdBy
- * @property int $updatedBy
+ * @property string $createdBy
+ * @property string $updatedBy
  * @property string|null $deletedAt
- * @property int $deletedBy
+ * @property string $deletedBy
  * @internal will change in the future
  */
 trait ArticleCategoryTrait

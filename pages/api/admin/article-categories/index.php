@@ -10,16 +10,17 @@ return new class () extends BasePage {
     use CollGetTrait;
     use PostToPatchTrait;
 
-    protected $include = [
-        'children',
-    ];
-
     public function get()
     {
         return IndexAction::new()
-            ->beforeFind(function (ArticleCategoryModel $models) {
-                $models->where('level', 1)
-                    ->setDefaultSortColumn(['sort', 'id']);
+            ->beforeFind(function (ArticleCategoryModel $categories) {
+                $categories->setDefaultSortColumn(['sort', 'id']);
+            })
+            ->afterReqQuery(function (ArticleCategoryModel $categories) {
+                $categories->resetQueryParts(['limit', 'offset']);
+            })
+            ->afterFind(function (ArticleCategoryModel $categories) {
+                $categories->toTree();
             })
             ->exec($this);
     }

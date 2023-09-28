@@ -1,9 +1,9 @@
 import Index from './index';
-import {render} from '@testing-library/react';
-import {MemoryRouter} from 'react-router';
-import $, {Ret} from 'miaoxing';
-import {bootstrap, createPromise, setUrl, resetUrl} from '@mxjs/test';
-import {app} from '@mxjs/app';
+import { render } from '@testing-library/react';
+import { MemoryRouter } from 'react-router';
+import $, { Ret } from 'miaoxing';
+import { bootstrap, createPromise, setUrl, resetUrl } from '@mxjs/test';
+import { app } from '@mxjs/app';
 
 bootstrap();
 
@@ -47,12 +47,14 @@ describe('admin/article-categories', () => {
         }),
       }));
 
-    const {findByText} = render(<MemoryRouter>
+    const result = render(<MemoryRouter>
       <Index/>
     </MemoryRouter>);
 
-    await findByText('测试分类');
-    await findByText('└ 子分类');
+    await result.findByText('测试分类');
+
+    // Children is hiding
+    await result.findByLabelText('展开行');
 
     await Promise.all([promise]);
     expect($.http).toHaveBeenCalledTimes(1);

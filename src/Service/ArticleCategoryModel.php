@@ -9,12 +9,9 @@ use Miaoxing\Plugin\Model\ModelTrait;
 use Miaoxing\Plugin\Model\ReqQueryTrait;
 use Miaoxing\Plugin\Model\SnowflakeTrait;
 use Wei\Model\SoftDeleteTrait;
+use Wei\Model\TreeTrait;
 use Wei\Ret;
 
-/**
- * @property ArticleCategoryModel $parent
- * @property ArticleCategoryModel[]|ArticleCategoryModel $children
- */
 class ArticleCategoryModel extends BaseModel
 {
     use ArticleCategoryTrait;
@@ -23,6 +20,9 @@ class ArticleCategoryModel extends BaseModel
     use ReqQueryTrait;
     use SnowflakeTrait;
     use SoftDeleteTrait;
+    use TreeTrait;
+
+    protected $parentIdColumn = 'parentId';
 
     protected $columns = [
         'link' => [
@@ -31,29 +31,27 @@ class ArticleCategoryModel extends BaseModel
         ],
     ];
 
-    public function getGuarded(): array
-    {
-        return array_merge($this->guarded, [
-            'level',
-        ]);
-    }
-
-    public function afterDestroy()
-    {
-        $this->children->destroy();
-    }
-
-    /**
-     * 获取当前分类的父分类
-     */
-    public function parent(): self
-    {
-        return $this->belongsTo(static::class, 'id', 'parent_id');
-    }
-
     public function children(): self
     {
         return $this->hasMany(static::class, 'parent_id')->desc('sort');
+    }
+
+    public function checkParentId($parentId): Ret
+    {
+        if (!$parentId) {
+            return suc();
+        }
+
+        if ((string) $parentId === $this->id) {
+            return err('不能使用自己作为父级分类');
+        }
+
+        $parent = static::new()->findOrFail($parentId);
+        if ($this->isAncestorOf($parent)) {
+            return err('不能使用子分类作为父级分类');
+        }
+
+        return suc();
     }
 
     public function checkDestroy(): Ret
