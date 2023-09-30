@@ -1,3 +1,24 @@
+## [0.3.23](https://github.com/miaoxing/article/compare/v0.3.22...v0.3.23) (2023-09-30)
+
+
+### Features
+
+* **article:** 图文分类支持多级 ([6c48498](https://github.com/miaoxing/article/commit/6c48498d9c96107e79d047f9fad055a1dbcd1af8))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-page:** upgrade from `2.1.5` to `2.2.0`
+* **@mxjs/a-form:** upgrade from `1.6.0` to `1.7.0`
+* **@mxjs/upload:** upgrade from `0.6.21` to `0.6.22`
+* **@mxjs/ueditor:** upgrade from `0.2.23` to `0.2.24`
+* **@miaoxing/admin:** upgrade from `0.11.0` to `0.11.1`
+* **@miaoxing/app:** upgrade from `0.7.6` to `0.7.7`
+* **@miaoxing/link-to:** upgrade from `0.1.42` to `0.1.43`
+
 ## [0.3.22](https://github.com/miaoxing/article/compare/v0.3.21...v0.3.22) (2023-09-02)
 
 
