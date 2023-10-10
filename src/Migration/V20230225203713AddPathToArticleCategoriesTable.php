@@ -4,6 +4,7 @@ namespace Miaoxing\Article\Migration;
 
 use Miaoxing\Article\Service\ArticleCategoryModel;
 use Wei\Migration\BaseMigration;
+use Wei\QueryBuilder;
 
 class V20230225203713AddPathToArticleCategoriesTable extends BaseMigration
 {
@@ -16,7 +17,12 @@ class V20230225203713AddPathToArticleCategoriesTable extends BaseMigration
             ->string('path')->comment('路径')->after('level')
             ->index('path')
             ->exec();
-        ArticleCategoryModel::whereNotHas('parentId')->all()->updateTree();
+
+        // NOTE: 不使用 Model，兼容单元测试时没有 appId 导致错误
+        $categories = QueryBuilder::table('article_categories')->where('parent_id', '')->select('id')->all();
+        if ($categories) {
+            ArticleCategoryModel::findAll(array_column($categories, 'id'))->updateTree();
+        }
     }
 
     /**
