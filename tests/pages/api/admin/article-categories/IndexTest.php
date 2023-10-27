@@ -18,15 +18,13 @@ class IndexTest extends BaseTestCase
             'sort' => 30,
             'description' => '测试描述',
         ]);
-        ArticleCategoryModel::save([
-            'parentId' => $category->id,
+        $node = $category->saveNode([
             'name' => '子分类',
             'sort' => 60,
             'description' => '子分类描述',
-            'level' => 2,
         ]);
 
-        $ret = Tester::request(['search' => ['id' => $category->id]])->getAdminApi('article-categories');
+        $ret = Tester::request(['search' => ['id' => [$category->id, $node->id]]])->getAdminApi('article-categories');
 
         $categories = ArticleCategoryModel::findAll([$category->id])
             ->load('children')
@@ -43,7 +41,7 @@ class IndexTest extends BaseTestCase
             'id' => '1', // ignored
             'level' => '2', // ignored
             'parentId' => 0,
-            'name' => '测试',
+            'name' => '测试' . mt_rand(),
             'sort' => '60',
             'description' => '描述',
         ]);
@@ -52,7 +50,7 @@ class IndexTest extends BaseTestCase
         /** @var ArticleCategoryModel $category */
         $category = $ret['data'];
         $this->assertNotEquals('1', $category->id);
-        $this->assertSame('测试', $category->name);
+        $this->assertStringStartsWith('测试', $category->name);
         $this->assertSame(60, $category->sort);
         $this->assertSame('描述', $category->description);
         $this->assertSame(1, $category->level);
@@ -66,7 +64,7 @@ class IndexTest extends BaseTestCase
 
         $ret = Tester::postAdminApi('article-categories', [
             'parentId' => $category->id,
-            'name' => '测试分类',
+            'name' => '测试' . mt_rand(),
         ]);
         $this->assertRetSuc($ret);
 

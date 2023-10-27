@@ -103,7 +103,7 @@ class IdTest extends BaseTestCase
         $ret = Tester::patchAdminApi('article-categories/' . $category->id, [
             'parentId' => $subCategory->id,
         ]);
-        $this->assertRetErr($ret, '当前只支持 2 级分类，该分类已有子分类，不能成为其他分类的子分类');
+        $this->assertRetErr($ret, '不能使用子分类作为父级分类');
     }
 
     public function testDelete()
