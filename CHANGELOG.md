@@ -1,3 +1,24 @@
+## [0.3.24](https://github.com/miaoxing/article/compare/v0.3.23...v0.3.24) (2023-11-02)
+
+
+### Bug Fixes
+
+* **article:** 解决 migration 中调用 model 失败 ([560f37b](https://github.com/miaoxing/article/commit/560f37ba1c569ec7ae9e87854b09a9558a729aa2))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-table:** upgrade from `1.5.3` to `1.6.0`
+* **@mxjs/a-form:** upgrade from `1.7.0` to `2.0.0`
+* **@mxjs/upload:** upgrade from `0.6.22` to `0.6.23`
+* **@mxjs/ueditor:** upgrade from `0.2.24` to `0.2.25`
+* **@miaoxing/admin:** upgrade from `0.11.1` to `0.11.2`
+* **@miaoxing/app:** upgrade from `0.7.7` to `0.7.8`
+* **@miaoxing/link-to:** upgrade from `0.1.43` to `0.1.44`
+
 ## [0.3.23](https://github.com/miaoxing/article/compare/v0.3.22...v0.3.23) (2023-09-30)
 
 
