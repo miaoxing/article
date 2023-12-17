@@ -12,12 +12,12 @@ return new class () extends BasePage {
     public function patch($req)
     {
         return UpdateAction::new()
-            ->validate(function (ArticleCategoryModel $category, $req) {
+            ->validate(static function (ArticleCategoryModel $category, $req) {
                 $v = V::defaultOptional();
                 $v->setModel($category);
 
                 $parentIdV = $v->modelColumn('parentId', '父级分类');
-                $parentIdV->callback(function ($parentId) use ($category) {
+                $parentIdV->callback(static function ($parentId) use ($category) {
                     $ret = $category->checkParentId($parentId);
                     return $ret->isErr() ? $ret->getMessage() : true;
                 });

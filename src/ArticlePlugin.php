@@ -30,7 +30,7 @@ class ArticlePlugin extends \Miaoxing\Plugin\BasePlugin
 
     public function onPermissionGetMap(PermissionMap $map)
     {
-        $map->prefix('admin/articles', function (PermissionMap $map) {
+        $map->prefix('admin/articles', static function (PermissionMap $map) {
             $map->addList('', [
                 'GET api/admin/article-categories',
             ]);
@@ -43,7 +43,7 @@ class ArticlePlugin extends \Miaoxing\Plugin\BasePlugin
             $map->addDelete();
         });
 
-        $map->prefix('admin/article-categories', function (PermissionMap $map) {
+        $map->prefix('admin/article-categories', static function (PermissionMap $map) {
             $map->addList();
             $map->addNew('', [
                 'GET api/admin/article-categories',

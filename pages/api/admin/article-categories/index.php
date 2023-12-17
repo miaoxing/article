@@ -13,13 +13,13 @@ return new class () extends BasePage {
     public function get()
     {
         return IndexAction::new()
-            ->beforeFind(function (ArticleCategoryModel $categories) {
+            ->beforeFind(static function (ArticleCategoryModel $categories) {
                 $categories->setDefaultSortColumn(['sort', 'id']);
             })
-            ->afterReqQuery(function (ArticleCategoryModel $categories) {
+            ->afterReqQuery(static function (ArticleCategoryModel $categories) {
                 $categories->resetQueryParts(['limit', 'offset']);
             })
-            ->afterFind(function (ArticleCategoryModel $categories) {
+            ->afterFind(static function (ArticleCategoryModel $categories) {
                 $categories->toTree();
             })
             ->exec($this);

@@ -24,9 +24,8 @@ class () extends BasePage {
 
     public function patch()
     {
-        return UpdateAction
-            ::setReq($this->objectReq)
-            ->beforeSave(function (ArticleModel $article, $req) {
+        return UpdateAction::setReq($this->objectReq)
+            ->beforeSave(static function (ArticleModel $article, $req) {
                 $isNew = $article->isNew();
 
                 $v = V::defaultOptional();
@@ -42,7 +41,7 @@ class () extends BasePage {
                 $v->modelColumn('sort', '顺序');
                 return $v->check($req);
             })
-            ->afterSave(function (ArticleModel $article, $req) {
+            ->afterSave(static function (ArticleModel $article, $req) {
                 if (isset($req['detail'])) {
                     $article->detail()->saveRelation((array) $req['detail']);
                 }
@@ -52,8 +51,8 @@ class () extends BasePage {
 
     public function delete()
     {
-        return DestroyAction
-            ::afterDestroy(function (ArticleModel $article) {
+        return DestroyAction::new()
+            ->afterDestroy(static function (ArticleModel $article) {
                 ArticleDetailModel::findBy('articleId', $article->id)->destroy();
             })
             ->exec($this);
