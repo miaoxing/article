@@ -168,11 +168,11 @@ const ArticlePreview = (
     <>
       {
         articles.length ?
-          <Box as="ul" mb0 className="list list-indented">
+          <Box as="ul" mb={0} className="list list-indented">
             <Tpl articles={articles}/>
           </Box>
           :
-          <Box overflowHidden>
+          <Box overflow="hidden">
             <Empty image={Empty.PRESENTED_IMAGE_SIMPLE}/>
           </Box>
       }
