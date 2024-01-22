@@ -1,23 +1,16 @@
-import {useState, useEffect} from 'react';
+import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import $ from 'miaoxing';
-import {Empty} from 'antd';
-import {Box, Image} from '@mxjs/box';
-import {css} from '@mxjs/css';
+import { Empty } from 'antd';
+import { Box, Image } from '@mxjs/a-box';
 import './list.scss';
 import defaultCover from '../../images/default-cover.svg';
-
-const imgClass = css({
-  maxW: '100%',
-  h: 'auto',
-  mb2: true,
-});
 
 const ImageTopList = ({articles}) => {
   return articles.map((article) => (
     <li key={article.id}>
       <a className="list-item" href="#">
-        <img className={imgClass} src={article.cover || defaultCover}/>
+        <Image maxW="full" h="auto" mb={2} src={article.cover || defaultCover}/>
         <h4 className="list-title">
           {article.title}
         </h4>
@@ -42,58 +35,41 @@ const OnlyTitleList = ({articles}) => {
   ));
 };
 
-const imageLeftClass = css({
-  // 样式被 list.scss 覆盖
-  flex: '0 0 72px !important',
-  h: '72px',
-  w: '72px !important',
-});
-
-const verticalAlignMiddle = css({
-  verticalAlign: 'middle',
-});
-
 const ImageLeftTitleRightList = ({articles}) => {
   return articles.map(article => (
     <li key={article.id}>
       <a className="list-item" href="#">
-        <div className={'list-col ' + imageLeftClass}>
+        <Box className="list-col" flex="0 0 72px !important" h="72px" w="72px!">
           <Image h="100%" src={article.cover || defaultCover}/>
-        </div>
-        <div className={'list-col ' + verticalAlignMiddle}>
+        </Box>
+        <Box className="list-col" verticalAlign="middle">
           <h4 className="list-title">
             {article.title}
           </h4>
           <div className="list-text">
             {article.intro}
           </div>
-        </div>
+        </Box>
       </a>
     </li>
   ));
 };
 
-const imageRightClass = css({
-  flex: '0 0 87px !important',
-  h: '72px',
-  w: '87px !important',
-});
-
 const TitleLeftImageRightList = ({articles}) => {
   return articles.map(article => (
     <li key={article.id}>
       <a className="list-item" href="#">
-        <div className={'list-col ' + verticalAlignMiddle}>
+        <Box className="list-col" verticalAlign="middle">
           <h4 className="list-title">
             {article.title}
           </h4>
           <div className="list-text">
             {article.intro}
           </div>
-        </div>
-        <div className={'list-col' + imageRightClass}>
+        </Box>
+        <Box className="list-col" flex="0 0 87px !important" h="72px" w="87px">
           <Image h="100%" maxW="100%" src={article.cover || defaultCover}/>
-        </div>
+        </Box>
       </a>
     </li>
   ));
