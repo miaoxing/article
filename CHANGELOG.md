@@ -1,3 +1,35 @@
+## [0.3.28](https://github.com/miaoxing/article/compare/v0.3.27...v0.3.28) (2024-01-31)
+
+
+### Features
+
+* **article:** 更新 box 组件为 chakra-ui ([37b0cf8](https://github.com/miaoxing/article/commit/37b0cf818eb92eb9c11fa3c7cba571c9db96ea90))
+* 更新 `react` 支持 18 ([d0a834e](https://github.com/miaoxing/article/commit/d0a834e38629331cd865a2bc664b6bb68cdea8e6))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-box:** upgrade from `1.0.0` to `1.1.0`
+* **@mxjs/a-page:** upgrade from `2.2.3` to `2.3.0`
+* **@mxjs/a-clink:** upgrade from `2.0.5` to `2.1.0`
+* **@mxjs/a-table:** upgrade from `1.6.3` to `1.7.0`
+* **@mxjs/a-form:** upgrade from `2.0.3` to `2.1.0`
+* **@mxjs/actions:** upgrade from `0.2.16` to `0.2.17`
+* **@mxjs/upload:** upgrade from `0.6.26` to `0.6.27`
+* **@mxjs/ueditor:** upgrade from `0.2.28` to `0.2.29`
+* **@mxjs/icons:** upgrade from `1.0.8` to `1.1.0`
+* **@mxjs/bootstrap:** upgrade from `0.1.18` to `0.1.19`
+* **@mxjs/a-button:** upgrade from `3.0.5` to `3.1.0`
+* **@mxjs/m-ret:** upgrade from `1.0.9` to `1.1.0`
+* **@mxjs/m-rich-text:** upgrade from `1.1.6` to `1.2.0`
+* **@mxjs/m-page:** upgrade from `1.1.6` to `1.2.0`
+* **@miaoxing/admin:** upgrade from `0.11.5` to `0.12.0`
+* **@miaoxing/app:** upgrade from `0.7.11` to `0.8.0`
+* **@miaoxing/link-to:** upgrade from `0.1.47` to `0.1.48`
+
 ## [0.3.27](https://github.com/miaoxing/article/compare/v0.3.26...v0.3.27) (2024-01-08)
 
 
