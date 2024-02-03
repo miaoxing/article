@@ -12,7 +12,7 @@
     "preset": "jest-preset-miaoxing"
   },
   "dependencies": {
-    "antd": "~5.1.6",
+    "antd": "~5.13",
     "react": ">=16.13.1",
     "react-dom": ">=16.13.1",
     "@mxjs/a-box": "^1.1.0",
@@ -29,7 +29,7 @@
     "prop-types": "^15.7.2",
     "@mxjs/icons": "^1.1.0",
     "@mxjs/bootstrap": "^0.1.19",
-    "@ant-design/icons": "^4.6.2",
+    "@ant-design/icons": "^5",
     "append-url": "^1.0.26",
     "bootstrap-mobile": "^0.10.9",
     "@mxjs/a-button": "^3.1.0",
