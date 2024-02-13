@@ -21,7 +21,6 @@
     "@mxjs/a-table": "^1.7.0",
     "@mxjs/a-form": "^2.1.0",
     "@mxjs/api": "^1.0.10",
-    "@mxjs/actions": "^0.2.17",
     "miaoxing": "^0.4.12",
     "@mxjs/app": "^0.6.5",
     "@mxjs/upload": "^0.6.27",

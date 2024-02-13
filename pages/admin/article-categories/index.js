@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import { Table, TableProvider, CTableDeleteLink, useTable } from '@mxjs/a-table';
+import { Table, TableProvider, CTableDeleteLink, useTable, TableActions } from '@mxjs/a-table';
 import { CEditLink, CNewBtn } from '@mxjs/a-clink';
 import { Page, PageActions } from '@mxjs/a-page';
-import { LinkActions } from '@mxjs/actions';
 import { SearchForm, SearchItem } from '@mxjs/a-form';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -115,10 +114,10 @@ const Index = () => {
               title: '操作',
               dataIndex: 'id',
               render: (id) => (
-                <LinkActions>
+                <TableActions>
                   <CEditLink id={id}/>
                   <CTableDeleteLink id={id}/>
-                </LinkActions>
+                </TableActions>
               ),
             },
           ]}
