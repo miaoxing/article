@@ -4,7 +4,7 @@
 import {CListBtn} from '@mxjs/a-clink';
 import {Page, PageActions} from '@mxjs/a-page';
 import {Form, FormItem, FormAction} from '@mxjs/a-form';
-import {FormUeditor} from '@mxjs/ueditor';
+import {FormUeditor} from '@mxjs/a-ueditor';
 import LinkPicker from '@miaoxing/link-to/components/LinkPicker';
 import {Input} from 'antd';
 import {FormItemSort, Upload, TreeSelect} from '@miaoxing/admin';
