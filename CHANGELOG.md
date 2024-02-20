@@ -1,3 +1,29 @@
+## [0.3.29](https://github.com/miaoxing/article/compare/v0.3.28...v0.3.29) (2024-02-20)
+
+
+### Features
+
+* `@mxjs/ueditor` 依赖更改为 `@mxjs/a-ueditor` ([750f57e](https://github.com/miaoxing/article/commit/750f57eeae6af1da06c8932bc6897144ba3d7f6c))
+* 更新 antd, antd icons 版本 ([bee80ea](https://github.com/miaoxing/article/commit/bee80ea9078ee0a2a91595f0deea982bd3a0e7b6))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-page:** upgrade from `2.3.0` to `2.4.0`
+* **@mxjs/a-clink:** upgrade from `2.1.0` to `2.1.1`
+* **@mxjs/a-table:** upgrade from `1.7.0` to `1.8.0`
+* **@mxjs/a-form:** upgrade from `2.1.0` to `2.2.0`
+* **@mxjs/upload:** upgrade from `0.6.27` to `0.6.28`
+* **@mxjs/a-ueditor:** upgrade from `1.1.0` to `1.1.1`
+* **@mxjs/icons:** upgrade from `1.1.0` to `1.2.0`
+* **@mxjs/a-button:** upgrade from `3.1.0` to `3.2.0`
+* **@miaoxing/admin:** upgrade from `0.12.0` to `0.12.1`
+* **@miaoxing/app:** upgrade from `0.8.0` to `0.8.1`
+* **@miaoxing/link-to:** upgrade from `0.1.48` to `0.1.49`
+
 ## [0.3.28](https://github.com/miaoxing/article/compare/v0.3.27...v0.3.28) (2024-01-31)
 
 
