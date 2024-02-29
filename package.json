@@ -1,6 +1,6 @@
 {
   "name": "@miaoxing/article",
-  "version": "0.3.29",
+  "version": "0.3.30",
   "private": true,
   "main": "index.js",
   "author": "twinh",
@@ -16,7 +16,7 @@
     "react": ">=16.13.1",
     "react-dom": ">=16.13.1",
     "@mxjs/a-box": "^1.1.0",
-    "@mxjs/a-page": "^2.4.0",
+    "@mxjs/a-page": "^2.4.1",
     "@mxjs/a-clink": "^2.1.1",
     "@mxjs/a-table": "^1.8.0",
     "@mxjs/a-form": "^2.2.0",
