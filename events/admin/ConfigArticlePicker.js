@@ -159,7 +159,7 @@ const ArticlePicker = ({value = [], onChange}) => {
           </SearchForm>
           <Table
             tableApi={table}
-            url={$.apiUrl('articles')}
+            url="articles"
             rowSelection={{
               selectedRowKeys,
               onChange: (selectedRowKeys) => {

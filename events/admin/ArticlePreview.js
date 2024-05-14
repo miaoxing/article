@@ -124,11 +124,12 @@ const ArticlePreview = (
     }
 
     $.get({
-      url: $.apiUrl('articles', {
+      url: 'articles',
+      params: {
         sortField: 'id',
         limit: num,
         search,
-      }),
+      },
     }).then(({ret}) => {
       if (ret.isErr()) {
         $.ret(ret);
