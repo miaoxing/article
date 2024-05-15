@@ -7,7 +7,6 @@ import {Avatar, Button, Modal} from 'antd';
 import Icon from '@mxjs/icons';
 import {PageActions} from '@mxjs/a-page';
 import {SearchForm, SearchItem} from '@mxjs/a-form';
-import api from '@mxjs/api';
 import appendUrl from 'append-url';
 import PropTypes from 'prop-types';
 import {NewBtn} from '@mxjs/a-button';
@@ -67,7 +66,7 @@ const ArticlePicker = ({value = [], onChange}) => {
       return;
     }
 
-    api.get(appendUrl('articles', {sortField: 'id', search: {id: value}}))
+    $.get(appendUrl('articles', {sortField: 'id', search: {id: value}}))
       .then(({ret}) => {
         if (ret.isErr()) {
           $.ret(ret);
