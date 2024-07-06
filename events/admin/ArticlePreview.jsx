@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import $ from 'miaoxing';
 import { Empty } from 'antd';
-import { Box, Image } from '@mxjs/a-box';
 import './list.scss';
 import defaultCover from '../../images/default-cover.svg';
 
@@ -10,7 +9,7 @@ const ImageTopList = ({articles}) => {
   return articles.map((article) => (
     <li key={article.id}>
       <a className="list-item" href="#">
-        <Image maxW="full" h="auto" mb={2} src={article.cover || defaultCover}/>
+        <img className="max-w-full h-auto mb-2" src={article.cover || defaultCover}/>
         <h4 className="list-title">
           {article.title}
         </h4>
@@ -39,17 +38,17 @@ const ImageLeftTitleRightList = ({articles}) => {
   return articles.map(article => (
     <li key={article.id}>
       <a className="list-item" href="#">
-        <Box className="list-col" flex="0 0 72px !important" h="72px" w="72px!">
-          <Image h="100%" src={article.cover || defaultCover}/>
-        </Box>
-        <Box className="list-col" verticalAlign="middle">
+        <div className="list-col !grow-0 !basis-[72px] h-[72px] w-[72px]">
+          <img className="h-full" src={article.cover || defaultCover}/>
+        </div>
+        <div className="list-col align-middle">
           <h4 className="list-title">
             {article.title}
           </h4>
           <div className="list-text">
             {article.intro}
           </div>
-        </Box>
+        </div>
       </a>
     </li>
   ));
@@ -59,17 +58,17 @@ const TitleLeftImageRightList = ({articles}) => {
   return articles.map(article => (
     <li key={article.id}>
       <a className="list-item" href="#">
-        <Box className="list-col" verticalAlign="middle">
+        <div className="list-col align-middle">
           <h4 className="list-title">
             {article.title}
           </h4>
           <div className="list-text">
             {article.intro}
           </div>
-        </Box>
-        <Box className="list-col" flex="0 0 87px !important" h="72px" w="87px">
-          <Image h="100%" maxW="100%" src={article.cover || defaultCover}/>
-        </Box>
+        </div>
+        <div className="list-col !grow-0 !basis-[87px] h-[72px] w-[87px]">
+          <img className="h-full max-w-full" src={article.cover || defaultCover}/>
+        </div>
       </a>
     </li>
   ));
@@ -145,13 +144,13 @@ const ArticlePreview = (
     <>
       {
         articles.length ?
-          <Box as="ul" mb={0} className="list list-indented">
+          <ul className="list list-indented mb-0">
             <Tpl articles={articles}/>
-          </Box>
+          </ul>
           :
-          <Box overflow="hidden">
+          <div className="overflow-hidden">
             <Empty image={Empty.PRESENTED_IMAGE_SIMPLE}/>
-          </Box>
+          </div>
       }
     </>
   );
