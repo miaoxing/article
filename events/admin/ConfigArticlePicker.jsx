@@ -1,43 +1,16 @@
-import {useEffect, useState} from 'react';
-import {Table, TableProvider, useTable} from '@mxjs/a-table';
+import { useEffect, useState } from 'react';
+import { Table, TableProvider, useTable } from '@mxjs/a-table';
 import Media from '@mxjs/a-media';
-import {CloseCircleFilled, DownCircleFilled, UpCircleFilled} from '@ant-design/icons';
 import $ from 'miaoxing';
-import {Avatar, Button, Modal} from 'antd';
+import { Avatar, Button, Modal } from 'antd';
 import Icon from '@mxjs/icons';
-import {PageActions} from '@mxjs/a-page';
-import {SearchForm, SearchItem} from '@mxjs/a-form';
+import { PageActions } from '@mxjs/a-page';
+import { SearchForm, SearchItem } from '@mxjs/a-form';
 import appendUrl from 'append-url';
 import PropTypes from 'prop-types';
-import {NewBtn} from '@mxjs/a-button';
-import {css, spacing} from '@mxjs/css';
+import { NewBtn } from '@mxjs/a-button';
 import defaultCover from '../../images/default-cover.svg';
-
-const cardClass = css({
-  position: 'relative',
-  mb4: true,
-  p6: true,
-  shadowTiny: true,
-  border: 1,
-  borderColor: 'gray100',
-  ':hover': {
-    '> .toolbar': {
-      display: 'block',
-    },
-  },
-});
-
-const toolbarClass = css({
-  display: 'none',
-  position: 'absolute',
-  top: -spacing(4),
-  right: -spacing(2),
-  textXL: true,
-  '> a': {
-    ml1: true,
-    gray400: true,
-  },
-});
+import { ConfigItem } from "@miaoxing/page/admin";
 
 const arrayMove = (array, from, to) => {
   array.splice(to, 0, array.splice(from, 1)[0]);
@@ -90,36 +63,16 @@ const ArticlePicker = ({value = [], onChange}) => {
     <>
       <div>
         {articles.map((article, index) => {
-          return <Media key={article.id} className={cardClass}>
-            <div className={'toolbar ' + toolbarClass}>
-              {index !== 0 && <a href="#" onClick={(e) => {
-                e.preventDefault();
-                move(index, index - 1);
-              }}>
-                <UpCircleFilled/>
-              </a>}
-              {index !== articles.length - 1 && <a href="#" onClick={(e) => {
-                e.preventDefault();
-                move(index, index + 1);
-              }}>
-                <DownCircleFilled/>
-              </a>}
-              <a href="#" onClick={(e) => {
-                e.preventDefault();
-                $.confirm('删除后不能还原，确认删除？', result => {
-                  if (result) {
-                    remove(index);
-                  }
-                });
-              }}>
-                <CloseCircleFilled/>
-              </a>
-            </div>
-            <Avatar src={article.cover || defaultCover} shape="square" size={48}/>
-            <Media.Body>
-              {article.title}
-            </Media.Body>
-          </Media>;
+          return (
+            <ConfigItem key={article.id} index={index} length={articles.length} operation={{move, remove}}>
+              <Media>
+                <Avatar src={article.cover || defaultCover} shape="square" size={48}/>
+                <Media.Body>
+                  {article.title}
+                </Media.Body>
+              </Media>
+            </ConfigItem>
+          );
         })}
         <Button block type="dashed" onClick={() => {
           setOpen(true);
