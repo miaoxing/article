@@ -64,7 +64,6 @@ exports[`admin/article-categories form 2`] = `
       Object {
         "data": Object {
           "description": undefined,
-          "id": undefined,
           "name": "测试分类",
           "parentId": 0,
           "sort": 50,

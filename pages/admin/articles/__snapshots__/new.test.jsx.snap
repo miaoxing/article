@@ -69,7 +69,6 @@ exports[`admin/articles form 2`] = `
           "detail": Object {
             "content": undefined,
           },
-          "id": 1,
           "intro": undefined,
           "redirectLink": undefined,
           "sort": 50,
