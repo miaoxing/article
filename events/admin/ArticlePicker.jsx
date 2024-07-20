@@ -25,8 +25,10 @@ const ArticlePicker = ({pickerRef, linkPicker, value}) => {
     title="选择图文"
     open={open}
     width={800}
-    bodyStyle={{
-      padding: '1rem',
+    styles={{
+      body: {
+        padding: '1rem',
+      }
     }}
     onOk={() => {
       if (id) {
