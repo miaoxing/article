@@ -1,3 +1,45 @@
+## [0.4.3](https://github.com/miaoxing/article/compare/v0.4.2...v0.4.3) (2024-07-31)
+
+
+### Bug Fixes
+
+* **article:** 更新 scss 导入路径为直接路径，解决 vite "Can't find stylesheet to import" ([2def7fc](https://github.com/miaoxing/article/commit/2def7fc8707eb599ff619af270e6746c484fa6f4))
+
+
+### Features
+
+* 升级 antd `Modal` 的 `bodyStyle` 为 `styles` ([15d3d76](https://github.com/miaoxing/article/commit/15d3d76c927886f1482e5c00186f2a87f4234b46))
+* **u:** 调整页面内容为卡片视图 ([b763207](https://github.com/miaoxing/article/commit/b763207857ec76ef1eb1e0a21b3885612f1c08e3))
+* Box 组件改为 tailwind 类名 ([9437ce3](https://github.com/miaoxing/article/commit/9437ce3161dbb213577018e2b9a4e322a5aa3ffd))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-page:** upgrade from `3.0.1` to `4.0.0`
+* **@mxjs/a-clink:** upgrade from `3.0.1` to `3.0.2`
+* **@mxjs/a-table:** upgrade from `1.9.0` to `2.0.0`
+* **@mxjs/a-form:** upgrade from `3.0.2` to `4.0.0`
+* **@mxjs/a-section:** upgrade from `1.0.0` to `1.1.0`
+* **@mxjs/api:** upgrade from `1.1.0` to `1.1.1`
+* **miaoxing:** upgrade from `0.4.15` to `0.4.16`
+* **@mxjs/app:** upgrade from `0.8.0` to `0.8.1`
+* **@mxjs/a-ueditor:** upgrade from `1.1.5` to `1.1.6`
+* **@mxjs/icons:** upgrade from `1.2.1` to `1.2.2`
+* **append-url:** upgrade from `1.0.27` to `1.0.28`
+* **bootstrap-mobile:** upgrade from `0.10.10` to `0.10.11`
+* **@mxjs/a-button:** upgrade from `4.0.1` to `5.0.0`
+* **@mxjs/m-ret:** upgrade from `1.1.3` to `1.1.4`
+* **@mxjs/m-rich-text:** upgrade from `1.2.1` to `1.2.2`
+* **@mxjs/m-page:** upgrade from `1.2.3` to `1.2.4`
+* **@miaoxing/dev:** upgrade from `9.1.1` to `9.1.2`
+* **@mxjs/test:** upgrade from `2.0.0` to `2.0.1`
+* **@miaoxing/admin:** upgrade from `0.13.2` to `0.14.0`
+* **@miaoxing/app:** upgrade from `0.10.1` to `0.10.2`
+* **@miaoxing/link-to:** upgrade from `0.1.54` to `0.1.55`
+
 ## [0.4.2](https://github.com/miaoxing/article/compare/v0.4.1...v0.4.2) (2024-06-30)
 
 
