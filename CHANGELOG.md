@@ -1,3 +1,24 @@
+## [0.4.4](https://github.com/miaoxing/article/compare/v0.4.3...v0.4.4) (2024-08-02)
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-page:** upgrade from `4.0.0` to `4.0.1`
+* **@mxjs/a-clink:** upgrade from `3.0.2` to `3.0.3`
+* **@mxjs/a-table:** upgrade from `2.0.0` to `2.0.1`
+* **@mxjs/a-form:** upgrade from `4.0.0` to `4.0.1`
+* **@mxjs/api:** upgrade from `1.1.1` to `1.1.2`
+* **miaoxing:** upgrade from `0.4.16` to `0.4.17`
+* **@mxjs/a-ueditor:** upgrade from `1.1.6` to `1.1.7`
+* **@mxjs/a-button:** upgrade from `5.0.0` to `5.0.1`
+* **@mxjs/m-ret:** upgrade from `1.1.4` to `1.1.5`
+* **@mxjs/m-page:** upgrade from `1.2.4` to `1.2.5`
+* **@mxjs/test:** upgrade from `2.0.1` to `2.0.2`
+* **@miaoxing/admin:** upgrade from `0.14.0` to `0.15.0`
+
 ## [0.4.3](https://github.com/miaoxing/article/compare/v0.4.2...v0.4.3) (2024-07-31)
 
 
