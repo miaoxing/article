@@ -26,7 +26,6 @@
     "@mxjs/a-ueditor": "^1.1.8",
     "prop-types": "^15.7.2",
     "@mxjs/icons": "^1.2.3",
-    "@mxjs/bootstrap": "^0.1.19",
     "@ant-design/icons": "^5",
     "append-url": "^1.0.29",
     "bootstrap-mobile": "^0.10.12",
