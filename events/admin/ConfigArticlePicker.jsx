@@ -87,7 +87,7 @@ const ArticlePicker = ({value = [], onChange}) => {
         width={800}
         styles={{
           body: {
-            padding: '1rem',
+            paddingBlock: '.5rem',
           }
         }}
         onOk={() => {
