@@ -1,3 +1,40 @@
+## [0.4.6](https://github.com/miaoxing/article/compare/v0.4.5...v0.4.6) (2024-09-01)
+
+
+### Features
+
+* modal 样式优化 ([62da2ec](https://github.com/miaoxing/article/commit/62da2ec871a38b86dd54c5f1abb1a74f5fe85e02))
+* 插件增加 wei 命令行入口 ([56f768b](https://github.com/miaoxing/article/commit/56f768b133723127dd14880f381f9a61dc8ada4d))
+* 更新 `antd` 到 `~5.19` ([dfadb0d](https://github.com/miaoxing/article/commit/dfadb0dfd530f53ebf0a9512e1959a36ee919284))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-page:** upgrade from `4.0.2` to `4.1.0`
+* **@mxjs/a-clink:** upgrade from `3.0.4` to `3.0.5`
+* **@mxjs/a-table:** upgrade from `2.0.2` to `2.1.0`
+* **@mxjs/a-form:** upgrade from `4.0.2` to `4.1.0`
+* **@mxjs/a-section:** upgrade from `1.1.1` to `1.2.0`
+* **@mxjs/api:** upgrade from `1.1.3` to `1.1.4`
+* **miaoxing:** upgrade from `0.4.18` to `0.4.19`
+* **@mxjs/app:** upgrade from `0.8.2` to `0.8.3`
+* **@mxjs/a-ueditor:** upgrade from `1.1.8` to `1.1.9`
+* **@mxjs/icons:** upgrade from `1.2.3` to `1.2.4`
+* **append-url:** upgrade from `1.0.29` to `1.0.30`
+* **bootstrap-mobile:** upgrade from `0.10.12` to `0.10.13`
+* **@mxjs/a-button:** upgrade from `5.0.2` to `5.1.0`
+* **@mxjs/m-ret:** upgrade from `1.1.6` to `1.1.7`
+* **@mxjs/m-rich-text:** upgrade from `1.2.3` to `1.2.4`
+* **@mxjs/m-page:** upgrade from `1.2.6` to `1.2.7`
+* **@miaoxing/dev:** upgrade from `9.1.3` to `9.2.0`
+* **@mxjs/test:** upgrade from `2.0.3` to `2.0.4`
+* **@miaoxing/admin:** upgrade from `0.15.1` to `0.15.2`
+* **@miaoxing/app:** upgrade from `0.10.3` to `0.10.4`
+* **@miaoxing/link-to:** upgrade from `0.1.56` to `0.1.57`
+
 ## [0.4.5](https://github.com/miaoxing/article/compare/v0.4.4...v0.4.5) (2024-08-03)
 
 
