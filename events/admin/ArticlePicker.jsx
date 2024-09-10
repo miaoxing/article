@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react';
-import {Button, Modal} from 'antd';
-import {Table, TableProvider, useTable} from '@mxjs/a-table';
-import {SearchForm, SearchItem} from '@mxjs/a-form';
-import {PageActions} from '@mxjs/a-page';
+import { Button, Modal } from 'antd';
+import { Table, TableProvider, useTable } from '@mxjs/a-table';
+import { SearchForm, SearchItem } from '@mxjs/a-form';
+import { PageActions } from '@mxjs/a-page';
 import Icon from '@mxjs/icons';
 import $ from 'miaoxing';
 import PropTypes from 'prop-types';
-import {NewBtn} from '@mxjs/a-button';
+import { NewBtn } from '@mxjs/a-button';
+import { useQuery } from '@mxjs/query';
 
-const ArticlePicker = ({pickerRef, linkPicker, value}) => {
+const ArticlePicker = ({ pickerRef, linkPicker, value }) => {
   const [table] = useTable();
   const [id, setId] = useState(value.id);
   const [title, setTitle] = useState();
@@ -32,7 +33,7 @@ const ArticlePicker = ({pickerRef, linkPicker, value}) => {
     }}
     onOk={() => {
       if (id) {
-        linkPicker.addValue({id}, {title});
+        linkPicker.addValue({ id }, { title });
       }
       setOpen(false);
     }}
@@ -89,19 +90,9 @@ ArticlePicker.propTypes = {
   value: PropTypes.object,
 };
 
-const ArticlePickerLabel = ({value, extra}) => {
-  const [title, setTitle] = useState('');
-
-  useEffect(() => {
-    if (!extra.title) {
-      (async () => {
-        const {ret} = await $.get('articles/' + value.id);
-        setTitle(ret.data.title);
-      })();
-    }
-  }, [value.id, extra]);
-
-  return extra.title || title;
+const ArticlePickerLabel = ({ value, extra }) => {
+  const { data = {} } = useQuery(!extra.title ? 'articles/' + value.id : null);
+  return extra.title || data.title;
 };
 
 ArticlePicker.Label = ArticlePickerLabel;
