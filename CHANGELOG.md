@@ -1,3 +1,29 @@
+## [0.4.8](https://github.com/miaoxing/article/compare/v0.4.7...v0.4.8) (2024-11-01)
+
+
+### Features
+
+* **article:** 增加获取图文分类接口 ([8fa9bb5](https://github.com/miaoxing/article/commit/8fa9bb5f8567664b2b42d297625bd50dec6c882e))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-page:** upgrade from `4.2.0` to `4.2.1`
+* **@mxjs/a-clink:** upgrade from `3.0.6` to `3.0.7`
+* **@mxjs/a-table:** upgrade from `2.2.0` to `2.2.1`
+* **@mxjs/a-form:** upgrade from `4.1.1` to `5.0.0`
+* **@mxjs/api:** upgrade from `1.1.4` to `1.1.5`
+* **@mxjs/app:** upgrade from `0.8.3` to `0.8.4`
+* **@mxjs/a-ueditor:** upgrade from `1.1.10` to `1.1.11`
+* **append-url:** upgrade from `1.0.30` to `1.1.0`
+* **@mxjs/test:** upgrade from `2.0.4` to `2.0.5`
+* **@miaoxing/admin:** upgrade from `0.16.0` to `0.16.1`
+* **@miaoxing/app:** upgrade from `0.10.5` to `0.10.6`
+* **@miaoxing/link-to:** upgrade from `0.1.58` to `0.1.59`
+
 ## [0.4.7](https://github.com/miaoxing/article/compare/v0.4.6...v0.4.7) (2024-09-30)
 
 
