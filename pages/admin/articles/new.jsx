@@ -18,7 +18,7 @@ const New = () => {
       </PageActions>
 
       <Form
-        afterLoad={({ret}) => {
+        afterLoad={(ret) => {
           // 未分类提示"请选择"
           if (!ret.data.categoryId) {
             delete ret.data.categoryId;
