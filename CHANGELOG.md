@@ -1,3 +1,18 @@
+## [0.4.9](https://github.com/miaoxing/article/compare/v0.4.8...v0.4.9) (2024-11-03)
+
+
+### Bug Fixes
+
+* 更新 `afterLoad` 的参数 ([5fa9336](https://github.com/miaoxing/article/commit/5fa93368c974dd8c64bf9f8dadfa5854d3b81767))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/admin:** upgrade from `0.16.1` to `0.16.2`
+
 ## [0.4.8](https://github.com/miaoxing/article/compare/v0.4.7...v0.4.8) (2024-11-01)
 
 
@@ -300,7 +315,7 @@
 ### Features
 
 * `@mxjs/ueditor` 依赖更改为 `@mxjs/a-ueditor` ([750f57e](https://github.com/miaoxing/article/commit/750f57eeae6af1da06c8932bc6897144ba3d7f6c))
-* 更新 antd, antd icons 版本 ([bee80ea](https://github.com/miaoxing/article/commit/bee80ea9078ee0a2a91595f0deea982bd3a0e7b6))
+* 更新 antd, antd icons 版本 ([e9a2f56](https://github.com/miaoxing/article/commit/e9a2f560968e0a5824de7df533e08f3b8b6b9227))
 
 
 
