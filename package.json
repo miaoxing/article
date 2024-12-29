@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "antd": "~5.19",
-    "react": ">=16.13.1",
-    "react-dom": ">=16.13.1",
+    "react": ">=16.13.1 <19",
+    "react-dom": ">=16.13.1 <19",
     "@mxjs/a-page": "^4.3.0",
     "@mxjs/a-clink": "^3.0.7",
     "@mxjs/a-table": "^2.3.0",
