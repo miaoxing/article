@@ -1,3 +1,45 @@
+# [0.5.0](https://github.com/miaoxing/article/compare/v0.4.10...v0.5.0) (2024-12-30)
+
+
+### Bug Fixes
+
+* 限制 react 版本低于 19，避免测试失败 ([5ed0af7](https://github.com/miaoxing/article/commit/5ed0af7a6164b0e62b322b669f059686c4f99241))
+
+
+### Code Refactoring
+
+* Taro 相关功能移到 m 项目中 ([bc25298](https://github.com/miaoxing/article/commit/bc2529833e505e1c7368d59ad3cbfd197012bc79))
+
+
+### BREAKING CHANGES
+
+* Taro 相关功能移到 m 项目中
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-page:** upgrade from `4.3.0` to `4.3.1`
+* **@mxjs/a-clink:** upgrade from `3.0.7` to `3.0.8`
+* **@mxjs/a-table:** upgrade from `2.3.0` to `2.4.0`
+* **@mxjs/a-form:** upgrade from `5.1.0` to `5.2.0`
+* **@mxjs/a-section:** upgrade from `1.2.0` to `1.2.1`
+* **@mxjs/api:** upgrade from `1.1.5` to `1.1.6`
+* **miaoxing:** upgrade from `0.4.19` to `0.4.20`
+* **@mxjs/app:** upgrade from `0.8.4` to `0.8.5`
+* **@mxjs/a-ueditor:** upgrade from `1.1.12` to `1.1.13`
+* **@mxjs/icons:** upgrade from `1.2.4` to `1.2.5`
+* **append-url:** upgrade from `1.1.0` to `1.1.1`
+* **bootstrap-mobile:** upgrade from `0.10.13` to `0.10.14`
+* **@mxjs/a-button:** upgrade from `5.2.0` to `5.2.1`
+* **@miaoxing/dev:** upgrade from `9.2.0` to `9.3.0`
+* **@mxjs/test:** upgrade from `2.0.5` to `2.0.6`
+* **@miaoxing/admin:** upgrade from `0.16.3` to `0.17.0`
+* **@miaoxing/app:** upgrade from `0.10.7` to `0.10.8`
+* **@miaoxing/link-to:** upgrade from `0.1.60` to `0.1.61`
+
 ## [0.4.10](https://github.com/miaoxing/article/compare/v0.4.9...v0.4.10) (2024-11-30)
 
 
