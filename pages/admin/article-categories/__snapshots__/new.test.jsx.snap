@@ -17,7 +17,7 @@ exports[`admin/article-categories form 1`] = `
       Object {
         "loading": true,
         "method": "get",
-        "url": "/api/admin/article-categories/defaults",
+        "url": "article-categories/defaults",
       },
     ],
   ],
@@ -57,7 +57,7 @@ exports[`admin/article-categories form 2`] = `
       Object {
         "loading": true,
         "method": "get",
-        "url": "/api/admin/article-categories/defaults",
+        "url": "article-categories/defaults",
       },
     ],
     Array [
@@ -70,7 +70,7 @@ exports[`admin/article-categories form 2`] = `
         },
         "loading": true,
         "method": "POST",
-        "url": "/api/admin/article-categories",
+        "url": "article-categories",
       },
     ],
   ],

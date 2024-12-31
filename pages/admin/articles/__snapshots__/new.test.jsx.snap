@@ -17,7 +17,7 @@ exports[`admin/articles form 1`] = `
       Object {
         "loading": true,
         "method": "get",
-        "url": "/api/admin/articles/defaults",
+        "url": "articles/defaults",
       },
     ],
   ],
@@ -57,7 +57,7 @@ exports[`admin/articles form 2`] = `
       Object {
         "loading": true,
         "method": "get",
-        "url": "/api/admin/articles/defaults",
+        "url": "articles/defaults",
       },
     ],
     Array [
@@ -77,7 +77,7 @@ exports[`admin/articles form 2`] = `
         },
         "loading": true,
         "method": "POST",
-        "url": "/api/admin/articles",
+        "url": "articles",
       },
     ],
   ],
