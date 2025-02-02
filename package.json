@@ -38,7 +38,7 @@
     "react-router": "^6"
   },
   "resolutions": {
-    "nwsapi": "2.2.0"
+    "nwsapi": "2.2.13"
   },
   "ciDependencies": {
     "miaoxing": "miaoxing/miaoxing-js",
