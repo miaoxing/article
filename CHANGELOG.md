@@ -1,3 +1,15 @@
+## [0.5.3](https://github.com/miaoxing/article/compare/v0.5.2...v0.5.3) (2025-05-01)
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/admin:** upgrade from `0.17.2` to `0.17.3`
+* **@miaoxing/app:** upgrade from `0.10.10` to `0.10.11`
+* **@miaoxing/link-to:** upgrade from `0.1.63` to `0.1.64`
+
 ## [0.5.2](https://github.com/miaoxing/article/compare/v0.5.1...v0.5.2) (2025-02-02)
 
 
